@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeablePrefabs:
-  - {fileID: 7352590922148074910, guid: 3da10be7f94c36848ba85febe7385426, type: 3}
+  - {fileID: 1693713521741242255, guid: c42a1a26a690c05408f73122b6233a19, type: 3}
   - {fileID: 5309733309019237554, guid: c0a8d97b1fa6bfc42aa6747eca23b611, type: 3}
   - {fileID: 5222281774391331308, guid: 635c363ac15b87843a0c60d4af24f7bb, type: 3}
   - {fileID: 6350658347335738257, guid: 19b9c239446f13f469f312e2397d4ae7, type: 3}
@@ -215,13 +215,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23293084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 3643935278158147289, guid: c99aae8b55ed39243b8c7a3788302410, type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &23293090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,12 +258,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23293084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cacd06d57d647a498968e4554fe3fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToInstantiate: {fileID: 8512070591267975666, guid: 3da10be7f94c36848ba85febe7385426, type: 3}
+  gameObjectToInstantiate: {fileID: 5711964293505301553, guid: f1e0523cbd6749343a098466e426e4db, type: 3}
 --- !u!114 &23293093
 MonoBehaviour:
   m_ObjectHideFlags: 0

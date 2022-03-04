@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class TapToUnlockObj : MonoBehaviour
+public class TapToActivate : MonoBehaviour
 {
 
     public AudioClip[] aClips;
     public AudioSource myAudioSource;
     string ObjectToTouch;
-    public Animator animator;
-
 
     public GameObject timelineObj;
     public PlayableDirector timeline;
+
+    public GameObject ObjTouched;
+    public Animator ObjTouchedAnimator;
+
 
     public int timeToStop;
 
@@ -21,7 +23,6 @@ public class TapToUnlockObj : MonoBehaviour
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
-        timeline = GetComponent<PlayableDirector>();
         timelineObj.SetActive(false);
 
     }
@@ -37,11 +38,15 @@ public class TapToUnlockObj : MonoBehaviour
                 ObjectToTouch = Hit.transform.name;
                 switch (ObjectToTouch)
                 {
-                    case "pal-mind":
+                    case "pal":
+                        ObjTouchedAnimator = ObjTouched.GetComponent<Animator>();
+                        ObjTouchedAnimator.Play("Blink");
+
                         myAudioSource.clip = aClips[0];
                         myAudioSource.Play();
-                        animator.SetBool("blink", true);
+
                         timelineObj.SetActive(true);
+                        timeline = timelineObj.GetComponent<PlayableDirector>();
                         timeline.Play();
                         Destroy(timelineObj, timeToStop);
                         break;
@@ -51,10 +56,10 @@ public class TapToUnlockObj : MonoBehaviour
                         myAudioSource.Play();
                         break;
 
-                    /*case "Cube2":
+                    case "Cube2":
                         myAudioSource.clip = aClips[2];
                         myAudioSource.Play();
-                        break;*/
+                        break;
                     default:
                         break;
 
@@ -63,4 +68,9 @@ public class TapToUnlockObj : MonoBehaviour
             }
         }
     }
+
+    /*public void Play()
+    {
+        timeline.Play();
+    }*/
 }
