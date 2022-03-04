@@ -13,6 +13,7 @@ public class TapToUnlockObj : MonoBehaviour
 
 
     public GameObject timelineObj;
+    public PlayableDirector timeline;
 
     public int timeToStop;
 
@@ -20,6 +21,7 @@ public class TapToUnlockObj : MonoBehaviour
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        timeline = GetComponent<PlayableDirector>();
         timelineObj.SetActive(false);
 
     }
@@ -40,6 +42,7 @@ public class TapToUnlockObj : MonoBehaviour
                         myAudioSource.Play();
                         animator.SetBool("blink", true);
                         timelineObj.SetActive(true);
+                        timeline.Play();
                         Destroy(timelineObj, timeToStop);
                         break;
 
