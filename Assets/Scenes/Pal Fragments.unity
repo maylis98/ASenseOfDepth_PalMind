@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cacd06d57d647a498968e4554fe3fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToInstantiate: {fileID: 5711964293505301553, guid: f1e0523cbd6749343a098466e426e4db, type: 3}
+  gameObjectToInstantiate: {fileID: 1693713521741242255, guid: c42a1a26a690c05408f73122b6233a19, type: 3}
 --- !u!114 &23293093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 1315582778}
   - component: {fileID: 1315582783}
   - component: {fileID: 1315582784}
+  - component: {fileID: 1315582785}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -763,3 +764,11 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!81 &1315582785
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315582776}
+  m_Enabled: 1

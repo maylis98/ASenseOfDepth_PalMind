@@ -3143,7 +3143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21abf087b85427347a8b9c4ec8966ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aClips: []
+  aClips:
+  - {fileID: 8300000, guid: f7ec3e78d4e334542a834a267f690a4e, type: 3}
+  - {fileID: 8300000, guid: aad49331d34c374489d0e41b7f629cdf, type: 3}
   myAudioSource: {fileID: 3843432278732235933}
   timelineObj: {fileID: 1693713521741241933}
   timeline: {fileID: 1693713521741242226}

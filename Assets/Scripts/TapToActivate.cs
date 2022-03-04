@@ -23,6 +23,7 @@ public class TapToActivate : MonoBehaviour
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        timelineObj = GetComponent<GameObject>();
         timelineObj.SetActive(false);
 
     }
@@ -35,7 +36,7 @@ public class TapToActivate : MonoBehaviour
             RaycastHit Hit;
             if (Physics.Raycast(ray, out Hit))
             {
-                ObjectToTouch = Hit.transform.name;
+                ObjectToTouch = Hit.transform.name; 
                 switch (ObjectToTouch)
                 {
                     case "pal":
@@ -51,15 +52,6 @@ public class TapToActivate : MonoBehaviour
                         Destroy(timelineObj, timeToStop);
                         break;
 
-                    case "video":
-                        myAudioSource.clip = aClips[1];
-                        myAudioSource.Play();
-                        break;
-
-                    case "Cube2":
-                        myAudioSource.clip = aClips[2];
-                        myAudioSource.Play();
-                        break;
                     default:
                         break;
 
