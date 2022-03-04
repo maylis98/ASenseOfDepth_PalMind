@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Puzzle1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/Empty.unity
+    guid: 44736f42dc393a54e9c3cf63c21d15db
+  - enabled: 0
+    path: Assets/Scenes/Puzzle2.unity
+    guid: b0123f94a6330d0499ab62663c941b0c
+  - enabled: 0
+    path: Assets/Scenes/Puzzle3.unity
+    guid: 8f20613b794507d4cbd29037d5fff968
+  - enabled: 0
+    path: Assets/Scenes/Puzzle4.unity
+    guid: 66cc0eecb67fb86418cd88895ea68940
+  - enabled: 1
+    path: Assets/Scenes/Pal Fragments.unity
+    guid: 040f5c10b0466a149b8c4d802315f7b9
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8ee7983fa45404849974e2fb475689b2, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f45ed46d5fe9bbd42b12463a87776248, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0bffc88eed582a247b1740129eb70c81, type: 2}

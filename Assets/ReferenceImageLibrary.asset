@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5622604962943268525
+  m_GuidHigh: 15268372287167598770
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5233583010299589339
+      m_GuidHigh: 17238137888318586529
+    m_SerializedTextureGuid:
+      m_GuidLow: 15317989225992887006
+      m_GuidHigh: 8247612911344733482
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: init_scene
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4953636569531317317
+      m_GuidHigh: 10385067852482951589
+    m_SerializedTextureGuid:
+      m_GuidLow: 4815586829477743474
+      m_GuidHigh: 5374635768502453402
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: fragment_tree
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5428481682986901591
+      m_GuidHigh: 9821497607700695473
+    m_SerializedTextureGuid:
+      m_GuidLow: 15781932395976714757
+      m_GuidHigh: 6125104476550778730
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: fragment_cloak
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5427471333820592718
+      m_GuidHigh: 9637906553159352456
+    m_SerializedTextureGuid:
+      m_GuidLow: 1897374447105367978
+      m_GuidHigh: 7915631016872628600
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: fragment_mask
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5511651603049932474
+      m_GuidHigh: 15635027236289697212
+    m_SerializedTextureGuid:
+      m_GuidLow: 1960223986005474217
+      m_GuidHigh: 7026041595965118379
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: fragment_mousqueton
+    m_Texture: {fileID: 0}
