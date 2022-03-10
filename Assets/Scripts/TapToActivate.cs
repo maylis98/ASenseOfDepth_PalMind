@@ -11,7 +11,7 @@ public class TapToActivate : MonoBehaviour
     string ObjectToTouch;
 
     public GameObject timelineObj;
-    public PlayableDirector timeline;
+    /*public PlayableDirector timeline;*/
 
     public GameObject ObjTouched;
     public Animator ObjTouchedAnimator;
@@ -23,6 +23,7 @@ public class TapToActivate : MonoBehaviour
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        
         timelineObj = GetComponent<GameObject>();
         timelineObj.SetActive(false);
 
@@ -42,13 +43,14 @@ public class TapToActivate : MonoBehaviour
                     case "pal":
                         ObjTouchedAnimator = ObjTouched.GetComponent<Animator>();
                         ObjTouchedAnimator.Play("Blink");
+                        timelineObj.SetActive(true);
 
                         myAudioSource.clip = aClips[0];
                         myAudioSource.Play();
 
-                        timelineObj.SetActive(true);
-                        timeline = timelineObj.GetComponent<PlayableDirector>();
-                        timeline.Play();
+                        /*timeline = timelineObj.GetComponent<PlayableDirector>();*/
+                        /*timeline = GetComponent<PlayableDirector>();
+                        timeline.Play();*/
                         Destroy(timelineObj, timeToStop);
                         break;
 

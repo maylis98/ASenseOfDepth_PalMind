@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4833915655976157324}
   - component: {fileID: 4833915655976157325}
   - component: {fileID: 4833915655976157326}
+  - component: {fileID: 5190945080335879342}
   m_Layer: 0
   m_Name: (3) UntiedRope
   m_TagString: Untagged
@@ -207,6 +208,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5190945080335879342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833915655976157327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dac24fc391569247b91a3f2d3079e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4833915656053911962
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +318,7 @@ GameObject:
   - component: {fileID: 4833915656066862909}
   - component: {fileID: 4833915656066862910}
   - component: {fileID: 4833915656066862911}
+  - component: {fileID: 8452396620426745748}
   m_Layer: 0
   m_Name: (1) Pal remembers_mousq
   m_TagString: Untagged
@@ -499,6 +513,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8452396620426745748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833915656066862896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dac24fc391569247b91a3f2d3079e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4833915656350397121
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +538,7 @@ GameObject:
   - component: {fileID: 4833915656350397134}
   - component: {fileID: 4833915656350397135}
   - component: {fileID: 4833915656350397120}
+  - component: {fileID: 7905909439014125791}
   m_Layer: 0
   m_Name: (2) StrongCurrent
   m_TagString: Untagged
@@ -706,6 +733,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7905909439014125791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833915656350397121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dac24fc391569247b91a3f2d3079e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4833915656563258962
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +758,7 @@ GameObject:
   - component: {fileID: 4833915656563258975}
   - component: {fileID: 4833915656563258960}
   - component: {fileID: 4833915656563258961}
+  - component: {fileID: 8119843111751042765}
   m_Layer: 0
   m_Name: (5) Friction
   m_TagString: Untagged
@@ -913,6 +953,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8119843111751042765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833915656563258962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dac24fc391569247b91a3f2d3079e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4833915656725970375
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +978,7 @@ GameObject:
   - component: {fileID: 4833915656725970372}
   - component: {fileID: 4833915656725970373}
   - component: {fileID: 4833915656725970374}
+  - component: {fileID: 8029671539906016306}
   m_Layer: 0
   m_Name: (4) RubbedRock
   m_TagString: Untagged
@@ -1120,6 +1173,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8029671539906016306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833915656725970375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dac24fc391569247b91a3f2d3079e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6350658347335738257
 GameObject:
   m_ObjectHideFlags: 0
