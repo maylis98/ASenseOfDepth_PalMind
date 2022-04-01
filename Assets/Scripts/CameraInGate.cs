@@ -17,7 +17,7 @@ public class CameraInGate : MonoBehaviour
     }
     void OnTriggerEnter(Collider camera)
     {
-        if (camera.gameObject.tag == "MainCamera")
+        if (camera.gameObject.tag == "Holder")
         {
             myAudioSource.clip = aClips[0];
             myAudioSource.Play();

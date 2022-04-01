@@ -1615,7 +1615,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"77a42d12d05bd74479e5dcf4946e674c\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -3897,9 +3897,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -801.9999389648438,
-            "y": 1.3333070278167725,
-            "width": 126.66667938232422,
+            "x": -757.0000610351563,
+            "y": 112.0000228881836,
+            "width": 125.99999237060547,
             "height": 118.0
         }
     },
@@ -4074,7 +4074,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []

@@ -20,7 +20,7 @@ public class FollowMoveVibrate : MonoBehaviour
 
         transform.position = smoothedPosition + Random.insideUnitSphere * (Time.deltaTime * vibAmount);
 
-        transform.LookAt(target);
+        //transform.LookAt(target);
     }
 
 
