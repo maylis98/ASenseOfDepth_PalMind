@@ -16,16 +16,6 @@ MonoBehaviour:
   m_GuidHigh: 15268372287167598770
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5233583010299589339
-      m_GuidHigh: 17238137888318586529
-    m_SerializedTextureGuid:
-      m_GuidLow: 15317989225992887006
-      m_GuidHigh: 8247612911344733482
-    m_Size: {x: 0.1, y: 0.1}
-    m_SpecifySize: 1
-    m_Name: init_scene
-    m_Texture: {fileID: 0}
-  - m_SerializedGuid:
       m_GuidLow: 4953636569531317317
       m_GuidHigh: 10385067852482951589
     m_SerializedTextureGuid:
@@ -64,4 +54,44 @@ MonoBehaviour:
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
     m_Name: fragment_mousqueton
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4833270098233968990
+      m_GuidHigh: 16092037211438420628
+    m_SerializedTextureGuid:
+      m_GuidLow: 8621112473990705253
+      m_GuidHigh: 5292573000445505579
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: rippleSphere1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5202820614081250019
+      m_GuidHigh: 17901579228043253154
+    m_SerializedTextureGuid:
+      m_GuidLow: 2397214359810090959
+      m_GuidHigh: 12760170011586655161
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: rippleSphere2
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5185600987365091248
+      m_GuidHigh: 12878835089542738343
+    m_SerializedTextureGuid:
+      m_GuidLow: 17195871758176979152
+      m_GuidHigh: 11753847231637053832
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: rippleSphere3
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5328128308909876947
+      m_GuidHigh: 6255027054431794308
+    m_SerializedTextureGuid:
+      m_GuidLow: 15327018818084154180
+      m_GuidHigh: 2953939463459791755
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: rippleSphere4
     m_Texture: {fileID: 0}
