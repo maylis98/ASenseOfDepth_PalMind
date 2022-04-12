@@ -54,7 +54,6 @@ public class MemoryTextManager : MonoBehaviour
     {
 
         randomNumber = Random.Range(0, 5);
-        Debug.Log(randomNumber);
         textBoxes[randomNumber].text = sentence;
         textAudios[randomNumber].Play();
 
@@ -72,12 +71,6 @@ public class MemoryTextManager : MonoBehaviour
         Debug.Log("End of conversation");
         //endButton.SetBool("appear", true);
     }
-
-   /* private void Update()
-    {
-        randomNumber = Random.Range(0, 10);
-        Debug.Log(randomNumber);
-    }*/
 
 
 }

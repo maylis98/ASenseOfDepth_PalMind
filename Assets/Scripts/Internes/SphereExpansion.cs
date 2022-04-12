@@ -13,13 +13,13 @@ public class SphereExpansion : MonoBehaviour
 
     //VFX properties
     [SerializeField, Range(0, 6)]
-    private float expansion = 0;
+    private float expansion;
 
     [SerializeField, Range(0, 7)]
-    private float spread = 0;
+    private float spread;
 
     [SerializeField, Range(0, 4)]
-    private float fluxIntensity = 0;
+    private float fluxIntensity;
 
     private GameObject[]wayPointsParent;
     private Transform[] wayPoints;
@@ -34,10 +34,16 @@ public class SphereExpansion : MonoBehaviour
 
     //For Waypoint function
     private bool timeToMove = false;
-    private int current = 0;
-    private float rotSpeed;
-    public float speed;
-    float WPradius = 1;
+    private int current;
+    private int lastPos;
+
+    //For movingSphere to Zone
+    private GameObject[] zonesInScene;
+    [SerializeField] 
+    private Vector3 offsetFromObj;
+
+    //Text blink time
+    public float waitTime;
 
 
     private void Awake()
@@ -60,20 +66,26 @@ public class SphereExpansion : MonoBehaviour
         {
             updateWithConditions.Invoke();
         }
-        
+
     }
 
-    public void changePos()
+    public void changePos(bool isActivate)
     {
-        if (timeToMove)
+        if (isActivate)
         {
-        InvokeRepeating("moveToPoints", 0, 2);
+            InvokeRepeating("moveToPoints", 1, delay);
         }
+        else
+        {
+            CancelInvoke("moveToPoints");
+            return;
+        }
+        
     }
 
     IEnumerator sphereExpand()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(10);
 
         //Change VFX values
         vfx.SetFloat("Lifetime Expansion", 0.55f);
@@ -81,30 +93,52 @@ public class SphereExpansion : MonoBehaviour
         vfx.SetFloat("Flux Intensity", 2.67f);
 
         yield return new WaitForSeconds(3);
+
+        changePos(true);
         timeToMove = true;
+
+        yield return new WaitForSeconds(30);
+
+        changePos(false);
+        //timeToMove = false;
+        sphereToZone();
 
     }
 
     private void moveToPoints()
     {
+        current = Random.Range(0, wayPoints.Length);
+
+        if(current >= wayPoints.Length)
+        {
+            current = 0;
+        }
+
+        if (current == lastPos)
+        {
             current = Random.Range(0, wayPoints.Length);
-        Debug.Log(current);
+        }
+        lastPos = current;
 
-            if(current >= wayPoints.Length)
-            {
-                current = 0;
-            }
-        
-            transform.position = wayPoints[current].transform.position;
-        
-        //transform.position = Vector3.MoveTowards(transform.position, wayPoints[current].transform.position, Time.deltaTime * speed);
+        transform.position = wayPoints[current].transform.position;
+        sound.Play();
 
+    }
+
+    private void sphereToZone()
+    {
+        zonesInScene = GameObject.FindGameObjectsWithTag("Zone");
+        transform.position = zonesInScene[0].transform.position + offsetFromObj;
+        MeshRenderer zoneMesh = zonesInScene[0].GetComponent<MeshRenderer>();
+        zoneMesh.enabled = true;
+        FindObjectOfType<RotatingTextOnCircle>().InvokeRepeating("Blink", 0, waitTime);
+        sound.Play();
+        Debug.Log("sphere finished its tour");
     }
 
     public void scaleOverTime()
     {
         Vector3 vec = new Vector3(Mathf.Sin(Time.time * speedOfPulse), Mathf.Sin(Time.time * speedOfPulse), Mathf.Sin(Time.time * speedOfPulse));
-
         transform.localScale = vec;
     }
 

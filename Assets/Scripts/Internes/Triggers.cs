@@ -13,10 +13,15 @@ public class Triggers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("MainCamera"))
         {
             trigger.Invoke();
             StartCoroutine(stopAnim());
+        }
+
+        if (other.CompareTag("Sphere"))
+        {
+
         }
     }
 

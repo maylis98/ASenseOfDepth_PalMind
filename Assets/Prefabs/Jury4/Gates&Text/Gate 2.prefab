@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6302201825867958518
+--- !u!1 &2367431973519649728
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,133 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6302201825867958504}
-  - component: {fileID: 6302201825867958507}
-  - component: {fileID: 6302201825867958506}
-  - component: {fileID: 6302201825867958516}
-  - component: {fileID: 6302201825867958517}
-  - component: {fileID: 6302201825867958519}
-  - component: {fileID: 6302201825867958505}
-  - component: {fileID: 6302201825867958510}
-  - component: {fileID: 6302201825867958511}
+  - component: {fileID: 2367431973519649729}
+  - component: {fileID: 2367431973519649731}
+  - component: {fileID: 2367431973519649730}
   m_Layer: 0
-  m_Name: distortionField
-  m_TagString: Untagged
+  m_Name: Gate 2
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6302201825867958504
+--- !u!4 &2367431973519649729
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.40000096, y: 0.016000032, z: 0.0059999805}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 5817951795350572370}
+  m_GameObject: {fileID: 2367431973519649728}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 2.37, y: -0.48453042, z: -1.2778016}
+  m_LocalScale: {x: 0.019999998, y: 0.5, z: 0.5}
+  m_Children:
+  - {fileID: 2367431974767202250}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &6302201825867958507
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &2367431973519649731
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6302201825867958506
+  m_GameObject: {fileID: 2367431973519649728}
+  m_Mesh: {fileID: -8678823145569952518, guid: 534d659522590164e8bc38f4665a2354, type: 3}
+--- !u!23 &2367431973519649730
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431973519649728}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c66a5a6eda2bf3049b09af7246f4d439, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2367431974767202249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2367431974767202250}
+  - component: {fileID: 2367431974767202258}
+  - component: {fileID: 2367431974767202257}
+  - component: {fileID: 2367431974767202256}
+  - component: {fileID: 2367431974767202255}
+  - component: {fileID: 2367431974767202254}
+  - component: {fileID: 2367431974767202253}
+  - component: {fileID: 2367431974767202252}
+  - component: {fileID: 2367431974767202251}
+  m_Layer: 0
+  m_Name: distortionField (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2367431974767202250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367431974767202249}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -0.40000096, y: 0.016000032, z: 0.0059999805}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2367431973519649729}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &2367431974767202258
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367431974767202249}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2367431974767202257
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,13 +169,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &6302201825867958516
+--- !u!54 &2367431974767202256
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -103,13 +185,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6302201825867958517
+--- !u!64 &2367431974767202255
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -117,28 +199,28 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6302201825867958519
+--- !u!114 &2367431974767202254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97c4efc3b136acf4eb1171489c6fbe5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToScale: {fileID: 6302201825867958518}
+  objectToScale: {fileID: 2367431974767202249}
   scaleTo: {x: 0.09, y: 0.3, z: 0.17}
   seconds: 10
---- !u!114 &6302201825867958505
+--- !u!114 &2367431974767202253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4698f01cdcc98b4581aebdaa74d2cfe, type: 3}
@@ -156,13 +238,13 @@ MonoBehaviour:
   - {fileID: 0}
   visualEffect: {fileID: 0}
   spread: 7
---- !u!82 &6302201825867958510
+--- !u!82 &2367431974767202252
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -252,13 +334,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6302201825867958511
+--- !u!114 &2367431974767202251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302201825867958518}
+  m_GameObject: {fileID: 2367431974767202249}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f8c70b837c72474f8c326f23a7bd5e0, type: 3}
@@ -267,7 +349,7 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6302201825867958511}
+      - m_Target: {fileID: 2367431974767202251}
         m_TargetAssemblyTypeName: MemoryTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -280,102 +362,22 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   memory:
-    name: 1
+    name: 2
     sentences:
-    - "I remember feeling completely helpless\nbefore I drowned. It's weird. \nThat
-      experience should have made me \nafraid of everything. I mean... I don't like
-      water,\nbut maybe that's the only problem. As for the rest, \nI feel indestructible
-      now. Unlike my cousin... "
-    - "She was a diver too. \nOh, she was good, much better than me. \nShe could
-      dive for hours without feeling \nthe water pressure, the lack of oxygen or
-      the cold."
-    - "Unlike me... I completely lost control that day.\nI could feel the bite of
-      the cold. \nBut it didn't bring me to the surface. \nInstead, my mind ran away
-      from my own frozen body.\nThere I became completely separated from myself.
-      \nSuddenly, I felt what she must have felt\nwhen... she died. But I survived
-      that death plunge. She didn't."
-    - "I can't help but think that I survived. \nI beated death by escaping my own
-      body. \nI let her rest, I let her fall asleep, \nwhile my mind was still awake. "
-    - "Strange feeling... I survived. \nFor no reason at all."
---- !u!1 &6626577333778634728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5817951795350572370}
-  - component: {fileID: 7427104013796541175}
-  - component: {fileID: 4681114173057824317}
-  m_Layer: 0
-  m_Name: Gate 1
-  m_TagString: Dropper
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5817951795350572370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626577333778634728}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03388062, y: -0.48453042, z: -1.2778016}
-  m_LocalScale: {x: 0.019999998, y: 0.5, z: 0.5}
-  m_Children:
-  - {fileID: 6302201825867958504}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &7427104013796541175
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626577333778634728}
-  m_Mesh: {fileID: -8678823145569952518, guid: 534d659522590164e8bc38f4665a2354, type: 3}
---- !u!23 &4681114173057824317
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626577333778634728}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c66a5a6eda2bf3049b09af7246f4d439, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+    - "I hate the way the team reacted after that experience.\nThey pulled me out
+      of the water. Like a fragile puppet.\nAnd sure enough, I was. But after that,
+      they only saw me \nas a vulnerable person. I was only \"the one who almost
+      died\"\n in their eyes. They only asked me how and if I was recovering. \nWell,
+      I don't know. \nWill I recover?"
+    - "Should I do something to make it go faster? \nSo that I can get back to our
+      old discussions \nabout the best oxygen diffuser or the new places we'd like
+      \nto discover on our next dive? I miss it..."
+    - "I must say that I was surprised when the lead diver asked me \nto prepare
+      the roadmap for the next dive with him. \nThe dive was planned at the exact
+      spot where I drowned.\nDid he forget? Do they at least listen when I tell them
+      how \nthis experience changed me. "
+    - "I don't want to forget. \nMaybe they do. Like with my cousin's death. \nWhen
+      it happened, everyone heard about it, \neveryone was sad for her. Everyone
+      is sad for me now."
+    - "But no one really cares about \nhow the encounter with death changes your
+      life."

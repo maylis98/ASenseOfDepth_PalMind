@@ -9,11 +9,11 @@ public class MemoryTrigger : MonoBehaviour
 
     public Memory memory;
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "MainCamera")
         {
-            Debug.Log("collision detected");
             onTrigger.Invoke();
         }
     }

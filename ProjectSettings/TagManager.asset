@@ -9,6 +9,9 @@ TagManager:
   - Torch
   - Touch
   - wayPointsParent
+  - Gate
+  - Zone
+  - Sphere
   layers:
   - Default
   - TransparentFX

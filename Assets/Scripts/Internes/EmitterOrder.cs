@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class EmitterOrder : MonoBehaviour
 {
-    void Update()
+    /*void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("data has been sent");
-            EventManager.TriggerEvent("UnlockMemory", 0);
+            
+            
         }
         
+    }*/
+
+    public void SendData()
+    {
+        Debug.Log("data has been sent");
+        EventManager.TriggerEvent("UnlockMemory", 0);
     }
 }
