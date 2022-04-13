@@ -26,8 +26,8 @@ public class MemoriesManager : MonoBehaviour
         GameObject spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
         GameObject spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
 
-        MeshRenderer gateMeshR = spawnedGate.GetComponent<MeshRenderer>();
-        gateMeshR.enabled = false;
+        /*MeshRenderer gateMeshR = spawnedGate.GetComponent<MeshRenderer>();
+        gateMeshR.enabled = false;*/
     }
 
        

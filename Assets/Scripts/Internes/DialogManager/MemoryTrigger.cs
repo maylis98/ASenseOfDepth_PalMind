@@ -9,6 +9,16 @@ public class MemoryTrigger : MonoBehaviour
 
     public Memory memory;
 
+    public GameObject[] floatingObjs;
+
+    private void Start()
+    {
+        foreach(GameObject floatObj in floatingObjs)
+        {
+            floatObj.SetActive(false);
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,5 +31,13 @@ public class MemoryTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<MemoryTextManager>().StartMemory(memory);
+    }
+
+    public void ShowParallelDimension()
+    {
+        foreach (GameObject floatObj in floatingObjs)
+        {
+            floatObj.SetActive(true);
+        }
     }
 }

@@ -15,12 +15,11 @@ public class ZoneManager : MonoBehaviour
         zoneMesh.enabled = false;
     }
 
-    public void ShowGate()
+    private void ShowGate()
     {
-        gatesInScene = GameObject.FindGameObjectsWithTag("Gate");
-        MeshRenderer gateMeshR = gatesInScene[0].GetComponent<MeshRenderer>();
-        gateMeshR.enabled = true;
+        FindObjectOfType<VFXGateManager>().GateAppear();
     }
+    
 
     /*public void EnableMesh()
     {

@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Memory
 {
-    public string name;
+    public string memoryNumber;
 
-    [TextArea(3,10)]
+    [TextArea(5,10)]
     public string[] sentences;
 
 }

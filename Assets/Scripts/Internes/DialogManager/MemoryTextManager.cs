@@ -5,21 +5,23 @@ using TMPro;
 
 public class MemoryTextManager : MonoBehaviour
 {
-    //public TextMesh[] textBoxes;
-    public TextMeshPro[] textBoxes;
-    public AudioSource[] textAudios;
-    
-    private int randomNumber;
+    public GameObject textBoxObj;
+    private TextMeshPro textBox;
+    private AudioSource textAudio;
 
-    //public GameObject startMemory;
-
-    //public Animator textBoxAnimator;
-    //public Animator endButton;
+    public GameObject[] wayPointsParent;
+    private Transform[] wayPoints;
+    private int currentPos;
+    private int lastPos;
 
     private Queue<string> sentences;
 
     void Start()
     {
+        textBox = textBoxObj.GetComponent<TextMeshPro>();
+        textAudio = textBoxObj.GetComponent<AudioSource>();
+        wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
+
         sentences = new Queue<string>();
     }
 
@@ -44,34 +46,60 @@ public class MemoryTextManager : MonoBehaviour
             return;
         }
 
-        //startMemory.SetActive(false);
+        moveToPoints();
+        
         string sentence = sentences.Dequeue();
-        //StopAllCoroutines();
-        TypeSentence(sentence);
-        //textBoxes.text = sentence;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
 
     }
 
-    private void TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
 
-        randomNumber = Random.Range(0, 5);
-        textBoxes[randomNumber].text = sentence;
-        textAudios[randomNumber].Play();
+        textBox.text = "";
 
-        /*foreach (char letter in sentence.ToCharArray())
+        foreach (char letter in sentence.ToCharArray())
         {
-            textBoxes[randomNumber].text += letter;
+            textBox.text += letter;
             yield return null;
-        }*/
+        }
     }
 
    void EndMemory()
     {
-        //textBoxAnimator.SetBool("appear", false);
-
+        //Clear text
+        textBox.text = "";
         Debug.Log("End of conversation");
-        //endButton.SetBool("appear", true);
+
+        //VFX State to "Unified"
+        FindObjectOfType<VFXMemoryManager>().UnifiedMemory();
+
+
+        //Start Pal's body fragment animation
+
+    }
+
+    private void moveToPoints()
+    {
+        currentPos = Random.Range(0, wayPoints.Length);
+
+        if (currentPos >= wayPoints.Length)
+        {
+            currentPos = 0;
+        }
+
+        if (currentPos == lastPos)
+        {
+            currentPos = Random.Range(0, wayPoints.Length);
+        }
+        lastPos = currentPos;
+
+        textBoxObj.transform.position = wayPoints[currentPos].transform.position;
+        textBoxObj.transform.rotation = wayPoints[currentPos].transform.rotation;
+
+        textAudio.Play();
+
     }
 
 

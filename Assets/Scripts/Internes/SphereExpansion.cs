@@ -129,6 +129,8 @@ public class SphereExpansion : MonoBehaviour
     {
         zonesInScene = GameObject.FindGameObjectsWithTag("Zone");
         transform.position = zonesInScene[0].transform.position + offsetFromObj;
+
+        //make Zone appear
         MeshRenderer zoneMesh = zonesInScene[0].GetComponent<MeshRenderer>();
         zoneMesh.enabled = true;
         FindObjectOfType<RotatingTextOnCircle>().InvokeRepeating("Blink", 0, waitTime);
