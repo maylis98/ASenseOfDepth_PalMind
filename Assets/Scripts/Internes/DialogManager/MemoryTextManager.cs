@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MemoryTextManager : MonoBehaviour
 {
-    public TextMesh[] textBoxes;
+    //public TextMesh[] textBoxes;
+    public TextMeshPro[] textBoxes;
     public AudioSource[] textAudios;
     
     private int randomNumber;
