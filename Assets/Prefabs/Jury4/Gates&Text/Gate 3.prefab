@@ -487,8 +487,8 @@ VisualEffect:
           serializedVersion: 2
           key0: {r: 1, g: 1, b: 1, a: 0}
           key1: {r: 1, g: 1, b: 1, a: 1}
-          key2: {r: 0.06869464, g: 0, b: 0.42352942, a: 1}
-          key3: {r: 1.4692196, g: 0, b: 6.2342596, a: 0}
+          key2: {r: 1, g: 0.12475102, b: 0, a: 1}
+          key3: {r: 6.23426, g: 0.9145345, b: 0, a: 0}
           key4: {r: 1, g: 1, b: 1, a: 0}
           key5: {r: 1, g: 1, b: 1, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 8628933351137258985}
   - component: {fileID: 443276502865950466}
   m_Layer: 0
-  m_Name: Gate 2
+  m_Name: Gate 3
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,8 +756,8 @@ VisualEffect:
           serializedVersion: 2
           key0: {r: 1, g: 1, b: 1, a: 0}
           key1: {r: 1, g: 1, b: 1, a: 1}
-          key2: {r: 0.06869464, g: 0, b: 0.42352942, a: 1}
-          key3: {r: 1.4692196, g: 0, b: 6.2342596, a: 0}
+          key2: {r: 1, g: 0.12475102, b: 0, a: 1}
+          key3: {r: 6.23426, g: 0.9145345, b: 0, a: 0}
           key4: {r: 1, g: 1, b: 1, a: 0}
           key5: {r: 1, g: 1, b: 1, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1095,20 +1095,12 @@ MonoBehaviour:
   memory:
     memoryNumber: 2
     sentences:
-    - I hate the way the team reacted after that experience. They pulled me out of
-      the water. Like a fragile puppet. And sure enough, I was. But after that, they
-      only saw me as a vulnerable person. I was only "the one who almost died" in
-      their eyes.
-    - They only asked me how and if I was recovering. Well, I don't know. Will I
-      recover? Should I do something to make it go faster?
-    - I must say that I was surprised when the lead diver asked me if I wanted to
-      prepare the roadmap for the next dive with him. The dive was planned at the
-      exact spot where I drowned. Did he forget?
-    - Do they at least listen when I tell them how this experience changed me? I
-      don't want to forget. Maybe they do. Like with my cousin's death.
-    - When it happened, everyone heard about it, everyone was sad for her. Everyone
-      is sad for me now.
-    - But no one really cares about how the encounter with death changes your life.
+    - LALALALA
+    - blalalal
+    - bibilbibi
+    - lalalalal
+    - lollolol
+    - lililililililili
   floatingObjs:
   - {fileID: 4627720966642016627}
   - {fileID: 8504987631276441689}
@@ -1162,7 +1154,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 78fd1985c06c43b49ae6a78f9198e889, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 097e6286d2cb1fe4aa078c162a2e1188, type: 2}
 --- !u!1 &4951106038999971444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,14 +6262,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290442422959566543}
-  m_LocalRotation: {x: -0.31730464, y: 0, z: 0, w: 0.94832367}
-  m_LocalPosition: {x: 0, y: -0, z: 0.795}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41, y: -0.1, z: -0.36}
+  m_LocalScale: {x: 150, y: 150, z: 150}
   m_Children:
   - {fileID: 7634262874623315872}
   m_Father: {fileID: 8504987631276441766}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -37, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5758303251387268048
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6285,7 +6277,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290442422959566543}
-  m_Mesh: {fileID: -3014937882001165872, guid: eaceadf8b8e839243a87e9b43673b8ee, type: 3}
+  m_Mesh: {fileID: 2959467708922500008, guid: afcf2894440955144889f19179b8317f, type: 3}
 --- !u!23 &7497768825937121050
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6527,7 +6519,7 @@ GameObject:
   - component: {fileID: 5724660553421427830}
   - component: {fileID: 5557724750261956641}
   m_Layer: 0
-  m_Name: Coral 2
+  m_Name: Coral 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6540,14 +6532,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8504987631276441689}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.85, y: 0.52, z: 0}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -5.11, y: 2.95, z: 0.86}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8666686933619258485}
   m_Father: {fileID: 4324811447431901687}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!2083052967 &8504987631276441767
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -6556,7 +6548,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8504987631276441689}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 4e488d9aba4ef0f4c8824b5d0dd99710, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 9a5642bae58b0d84e85feb2667c22559, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -6584,7 +6576,7 @@ VisualEffect:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 40, y: 40, z: 40}
+      - m_Value: {x: 5, y: 5, z: 5}
         m_Name: Transform_scale
         m_Overridden: 1
     m_Vector4f:
@@ -6629,8 +6621,8 @@ VisualEffect:
           serializedVersion: 2
           key0: {r: 1, g: 1, b: 1, a: 0}
           key1: {r: 1, g: 1, b: 1, a: 1}
-          key2: {r: 0.06869464, g: 0, b: 0.42352942, a: 1}
-          key3: {r: 1.4692196, g: 0, b: 6.2342596, a: 0}
+          key2: {r: 1, g: 0.11814346, b: 0, a: 1}
+          key3: {r: 6.23426, g: 0.9145345, b: 0, a: 0}
           key4: {r: 1, g: 1, b: 1, a: 0}
           key5: {r: 0, g: 0, b: 0, a: 0}
           key6: {r: 0, g: 0, b: 0, a: 0}

@@ -154,12 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpheresOfMemory:
   - {fileID: 3610988817717689725, guid: d056054074db0ba4b9fae89a30fbb7be, type: 3}
-  - {fileID: 3541458692702331936, guid: d47317af309b8804cba040d7bb31a748, type: 3}
-  - {fileID: 2382318364775680354, guid: 87398161390f2344dbf6777662c80a74, type: 3}
+  - {fileID: 3610988817717689725, guid: 605f78a766d92cd4fa40971c59d9fef2, type: 3}
+  - {fileID: 3610988817717689725, guid: 2f55fe99dbd67bb48be9886d6070852d, type: 3}
   GatesOfMemory:
   - {fileID: 3985406069563779917, guid: 6cedf5ce00a85df4aaf566dd2bd59c19, type: 3}
-  - {fileID: 2367431973519649728, guid: b9e9a28f0b0b5fa4aaa9bc409808e0e6, type: 3}
-  - {fileID: 3985406069563779917, guid: 6cedf5ce00a85df4aaf566dd2bd59c19, type: 3}
+  - {fileID: 3985406069563779917, guid: d7315cd319d75e547a0e682d9d03ee53, type: 3}
+  - {fileID: 3985406069563779917, guid: 9e21c9dff10d8224e994e387beb9153c, type: 3}
   triggerZone: {fileID: 1439092732}
   offsetFromObj: {x: 0, y: 3, z: 0}
   initGateRotation: {x: 0, y: 0, z: 0}
