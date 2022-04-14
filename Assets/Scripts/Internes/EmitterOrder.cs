@@ -18,5 +18,6 @@ public class EmitterOrder : MonoBehaviour
     {
         Debug.Log("data has been sent");
         EventManager.TriggerEvent("UnlockMemory", 0);
+        EventManager.TriggerEvent("cleanCanvas", true);
     }
 }

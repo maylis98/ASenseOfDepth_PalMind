@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ZoneManager : MonoBehaviour
 {
+    bool deleteZone;
+
+    public GameObject zone;
+
     private GameObject[] gatesInScene;
 
     MeshRenderer zoneMesh;
@@ -13,13 +17,26 @@ public class ZoneManager : MonoBehaviour
     {
         zoneMesh = GetComponent<MeshRenderer>();
         zoneMesh.enabled = false;
+        deleteZone = false;
+
+        EventManager.StartListening("endZone", endZone);
     }
 
     private void ShowGate()
     {
         FindObjectOfType<VFXGateManager>().GateAppear();
     }
-    
+
+    private void endZone(object data)
+    {
+        if(deleteZone = (bool)data)
+        {
+            zone.SetActive(false);
+        }
+        
+    }
+
+
 
     /*public void EnableMesh()
     {

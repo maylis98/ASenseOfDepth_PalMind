@@ -45,6 +45,8 @@ public class SphereExpansion : MonoBehaviour
     //Text blink time
     public float waitTime;
 
+    bool deleteZone;
+
 
     private void Awake()
     {
@@ -58,6 +60,9 @@ public class SphereExpansion : MonoBehaviour
 
         wayPointsParent = GameObject.FindGameObjectsWithTag("wayPointsParent");
         wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
+
+        deleteZone = false;
+        EventManager.StartListening("endZone", endZone);
     }
 
     private void Update()
@@ -135,13 +140,22 @@ public class SphereExpansion : MonoBehaviour
         zoneMesh.enabled = true;
         FindObjectOfType<RotatingTextOnCircle>().InvokeRepeating("Blink", 0, waitTime);
         sound.Play();
-        Debug.Log("sphere finished its tour");
     }
 
     public void scaleOverTime()
     {
         Vector3 vec = new Vector3(Mathf.Sin(Time.time * speedOfPulse), Mathf.Sin(Time.time * speedOfPulse), Mathf.Sin(Time.time * speedOfPulse));
         transform.localScale = vec;
+    }
+
+
+    private void endZone(object data)
+    {
+        if (deleteZone = (bool)data)
+        {
+            Debug.Log("deleteSphere has been received");
+            this.gameObject.SetActive(false);
+        }
     }
 
 

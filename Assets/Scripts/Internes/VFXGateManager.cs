@@ -19,5 +19,10 @@ public class VFXGateManager : MonoBehaviour
         VFXGate.SetFloat("Number of particules", 100000f);
     }
 
+    public void GateDisappear()
+    {
+        VFXGate.SetFloat("Number of particules", 0f);
+    }
+
 
 }

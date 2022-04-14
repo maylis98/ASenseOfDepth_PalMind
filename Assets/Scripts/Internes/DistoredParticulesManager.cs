@@ -5,6 +5,15 @@ using UnityEngine;
 public class DistoredParticulesManager : MonoBehaviour
 {
     //public GameObject postProcessingVolume;
+    private bool isFinished;
+    public GameObject ObjToDestroy;
+
+    void Awake()
+    {
+        EventManager.StartListening("disabledDistoredVision", disableDistoredVision);
+        isFinished = false;
+
+    }
 
     public void distoredVision()
     {
@@ -13,5 +22,17 @@ public class DistoredParticulesManager : MonoBehaviour
         this.transform.position = holderPos.position;
         this.transform.parent = holderPos;
         //postProcessingVolume.SetActive(true);
+    }
+
+    private void disableDistoredVision(object data)
+    {
+
+        Debug.Log("we received isFinished");
+
+        if(isFinished = (bool)data)
+        {
+            Destroy(ObjToDestroy);
+        }
+        
     }
 }

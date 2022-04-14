@@ -15,19 +15,37 @@ public class MemoriesManager : MonoBehaviour
     private Vector3 offsetFromObj;
     public Vector3 initGateRotation;
 
+    private GameObject spawnedSphere;
+    private GameObject spawnedGate;
+    private int indexOfMemory;
+    private bool theEnd;
+
     void Awake()
     {
+        theEnd = false;
         EventManager.StartListening("UnlockMemory", UnlockMemory);
+        EventManager.StartListening("endOfMemory", endThisMemory);
     }
 
     private void UnlockMemory(object data)
     {
-        Debug.Log("we received {data}");
-        GameObject spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
-        GameObject spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
+        spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
+        spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
 
-        /*MeshRenderer gateMeshR = spawnedGate.GetComponent<MeshRenderer>();
-        gateMeshR.enabled = false;*/
+        data = indexOfMemory;
+        Debug.Log("index of current memory is " + indexOfMemory);
+
+    }
+
+    private void endThisMemory(object data)
+    {
+        if(theEnd = (bool)data)
+        {
+            Destroy(spawnedSphere);
+            Destroy(spawnedGate);
+            FindObjectOfType<CanvasManager>().deleteEndText();
+            Debug.Log("c'est la fin de ce souvenir");
+        }
     }
 
        
