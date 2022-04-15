@@ -8,8 +8,10 @@ public class VFXMemoryManager : MonoBehaviour
     public VisualEffect VFXCoral;
     public GameObject enceinte;
     public GameObject palBodyFragment;
+    private AudioSource audioBodyFragment;
 
     private Animator enceinteAnimator;
+    private AudioSource enceinteAudio;
     private VisualEffect VFXenceinte;
 
     private BoxCollider VFXCoralCollider;
@@ -24,12 +26,15 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoralCollider = VFXCoral.GetComponent<BoxCollider>();
         VFXCoralCollider.enabled = false;
 
+        enceinteAudio = enceinte.GetComponent<AudioSource>();
         enceinteAnimator = enceinte.GetComponent<Animator>();
         VFXenceinte = enceinte.GetComponent<VisualEffect>();
 
+        audioBodyFragment = palBodyFragment.GetComponent<AudioSource>();
 
         //Desactivate Pal Body's fragment at first
         palBodyFragment.SetActive(false);
+        audioBodyFragment.Play();
         
     }
 
@@ -45,6 +50,7 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoral.SetVector3("Transform_scale", new Vector3(5, 5, 5));
 
         enceinteAnimator.SetBool("endPoint", true);
+        enceinteAudio.Play();
 
         VFXCoralCollider.enabled = true;
 
@@ -62,6 +68,7 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoral.SetFloat("Number of particules", 0f);
 
         palBodyFragment.SetActive(true);
+        audioBodyFragment.Play();
 
     }
 }

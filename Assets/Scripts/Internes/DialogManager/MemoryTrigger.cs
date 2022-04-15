@@ -14,9 +14,13 @@ public class MemoryTrigger : MonoBehaviour
 
     public Animator vaseAnimator;
 
+    private AudioSource audioDistortionField;
+
 
     private void Start()
     {
+        audioDistortionField = this.gameObject.GetComponent<AudioSource>();
+
         foreach (GameObject floatObj in floatingObjs)
         {
             floatObj.SetActive(false);
@@ -39,6 +43,8 @@ public class MemoryTrigger : MonoBehaviour
 
     public void ShowParallelDimension()
     {
+        audioDistortionField.Play();
+
         foreach (GameObject floatObj in floatingObjs)
         {
             floatObj.SetActive(true);
@@ -47,6 +53,8 @@ public class MemoryTrigger : MonoBehaviour
 
     public void HideParallelDimension()
     {
+        audioDistortionField.Play();
+
         vaseAnimator.SetBool("disappear", true);
         floatingObjs[0].SetActive(false);
     }

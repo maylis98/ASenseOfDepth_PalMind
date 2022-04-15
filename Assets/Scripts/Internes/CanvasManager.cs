@@ -10,12 +10,14 @@ public class CanvasManager : MonoBehaviour
 
     private bool memoryAppear;
     private Animator endTextAnimator;
+    private AudioSource endTextAudio;
 
     void Start()
     {
         memoryAppear = false;
         endText.SetActive(false);
         endTextAnimator = endText.GetComponent<Animator>();
+        endTextAudio = endText.GetComponent<AudioSource>();
 
         EventManager.StartListening("cleanCanvas", memoryCanvas);
         EventManager.StartListening("returnGame", returnGameControls);
@@ -38,6 +40,7 @@ public class CanvasManager : MonoBehaviour
             Debug.Log("return to game received");
             MainControls.SetActive(true);
             endText.SetActive(true);
+            endTextAudio.Play();
             endTextAnimator.SetBool("disappear", false);
         }
     }
@@ -45,5 +48,6 @@ public class CanvasManager : MonoBehaviour
     public void deleteEndText()
     {
         endTextAnimator.SetBool("disappear", true);
+        endTextAudio.Play();
     }
 }

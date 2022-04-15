@@ -92,6 +92,7 @@ public class SphereExpansion : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
 
+        
         //Change VFX values
         vfx.SetFloat("Lifetime Expansion", 0.55f);
         vfx.SetFloat("Spread", 0f);
@@ -99,6 +100,7 @@ public class SphereExpansion : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
+        sound.Play();
         changePos(true);
         timeToMove = true;
 

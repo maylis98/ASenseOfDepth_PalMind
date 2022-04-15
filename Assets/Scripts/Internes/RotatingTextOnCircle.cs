@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class RotatingTextOnCircle : MonoBehaviour
 {
-
+    private AudioSource audioText;
     private MeshRenderer textMeshR;
 
     private void Start()
     {
         textMeshR = GetComponent<MeshRenderer>();
         textMeshR.enabled = false;
+        audioText = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -20,6 +21,8 @@ public class RotatingTextOnCircle : MonoBehaviour
 
     public void Blink()
     {
+        audioText.Play();
+
             if(textMeshR.enabled == false)
             {
                 textMeshR.enabled = true;

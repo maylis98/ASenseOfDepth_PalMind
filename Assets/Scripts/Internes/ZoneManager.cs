@@ -7,6 +7,7 @@ public class ZoneManager : MonoBehaviour
     bool deleteZone;
 
     public GameObject zone;
+    public AudioSource audioZone;
 
     private GameObject[] gatesInScene;
 
@@ -31,15 +32,11 @@ public class ZoneManager : MonoBehaviour
     {
         if(deleteZone = (bool)data)
         {
+            audioZone.Stop();
             zone.SetActive(false);
+            
         }
         
     }
 
-
-
-    /*public void EnableMesh()
-    {
-        zoneMesh.enabled = true;
-    }*/
 }
