@@ -59,7 +59,7 @@ public class SphereExpansion : MonoBehaviour
         StartCoroutine(sphereExpand());
 
         wayPointsParent = GameObject.FindGameObjectsWithTag("wayPointsParent");
-        wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
+        //wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
 
         deleteZone = false;
         EventManager.StartListening("endZone", endZone);
@@ -114,6 +114,7 @@ public class SphereExpansion : MonoBehaviour
 
     private void moveToPoints()
     {
+        wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
         current = Random.Range(0, wayPoints.Length);
 
         if(current >= wayPoints.Length)

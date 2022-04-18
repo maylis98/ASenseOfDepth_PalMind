@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MemoriesManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class MemoriesManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] GatesOfMemory;
+
+    public UnityEvent onEnd;
 
     public GameObject triggerZone;
     [SerializeField]
@@ -44,6 +47,7 @@ public class MemoriesManager : MonoBehaviour
             Destroy(spawnedSphere);
             Destroy(spawnedGate);
             FindObjectOfType<CanvasManager>().deleteEndText();
+            onEnd.Invoke();
             Debug.Log("c'est la fin de ce souvenir");
         }
     }

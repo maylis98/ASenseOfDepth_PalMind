@@ -1,23 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EmitterOrder : MonoBehaviour
 {
-    /*void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-            
-        }
-        
-    }*/
-
-    public void SendData()
+    public void SendData(int memoryNumber)
     {
         Debug.Log("data has been sent");
-        EventManager.TriggerEvent("UnlockMemory", 2);
+        EventManager.TriggerEvent("UnlockMemory", memoryNumber);
         EventManager.TriggerEvent("cleanCanvas", true);
     }
 }
