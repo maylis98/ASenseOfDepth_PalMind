@@ -15,15 +15,20 @@ public class DialogManager : MonoBehaviour
     public Animator endButton;
 
     private Queue<string> sentences;
+    private bool introIsEnd;
 
     void Start()
     {
+        introIsEnd = false;
         sentences = new Queue<string>();
+        EventManager.StartListening("show End Button", showEndButton);
     }
 
     public void StartDialogue(Dialog dialogue)
     {
+        dialogueBoxAnimator.SetBool("blink", false);
         dialogueBoxAnimator.SetBool("appear", true);
+        
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -43,12 +48,12 @@ public class DialogManager : MonoBehaviour
         }
 
         startGame.SetActive(false);
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
         //dialogueText.text = sentence;
       
-
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -62,14 +67,24 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-   void EndDialogue()
-    {
-        intro.SetActive(false);
-        dialogueBoxAnimator.SetBool("appear", false);
-
+   private void EndDialogue()
+   {
+        dialogueBoxAnimator.SetBool("blink", true);
+        dialogueText.text = "LISTEN";
         Debug.Log("End of conversation");
-        endButton.SetBool("appear", true);
+            
+   }
+
+    public void showEndButton(object data)
+    {
+        if (introIsEnd = (bool)data)
+        {
+            intro.SetActive(false);
+            dialogueBoxAnimator.SetBool("appear", false);
+
+            endButton.SetBool("appear", true);
+        }
     }
 
-    
+
 }

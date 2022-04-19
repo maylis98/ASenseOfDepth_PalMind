@@ -11,4 +11,5 @@ public class EmitterOrder : MonoBehaviour
         EventManager.TriggerEvent("UnlockMemory", memoryNumber);
         EventManager.TriggerEvent("cleanCanvas", true);
     }
+
 }

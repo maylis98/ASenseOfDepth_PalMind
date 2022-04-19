@@ -5,7 +5,6 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject MainControls;
-    public GameObject TemporaryLauncher;
     public GameObject endText;
 
     private bool memoryAppear;
@@ -28,8 +27,8 @@ public class CanvasManager : MonoBehaviour
         if(memoryAppear = (bool)data)
         {
             Debug.Log("a memory has appeared");
+            FindObjectOfType<NativeWebsocketChat>().SendChatMessage("player static");
             MainControls.SetActive(false);
-            TemporaryLauncher.SetActive(false);
         }
     }
 

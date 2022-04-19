@@ -62,6 +62,12 @@ public class NativeWebsocketChat : MonoBehaviour
 
                 switch (message)
                 {
+                    case "start intro text":
+                        FindObjectOfType<DialogTrigger>().TriggerDialogue(1);
+                        break;
+                    case "enter main scene":
+                        EventManager.TriggerEvent("show End Button", true);
+                        break;
                     case "memory 1 is called":
                         FindObjectOfType<EmitterOrder>().SendData(0);
                         Debug.Log("I will display memory 1");
