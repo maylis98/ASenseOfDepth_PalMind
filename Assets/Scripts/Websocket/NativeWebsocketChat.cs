@@ -62,12 +62,36 @@ public class NativeWebsocketChat : MonoBehaviour
 
                 switch (message)
                 {
+                    //INTRO MANAGER
                     case "start intro text":
                         FindObjectOfType<DialogTrigger>().TriggerDialogue(1);
                         break;
                     case "enter main scene":
                         EventManager.TriggerEvent("show End Button", true);
                         break;
+
+                    //SHOW THOUGHTS
+                    case "look around":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(0);
+                        break;
+                    case "distortion field":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(1);
+                        break;
+                    case "front water":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(2);
+                        break;
+                    case "strange feet":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(3);
+                        break;
+                    case "water up":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(4);
+                        break;
+                    case "finds box":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(5);
+                        break;
+
+
+                    //SHOW MEMORY
                     case "memory 1 is called":
                         FindObjectOfType<EmitterOrder>().SendData(0);
                         Debug.Log("I will display memory 1");
@@ -80,6 +104,7 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<EmitterOrder>().SendData(2);
                         Debug.Log("I will display memory 3");
                         break;
+
                     default:
                         Debug.Log("Nothing to display");
                         break;
