@@ -12,12 +12,11 @@ public class ZoneManager : MonoBehaviour
     private GameObject[] gatesInScene;
 
     MeshRenderer zoneMesh;
-    MeshRenderer childrenZoneMesh;
 
     private void Start()
     {
-        zoneMesh = GetComponent<MeshRenderer>();
-        zoneMesh.enabled = false;
+        /*zoneMesh = GetComponent<MeshRenderer>();
+        zoneMesh.enabled = false;*/
         deleteZone = false;
 
         EventManager.StartListening("endZone", endZone);

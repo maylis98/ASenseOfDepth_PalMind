@@ -104,7 +104,7 @@ public class SphereExpansion : MonoBehaviour
         changePos(true);
         timeToMove = true;
 
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(20);
 
         changePos(false);
         //timeToMove = false;
@@ -135,12 +135,12 @@ public class SphereExpansion : MonoBehaviour
 
     private void sphereToZone()
     {
+        //Place sphere above zone
         zonesInScene = GameObject.FindGameObjectsWithTag("Zone");
         transform.position = zonesInScene[0].transform.position + offsetFromObj;
 
-        //make Zone appear
-        MeshRenderer zoneMesh = zonesInScene[0].GetComponent<MeshRenderer>();
-        zoneMesh.enabled = true;
+        //Make zone appear
+        FindObjectOfType<SpriteColorManager>().showZone();
         FindObjectOfType<RotatingTextOnCircle>().InvokeRepeating("Blink", 0, waitTime);
         sound.Play();
     }
