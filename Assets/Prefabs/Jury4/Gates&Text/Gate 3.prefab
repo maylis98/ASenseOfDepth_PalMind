@@ -296,6 +296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger:
     m_PersistentCalls:
+      m_Calls: []
+  mouseDown:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1615569150354097972}
         m_TargetAssemblyTypeName: MemoryTextManager, Assembly-CSharp
@@ -6574,6 +6577,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger:
     m_PersistentCalls:
+      m_Calls: []
+  mouseDown:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6212730536452650499}
         m_TargetAssemblyTypeName: EndMemory, Assembly-CSharp
@@ -6930,6 +6936,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger:
+    m_PersistentCalls:
+      m_Calls: []
+  mouseDown:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6165239519084016918}

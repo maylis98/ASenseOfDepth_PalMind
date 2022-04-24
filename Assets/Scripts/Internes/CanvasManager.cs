@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CanvasManager : MonoBehaviour
 {
     public GameObject MainControls;
     public GameObject endText;
+    public TextMeshProUGUI instructionsBox;
+    private TextMeshProUGUI endTextBox;
+    
 
     private bool memoryAppear;
     private Animator endTextAnimator;
@@ -17,6 +21,7 @@ public class CanvasManager : MonoBehaviour
         endText.SetActive(false);
         endTextAnimator = endText.GetComponent<Animator>();
         endTextAudio = endText.GetComponent<AudioSource>();
+        endTextBox = endText.GetComponent<TextMeshProUGUI>();
 
         EventManager.StartListening("cleanCanvas", memoryCanvas);
         EventManager.StartListening("returnGame", returnGameControls);
@@ -39,6 +44,8 @@ public class CanvasManager : MonoBehaviour
             Debug.Log("return to game received");
             MainControls.SetActive(true);
             endText.SetActive(true);
+            sentenceInEndText("...I can feel myself again...");
+            endTextBox.text = "I can feel myself";
             endTextAudio.Play();
             endTextAnimator.SetBool("disappear", false);
         }
@@ -49,4 +56,16 @@ public class CanvasManager : MonoBehaviour
         endTextAnimator.SetBool("disappear", true);
         endTextAudio.Play();
     }
+
+    public void sentenceInEndText(string sentence)
+    {
+        endTextBox.text = sentence;
+    }
+
+    public void sentenceInInstructionsBox(string instructions)
+    {
+        instructionsBox.text = instructions;
+    }
+   
+
 }

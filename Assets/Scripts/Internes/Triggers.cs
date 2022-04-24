@@ -9,6 +9,10 @@ public class Triggers : MonoBehaviour
     private UnityEvent trigger;
 
     [SerializeField]
+    private UnityEvent mouseDown;
+
+
+    [SerializeField]
     private UnityEvent after1Second;
 
     private void OnTriggerEnter(Collider other)
@@ -29,5 +33,10 @@ public class Triggers : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         after1Second.Invoke();
+    }
+
+    private void OnMouseDown()
+    {
+        mouseDown.Invoke();
     }
 }

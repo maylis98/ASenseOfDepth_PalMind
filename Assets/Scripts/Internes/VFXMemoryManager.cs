@@ -70,5 +70,8 @@ public class VFXMemoryManager : MonoBehaviour
         palBodyFragment.SetActive(true);
         audioBodyFragment.Play();
 
+        FindObjectOfType<CanvasManager>().sentenceInEndText("This is a part of Pal's body");
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click ]");
+
     }
 }

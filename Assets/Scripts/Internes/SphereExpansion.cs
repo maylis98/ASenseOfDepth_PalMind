@@ -79,10 +79,12 @@ public class SphereExpansion : MonoBehaviour
         if (isActivate)
         {
             InvokeRepeating("moveToPoints", 1, delay);
+            FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Look around ]");
         }
         else
         {
             CancelInvoke("moveToPoints");
+            FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
             return;
         }
         

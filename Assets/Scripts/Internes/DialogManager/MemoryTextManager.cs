@@ -46,6 +46,7 @@ public class MemoryTextManager : MonoBehaviour
             return;
         }
 
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
         moveToPoints();
         
         string sentence = sentences.Dequeue();
@@ -70,6 +71,8 @@ public class MemoryTextManager : MonoBehaviour
     {
         //Clear text
         textBox.text = "";
+        FindObjectOfType<CanvasManager>().sentenceInEndText("Pal's memory is now complete");
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click on the memory ]");
         Debug.Log("End of conversation");
 
         //VFX State to "Unified"

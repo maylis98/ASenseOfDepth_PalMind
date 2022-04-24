@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4f47ae70f09e6f8479c5ff5fbad2b76f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Px Grotesk
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6d56dda2c33e6c549b439a9683c80100, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

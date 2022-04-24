@@ -11,11 +11,17 @@ public class MemoriesManager : MonoBehaviour
     [SerializeField]
     private GameObject[] GatesOfMemory;
 
+    [SerializeField]
+    private GameObject PalBody;
+
+
     public UnityEvent onEnd;
 
     public GameObject triggerZone;
     [SerializeField]
     private Vector3 offsetFromObj;
+    [SerializeField]
+    private Vector3 offsetFromCamera;
     public Vector3 initGateRotation;
 
     private GameObject spawnedSphere;
@@ -50,6 +56,11 @@ public class MemoriesManager : MonoBehaviour
             onEnd.Invoke();
             Debug.Log("c'est la fin de ce souvenir");
         }
+    }
+    public void showPalBody()
+    {
+        spawnedGate = Instantiate(PalBody, Camera.main.transform.position + offsetFromCamera, Quaternion.Euler(0, 180, 0));
+        FindObjectOfType<PalBodyManager>().showBody();
     }
 
        

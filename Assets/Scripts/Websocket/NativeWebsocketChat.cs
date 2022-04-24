@@ -89,6 +89,13 @@ public class NativeWebsocketChat : MonoBehaviour
                     case "finds box":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(5);
                         break;
+                    case "feel myself":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(6);
+                        break;
+                    case "end of Game":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(7);
+                        FindObjectOfType<MemoriesManager>().showPalBody();
+                        break;
 
 
                     //SHOW MEMORY
