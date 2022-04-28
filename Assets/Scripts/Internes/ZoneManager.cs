@@ -1,41 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ZoneManager : MonoBehaviour
 {
-    bool deleteZone;
-
+    
     public GameObject zone;
     public AudioSource audioZone;
+
+    [SerializeField]
+    private UnityEvent whenZoneIsShown;
+
+    [SerializeField]
+    private UnityEvent whenZoneIsHidden;
 
     private GameObject[] gatesInScene;
 
     MeshRenderer zoneMesh;
 
-    private void Start()
+    private void Awake()
     {
         /*zoneMesh = GetComponent<MeshRenderer>();
         zoneMesh.enabled = false;*/
-        deleteZone = false;
 
-        EventManager.StartListening("endZone", endZone);
+        EventManager.StartListening("endZone", disableZone);
     }
 
-    private void ShowGate()
+    public void showGate()
     {
         FindObjectOfType<VFXGateManager>().GateAppear();
     }
 
-    private void endZone(object data)
+    private void disableZone(object data)
     {
-        if(deleteZone = (bool)data)
+        if((bool)data)
         {
+            Debug.Log("endZoneIsReceived");
             audioZone.Stop();
-            zone.SetActive(false);
+            whenZoneIsHidden.Invoke();
+            //zone.SetActive(false);
             
         }
         
+    }
+
+    public void showZone()
+    {
+        audioZone.Play();
+        whenZoneIsShown.Invoke();
     }
 
 }

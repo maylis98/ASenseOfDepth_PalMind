@@ -2764,15 +2764,15 @@ MonoBehaviour:
   m_text: 'During a winter river swim, (s)he lost control. While (s)he was swimming,
     (s)he suddenly no longer felt like (s)he had to come up to the surface to breathe. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b05ae4f1a7962634a8d4c7d3220cfee8, type: 2}
-  m_sharedMaterial: {fileID: 2065115830244543913, guid: b05ae4f1a7962634a8d4c7d3220cfee8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57f94ef36e672f844842d3766b594058, type: 2}
+  m_sharedMaterial: {fileID: 80393421418118997, guid: 57f94ef36e672f844842d3766b594058, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294931530
-  m_fontColor: {r: 0.28930813, g: 0.4551354, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2789,19 +2789,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.1
-  m_fontSizeBase: 38.1
+  m_fontSize: 29.11
+  m_fontSizeBase: 29.11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 6.87
+  m_lineSpacing: 18
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

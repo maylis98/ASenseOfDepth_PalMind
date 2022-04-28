@@ -40,6 +40,7 @@ public class MemoriesManager : MonoBehaviour
     {
         spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
         spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
+        EventManager.TriggerEvent("showZone", true);
 
         data = indexOfMemory;
         Debug.Log("index of current memory is " + indexOfMemory);

@@ -7,6 +7,7 @@ public class ThoughtsManager : MonoBehaviour
 {
     public TextMeshProUGUI thoughtsText;
     public Animator thoughtsBoxAnimator;
+    public AudioSource thoughtsAudio;
     public GameObject continueButton;
 
     private Queue<string> sentences;
@@ -21,6 +22,7 @@ public class ThoughtsManager : MonoBehaviour
     {
         thoughtsBoxAnimator.SetBool("blink", false);
         thoughtsBoxAnimator.SetBool("appear", true);
+        thoughtsAudio.Play();
         continueButton.SetActive(true);
         
         sentences.Clear();

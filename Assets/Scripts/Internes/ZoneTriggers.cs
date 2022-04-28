@@ -7,8 +7,15 @@ public class ZoneTriggers : MonoBehaviour
 {
     [SerializeField]
     private UnityEvent triggerWithCam;
+
     [SerializeField]
-    private UnityEvent triggerWithSphere;
+    private UnityEvent mouseDown;
+
+    private void Start()
+    {
+        BoxCollider triggerCollider = GetComponent<BoxCollider>();
+        triggerCollider.enabled = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,13 +23,14 @@ public class ZoneTriggers : MonoBehaviour
         {
             triggerWithCam.Invoke();
         }
-
-        /*if (other.CompareTag("Sphere"))
-        {
-            Debug.Log("collision here");
-            triggerWithSphere.Invoke();
-        }*/
     }
+
+    private void OnMouseDown()
+    {
+        mouseDown.Invoke();
+    }
+
+
 
 
 }

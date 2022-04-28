@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: SortsMillGoudy-Regular SDF
+  m_Name: SortsMillGoudy-Regular SDF 1
   m_EditorClassIdentifier: 
-  hashCode: 779301099
+  hashCode: -1744626694
   material: {fileID: 1629921972774739206}
-  materialHashCode: 851707243
+  materialHashCode: -1669130726
   m_Version: 1.1.0
   m_SourceFontFileGUID: fe4bb83811b63cb4b8ef109fc8175847
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: fe4bb83811b63cb4b8ef109fc8175847, type: 3}

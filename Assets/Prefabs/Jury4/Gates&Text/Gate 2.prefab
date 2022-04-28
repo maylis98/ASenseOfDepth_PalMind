@@ -6918,6 +6918,7 @@ MonoBehaviour:
   VFXCoral: {fileID: 8504987631276441767}
   enceinte: {fileID: 3113940235819873416}
   palBodyFragment: {fileID: 8290442422959566543}
+  UnifiedVFXscale: {x: 40, y: 40, z: 40}
 --- !u!65 &5724660553421427830
 BoxCollider:
   m_ObjectHideFlags: 0

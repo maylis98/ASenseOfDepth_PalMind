@@ -142,7 +142,7 @@ public class SphereExpansion : MonoBehaviour
         transform.position = zonesInScene[0].transform.position + offsetFromObj;
 
         //Make zone appear
-        FindObjectOfType<SpriteColorManager>().showZone();
+        FindObjectOfType<ZoneManager>().showZone();
         FindObjectOfType<RotatingTextOnCircle>().InvokeRepeating("Blink", 0, waitTime);
         sound.Play();
     }

@@ -10,8 +10,13 @@ public class RotatingTextOnCircle : MonoBehaviour
     private void Start()
     {
         textMeshR = GetComponent<MeshRenderer>();
-        textMeshR.enabled = false;
         audioText = GetComponent<AudioSource>();
+        reInitialiseText();
+    }
+
+    private void reInitialiseText()
+    {
+        textMeshR.enabled = false;
     }
 
     void Update()
@@ -21,7 +26,6 @@ public class RotatingTextOnCircle : MonoBehaviour
 
     public void Blink()
     {
-        audioText.Play();
 
             if(textMeshR.enabled == false)
             {
@@ -32,6 +36,12 @@ public class RotatingTextOnCircle : MonoBehaviour
             {
                 textMeshR.enabled = false;
             }
+    }
+
+    public void disableBlink()
+    {
+        CancelInvoke("Blink");
+        reInitialiseText();
     }
 
 }

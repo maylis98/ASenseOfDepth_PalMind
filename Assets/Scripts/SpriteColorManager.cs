@@ -9,19 +9,32 @@ public class SpriteColorManager : MonoBehaviour
     private Color colorToChange;
     [SerializeField]
     private Color targetColor;
+    [SerializeField]
+    private Color initialColor;
     public float transitionTime;
+
    
     private SpriteRenderer zoneSprite;
-    private void Start()
+    private void Awake()
     {
         zoneSprite = GetComponent<SpriteRenderer>();
-        colorToChange.a = 0;
-        zoneSprite.color = colorToChange;
-        
-
+        reInitialiseZone();
     }
 
-    public void showZone()
+    public void reInitialiseZone()
+    {
+        colorToChange = initialColor;
+        colorToChange.a = 0;
+        zoneSprite.color = colorToChange;
+    }
+
+    public void hiddenZone()
+    {
+        colorToChange.a = 0;
+        reInitialiseZone();
+    }
+
+    public void visibleZone()
     {
         colorToChange.a = 255;
         zoneSprite.color = colorToChange;
@@ -43,8 +56,6 @@ public class SpriteColorManager : MonoBehaviour
             zoneSprite.color = colorToChange;
             yield return null;
         }
-        colorToChange = endColor;
-
     }
 }
 

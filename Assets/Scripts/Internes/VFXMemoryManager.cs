@@ -16,10 +16,12 @@ public class VFXMemoryManager : MonoBehaviour
 
     private BoxCollider VFXCoralCollider;
 
+    public Vector3 UnifiedVFXscale;
+
     private void Awake()
     {
 
-        VFXCoral.SetFloat("Flux Intensity", 4f);
+        VFXCoral.SetFloat("Flux Intensity", 0.3f);
         VFXCoral.SetVector3("Transform_scale", new Vector3(2, 2, 2));
 
         //Enable memory Collider at first
@@ -47,7 +49,7 @@ public class VFXMemoryManager : MonoBehaviour
 
 
         VFXCoral.SetFloat("Flux Intensity", 0.01f) ;
-        VFXCoral.SetVector3("Transform_scale", new Vector3(5, 5, 5));
+        VFXCoral.SetVector3("Transform_scale", UnifiedVFXscale);
 
         enceinteAnimator.SetBool("endPoint", true);
         enceinteAudio.Play();
@@ -66,6 +68,7 @@ public class VFXMemoryManager : MonoBehaviour
 
         VFXCoral.SetFloat("Flux Intensity", 1.3f);
         VFXCoral.SetFloat("Number of particules", 0f);
+        VFXCoralCollider.enabled = false;
 
         palBodyFragment.SetActive(true);
         audioBodyFragment.Play();

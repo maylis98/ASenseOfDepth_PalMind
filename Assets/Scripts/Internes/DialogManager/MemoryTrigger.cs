@@ -8,6 +8,8 @@ public class MemoryTrigger : MonoBehaviour
 {
     public UnityEvent onTrigger;
 
+    public UnityEvent mouseDown;
+
     public Memory memory;
 
     public GameObject[] floatingObjs;
@@ -34,6 +36,11 @@ public class MemoryTrigger : MonoBehaviour
         {
             onTrigger.Invoke();
         }
+    }
+
+    private void OnMouseDown()
+    {
+        mouseDown.Invoke();
     }
 
     public void TriggerDialogue()

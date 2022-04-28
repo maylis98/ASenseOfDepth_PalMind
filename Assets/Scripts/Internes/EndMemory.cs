@@ -25,7 +25,7 @@ public class EndMemory : MonoBehaviour
         armCollider = this.gameObject.GetComponent<BoxCollider>();
         armCollider.enabled = false;
 
-    
+
     }
 
     void Update()
@@ -57,6 +57,7 @@ public class EndMemory : MonoBehaviour
     public void returnToScreen()
     {
         disappear = true;
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
     }
 
     private IEnumerator ScaleTo(GameObject objectToScale, Vector3 scaleTo, float seconds)
