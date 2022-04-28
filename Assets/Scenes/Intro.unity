@@ -380,54 +380,6 @@ MonoBehaviour:
   rayDistanceFromCamera: 100
   generateRayAfterSeconds: 2
   selector: {fileID: 940900866}
---- !u!1 &52414633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 52414634}
-  - component: {fileID: 52414635}
-  m_Layer: 0
-  m_Name: DialogManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &52414634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52414633}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &52414635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52414633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f401507121dc42a4d94e7e6d6b32c6dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 2594539764810961439}
-  intro: {fileID: 2594539764994016824}
-  startGame: {fileID: 1287525227}
-  dialogueBoxAnimator: {fileID: 2594539764810961437}
-  endButton: {fileID: 574805540}
 --- !u!1 &175792361
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +410,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -714,7 +666,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1021,7 +973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 52414635}
+      - m_Target: {fileID: 2594539764579329810}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -1519,6 +1471,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.77, y: 0.68, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1028043689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+  m_PrefabInstance: {fileID: 1975371459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120448901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1878,7 @@ Camera:
   m_GameObject: {fileID: 1315582776}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2574,6 +2531,68 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &1975371459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2594539764579329901}
+    m_Modifications:
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -399.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -532.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021414415720887363, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: m_Name
+      value: Pal Mind
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+--- !u!1 &1975371460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9021414415720887363, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+  m_PrefabInstance: {fileID: 1975371459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2594539764579329808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,6 +2622,7 @@ GameObject:
   - component: {fileID: 2594539764579329902}
   - component: {fileID: 2594539764579329903}
   - component: {fileID: 2594539764579329808}
+  - component: {fileID: 2594539764579329810}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2610,6 +2630,68 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2594539764579329810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594539764579329809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f401507121dc42a4d94e7e6d6b32c6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whenFirstDialogueIsEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276656997}
+        m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
+        m_MethodName: SendChatMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: first dialogue is end
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2594539764994016825}
+        m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  whenSecondDialogueIsEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276656997}
+        m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
+        m_MethodName: SendChatMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: second dialogue is end
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueText: {fileID: 2594539764810961439}
+  intro: {fileID: 2594539764994016824}
+  startButton: {fileID: 1287525227}
+  nextButton: {fileID: 649943388}
+  palPresence: {fileID: 1975371460}
+  palBreath: {fileID: 2594539764810961410}
+  dialogueBoxAnimator: {fileID: 2594539764810961437}
+  endButton: {fileID: 574805540}
 --- !u!224 &2594539764579329901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2621,6 +2703,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1028043689}
   - {fileID: 574805539}
   - {fileID: 2594539764994016823}
   - {fileID: 175792362}
@@ -2692,7 +2775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 253}
+  m_AnchoredPosition: {x: 0, y: -34.895874}
   m_SizeDelta: {x: 615.3, y: 216.087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2594539764810961409
@@ -2707,6 +2790,7 @@ GameObject:
   - component: {fileID: 2594539764810961438}
   - component: {fileID: 2594539764810961439}
   - component: {fileID: 2594539764810961437}
+  - component: {fileID: 2594539764810961410}
   m_Layer: 5
   m_Name: DialogBox
   m_TagString: Untagged
@@ -2714,6 +2798,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &2594539764810961410
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594539764810961409}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7cd5b3ddcf90f3845b477e413d2408c1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &2594539764810961437
 Animator:
   serializedVersion: 3
@@ -2764,8 +2944,8 @@ MonoBehaviour:
   m_text: 'During a winter river swim, (s)he lost control. While (s)he was swimming,
     (s)he suddenly no longer felt like (s)he had to come up to the surface to breathe. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57f94ef36e672f844842d3766b594058, type: 2}
-  m_sharedMaterial: {fileID: 80393421418118997, guid: 57f94ef36e672f844842d3766b594058, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
+  m_sharedMaterial: {fileID: 2508897350221615766, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2825,7 +3005,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -31.921234, y: -65.190956, z: -26.98764, w: -40.710922}
+  m_margin: {x: 62.132843, y: -344.503, z: 64.21631, w: -288.6715}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2846,7 +3026,7 @@ RectTransform:
   - {fileID: 1287525228}
   - {fileID: 2594539764810961408}
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2885,32 +3065,32 @@ MonoBehaviour:
   dialogues:
   - name: Introduction to Pal's world
     sentences:
-    - 'You will now enter in Pal''s world. '
-    - Pal was a member of a group of 5 professional divers.
-    - Apnea at very low altitude, diving in frozen seas, swimming in troubled waters
-      were their daily challenges.
+    - "welcome to \n\nDISEMBODIED SELF"
+    - You will now enter in Pal's world.
+    - Pal was part of a group of 5 professional divers.
+    - They daily dived in frozen seas, practiced apnea at low altitudes or swam in
+      troubled waters.
     - "Pal was an excellent diver. She had incredible breathing capacities. \r\n\nVery
       unusual."
-    - Maybe she was a little too confident in her abilities.
+    - Maybe she was a little too confident in herself.
     - "You always have to be on your guard when scuba diving. \r\n\r\nUnderwater,
       sound travels poorly and the field of vision is reduced."
     - 'You should always dive with someone.
 
 '
     - Even the most experienced divers panic quickly when something unexpected happens.
-    - Now, listen to Pal.
-    - "welcome to \n\nDISEMBODIED SELF."
+    - ...
   - name: Intro with Pal's voice
     sentences:
+    - ...
     - Do you wonder where we are ?
-    - What is this thing ?
-    - This black shape ?
-    - Look closer ...
-    - It is me.
-    - That weird black shape...is me.
-    - 'Well ...not really ...
-
-      It is more like my body.'
+    - 'What am I ? '
+    - And what is this black shape ?
+    - ...Long story...
+    - I am a presence.
+    - A presence without a body.
+    - "That weird black shape behind \n...is my body."
     - My body...far from me...
     - Emptied from me...
-    - "Me. \nPal's Mind."
+    - ME...
+    - Pal's Mind.

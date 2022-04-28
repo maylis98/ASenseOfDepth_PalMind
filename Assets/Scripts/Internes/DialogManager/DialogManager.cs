@@ -2,33 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
+    public UnityEvent whenFirstDialogueIsEnd;
+    public UnityEvent whenSecondDialogueIsEnd;
+
     public TextMeshProUGUI dialogueText;
 
     public GameObject intro;
 
-    public GameObject startGame;
+    public GameObject startButton;
+    public GameObject nextButton;
+    public GameObject palPresence;
+    public AudioSource palBreath;
 
     public Animator dialogueBoxAnimator;
     public Animator endButton;
 
     private Queue<string> sentences;
-    private bool introIsEnd;
+    private int dialogNumber;
 
     void Start()
     {
-        introIsEnd = false;
+        nextButton.SetActive(false);
+
         sentences = new Queue<string>();
-        EventManager.StartListening("show End Button", showEndButton);
     }
 
-    public void StartDialogue(Dialog dialogue)
+    public void StartDialogue(Dialog dialogue, int dialogIndex)
     {
+        dialogNumber = dialogIndex;
+
         dialogueBoxAnimator.SetBool("blink", false);
         dialogueBoxAnimator.SetBool("appear", true);
+        nextButton.SetActive(true);
         
+
+        if (dialogNumber == 1)
+        {
+            palPresence.SetActive(true);
+            FindObjectOfType<PalPresenceManager>().startParticules();
+            palBreath.Play();
+        }
+
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -47,12 +65,11 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        startGame.SetActive(false);
+        startButton.SetActive(false);
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        //dialogueText.text = sentence;
       
     }
 
@@ -72,18 +89,28 @@ public class DialogManager : MonoBehaviour
         dialogueBoxAnimator.SetBool("blink", true);
         dialogueText.text = "LISTEN";
         Debug.Log("End of conversation");
-            
+
+        if (dialogNumber == 0)
+        {
+            whenFirstDialogueIsEnd.Invoke();
+        }
+        else if (dialogNumber == 1)
+        {
+            palBreath.Stop();
+            FindObjectOfType<PalPresenceManager>().stopParticules();
+            whenSecondDialogueIsEnd.Invoke();
+            showEndButton();
+        }
+
+     
    }
 
-    public void showEndButton(object data)
+    public void showEndButton()
     {
-        if (introIsEnd = (bool)data)
-        {
-            intro.SetActive(false);
-            dialogueBoxAnimator.SetBool("appear", false);
+        intro.SetActive(false);
+        dialogueBoxAnimator.SetBool("appear", false);
 
-            endButton.SetBool("appear", true);
-        }
+        endButton.SetBool("appear", true);
     }
 
 

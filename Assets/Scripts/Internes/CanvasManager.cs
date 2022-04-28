@@ -45,7 +45,6 @@ public class CanvasManager : MonoBehaviour
             MainControls.SetActive(true);
             endText.SetActive(true);
             sentenceInEndText("...I can feel myself again...");
-            endTextBox.text = "I can feel myself";
             endTextAudio.Play();
             endTextAnimator.SetBool("disappear", false);
         }
