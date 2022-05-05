@@ -38,9 +38,14 @@ public class MemoriesManager : MonoBehaviour
 
     private void UnlockMemory(object data)
     {
+        FindObjectOfType<NativeWebsocketChat>().SendChatMessage("player static");
+        FindObjectOfType<SoundManager>().sphereAppear();
+        EventManager.TriggerEvent("clearCanvas", true);
+        EventManager.TriggerEvent("showZone", true);
+
         spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
         spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
-        EventManager.TriggerEvent("showZone", true);
+        
 
         data = indexOfMemory;
         Debug.Log("index of current memory is " + indexOfMemory);
@@ -53,7 +58,7 @@ public class MemoriesManager : MonoBehaviour
         {
             Destroy(spawnedSphere);
             Destroy(spawnedGate);
-            FindObjectOfType<CanvasManager>().deleteEndText();
+            //FindObjectOfType<CanvasManager>().deleteEndText();
             onEnd.Invoke();
             Debug.Log("c'est la fin de ce souvenir");
         }

@@ -24,7 +24,8 @@ public class ARFilteredPlane : MonoBehaviour
     {
         arPlanes = new List<ARPlane>();
         arPlaneManager = FindObjectOfType<ARPlaneManager>();
-        
+
+
 
         arPlaneManager.planesChanged += OnPlanesChanged;
     }

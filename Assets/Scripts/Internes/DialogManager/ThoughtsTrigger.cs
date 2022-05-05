@@ -5,10 +5,17 @@ using UnityEngine;
 public class ThoughtsTrigger : MonoBehaviour
 {
     public Dialog[] dialogues;
-
-    public void TriggerThoughts(int indexOfDialogue)
+    //int indexOfDialogue
+    public void TriggerThoughts(string nameOfDialogue)
     {
-        FindObjectOfType<ThoughtsManager>().StartThoughts(dialogues[indexOfDialogue]);
+        foreach (Dialog dialogue in dialogues)
+        {
+            if (dialogue.name == nameOfDialogue)
+            {
+                FindObjectOfType<ThoughtsManager>().StartThoughts(dialogue);
+            }
+        }
+        //FindObjectOfType<ThoughtsManager>().StartThoughts(dialogues[indexOfDialogue]);
     }
 
 }

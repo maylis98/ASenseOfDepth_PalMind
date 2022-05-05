@@ -52,7 +52,7 @@ public class PalBodyManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime + 2);
 
         palAnimator.SetBool("up", true);
-        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(8);
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("I feel myself again");
         palCollider.enabled = true;
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("Click on Pal");
 
@@ -70,7 +70,7 @@ public class PalBodyManager : MonoBehaviour
             yield return null;
         }
        
-        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(9);
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Pal recovers");
         this.gameObject.SetActive(false);
 
     }

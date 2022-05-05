@@ -72,28 +72,28 @@ public class NativeWebsocketChat : MonoBehaviour
 
                     //SHOW THOUGHTS
                     case "look around":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(0);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Look around");
                         break;
                     case "distortion field":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(1);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Distortion field");
                         break;
                     case "front water":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(2);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Front water");
                         break;
                     case "strange feet":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(3);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Strange feet");
                         break;
                     case "water up":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(4);
+                        //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Water is going up");
                         break;
                     case "finds box":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(5);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Finds box");
                         break;
                     case "feel myself":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(6);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("I feel myself again");
                         break;
                     case "end of Game":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts(7);
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("end of Game");
                         FindObjectOfType<MemoriesManager>().showPalBody();
                         break;
 

@@ -35,6 +35,7 @@ public class MemoryTextManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
+
         DisplayNextSentence();
     }
 
@@ -46,7 +47,19 @@ public class MemoryTextManager : MonoBehaviour
             return;
         }
 
+        if(sentences.Count > 5 )
+        {
+            FindObjectOfType<SoundManager>().discoverText();
+        }
+
+        if (sentences.Count < 5)
+        {
+            FindObjectOfType<SoundManager>().morecalmAfterText();
+        }
+
+
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
+
         moveToPoints();
         
         string sentence = sentences.Dequeue();
@@ -71,8 +84,9 @@ public class MemoryTextManager : MonoBehaviour
     {
         //Clear text
         textBox.text = "";
-        FindObjectOfType<CanvasManager>().sentenceInEndText("Pal's memory is now complete");
+        //FindObjectOfType<CanvasManager>().sentenceInEndText("Pal's memory is now complete");
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click on the memory ]");
+        FindObjectOfType<SoundManager>().calmDownAfterText();
         Debug.Log("End of conversation");
 
         //VFX State to "Unified"

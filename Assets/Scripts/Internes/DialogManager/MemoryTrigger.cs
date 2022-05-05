@@ -53,6 +53,8 @@ public class MemoryTrigger : MonoBehaviour
     {
         audioDistortionField.Play();
 
+        FindObjectOfType<SoundManager>().enterGate();
+
         foreach (GameObject floatObj in floatingObjs)
         {
             floatObj.SetActive(true);
@@ -77,4 +79,5 @@ public class MemoryTrigger : MonoBehaviour
         Debug.Log("EndZone is sent");
         EventManager.TriggerEvent("endZone", true);
     }
+
 }

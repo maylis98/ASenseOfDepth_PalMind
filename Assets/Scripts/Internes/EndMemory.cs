@@ -32,7 +32,6 @@ public class EndMemory : MonoBehaviour
     {
         if (appear)
         {
-            armCollider.enabled = true;
             this.transform.Rotate(new Vector3(0, 0, 45) * Time.deltaTime);
         }
 
@@ -48,6 +47,11 @@ public class EndMemory : MonoBehaviour
         
     }
 
+    public void ableToClickOnArm()
+    {
+        armCollider.enabled = true;
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click ]");
+    }
 
     public void returnToGame()
     {
@@ -57,7 +61,7 @@ public class EndMemory : MonoBehaviour
     public void returnToScreen()
     {
         disappear = true;
-        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("This memory is now complete");
     }
 
     private IEnumerator ScaleTo(GameObject objectToScale, Vector3 scaleTo, float seconds)
@@ -78,6 +82,8 @@ public class EndMemory : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         EventManager.TriggerEvent("endOfMemory", true);
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
+        FindObjectOfType<SoundManager>().defaultState();
         Debug.Log("END sent to Game");
     }
 }

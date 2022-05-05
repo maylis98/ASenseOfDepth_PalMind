@@ -18,16 +18,18 @@ public class ThoughtsManager : MonoBehaviour
 
     private Queue<string> sentences;
     private bool isDone = false;
+    private bool memoryAppear = false;
 
     void Start()
     {
         continueButton.SetActive(false);
         sentences = new Queue<string>();
+        EventManager.StartListening("clearCanvas", disableWalkButton);
     }
 
     private void Update()
     {
-        if (continueButton.activeSelf)
+        if (continueButton.activeSelf == true)
         {
             walkButton.SetActive(false);
 
@@ -36,13 +38,19 @@ public class ThoughtsManager : MonoBehaviour
                 ifWalkButtonIsInactive.Invoke();
                 isDone = true;
             }
-            
+
         }
-        else
+        else if (continueButton.activeSelf == false && memoryAppear == false)
         {
             walkButton.SetActive(true);
             isDone = false;
         }
+        else
+        {
+            walkButton.SetActive(false);
+        }
+
+        Debug.Log("memoryAppear =" + memoryAppear);
     }
 
     public void StartThoughts(Dialog dialogue)
@@ -76,10 +84,10 @@ public class ThoughtsManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-      
+
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
         thoughtsText.text = "";
 
@@ -90,16 +98,40 @@ public class ThoughtsManager : MonoBehaviour
         }
     }
 
-   private void EndThoughts()
-   {
+    public void EndThoughts()
+    {
         sentences.Clear();
         FindObjectOfType<PalPresenceManager>().stopParticules();
         thoughtsBoxAnimator.SetBool("appear", false);
         continueButton.SetActive(false);
         thoughtsBreath.Stop();
 
-        Debug.Log("End of conversation");      
-   }
+        Debug.Log("End of conversation");
+    }
+
+    private void disableWalkButton(object data)
+    {
+        if (memoryAppear = (bool)data && continueButton.activeSelf == false)
+        {
+            walkButton.SetActive(false);
+            Debug.Log("update of memoryAppear" + memoryAppear);
+        }
+        
+    }
+
+    public void enableWalkButton(bool memoryIsEnd)
+    {
+        if (memoryIsEnd == true)
+        {
+            memoryAppear = false;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+
 
 
 }

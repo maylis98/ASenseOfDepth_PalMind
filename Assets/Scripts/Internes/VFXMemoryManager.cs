@@ -42,8 +42,7 @@ public class VFXMemoryManager : MonoBehaviour
 
     public void UnifiedMemory()
     {
-        StopAllCoroutines();
-
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Memory plant");
         VFXCoral.SetFloat("Lifetime Expansion", 2f);
         VFXCoral.SetFloat("Spread", 0f);
 
@@ -55,8 +54,7 @@ public class VFXMemoryManager : MonoBehaviour
         enceinteAudio.Play();
 
         VFXCoralCollider.enabled = true;
-
-
+        
     }
 
     public void MemoryDisappearArmAppear()
@@ -69,12 +67,13 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoral.SetFloat("Flux Intensity", 1.3f);
         VFXCoral.SetFloat("Number of particules", 0f);
         VFXCoralCollider.enabled = false;
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
 
         palBodyFragment.SetActive(true);
         audioBodyFragment.Play();
 
-        FindObjectOfType<CanvasManager>().sentenceInEndText("This is a part of Pal's body");
-        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click ]");
+        //FindObjectOfType<CanvasManager>().sentenceInEndText("This is a part of Pal's body");
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Body fragment");
 
     }
 }

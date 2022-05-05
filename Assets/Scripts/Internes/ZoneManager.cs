@@ -30,6 +30,7 @@ public class ZoneManager : MonoBehaviour
     public void showGate()
     {
         FindObjectOfType<VFXGateManager>().GateAppear();
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("In front of Gate");
     }
 
     private void disableZone(object data)
