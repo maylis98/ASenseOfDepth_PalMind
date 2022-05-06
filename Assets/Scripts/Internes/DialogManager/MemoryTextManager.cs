@@ -13,6 +13,7 @@ public class MemoryTextManager : MonoBehaviour
     private Transform[] wayPoints;
     private int currentPos;
     private int lastPos;
+    private int memoryLength;
 
     private Queue<string> sentences;
 
@@ -33,8 +34,10 @@ public class MemoryTextManager : MonoBehaviour
         foreach (string sentence in memory.sentences)
         {
             sentences.Enqueue(sentence);
+            memoryLength = memory.sentences.Length;
         }
 
+        FindObjectOfType<ProgressBar>().GetCurrentFill(sentences.Count, 0, memoryLength);
 
         DisplayNextSentence();
     }
@@ -60,6 +63,8 @@ public class MemoryTextManager : MonoBehaviour
 
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
 
+        FindObjectOfType<ProgressBar>().GetCurrentFill(sentences.Count, 0, memoryLength);
+
         moveToPoints();
         
         string sentence = sentences.Dequeue();
@@ -82,6 +87,7 @@ public class MemoryTextManager : MonoBehaviour
 
    void EndMemory()
     {
+        FindObjectOfType<ProgressBar>().GetCurrentFill(0, 0, memoryLength);
         //Clear text
         textBox.text = "";
         //FindObjectOfType<CanvasManager>().sentenceInEndText("Pal's memory is now complete");
