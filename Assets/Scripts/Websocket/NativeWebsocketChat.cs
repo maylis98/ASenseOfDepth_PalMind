@@ -43,9 +43,8 @@ public class NativeWebsocketChat : MonoBehaviour
 
         websocket.OnMessage += (bytes) =>
         {
-            Debug.Log("OnMessage!");
-            Debug.Log(bytes.Length);
-            Debug.Log(bytes[0]);
+            /*Debug.Log(bytes.Length);
+            Debug.Log(bytes[0]);*/
             //string str = Convert.ToString(bytes);
             //string str = BitConverter.ToString(bytes);
             //string str = Encoding.Default.GetString(bytes);
@@ -74,6 +73,21 @@ public class NativeWebsocketChat : MonoBehaviour
                     case "look around":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Look around");
                         break;
+                    case "bugs appear":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("The bugs");
+                        FindObjectOfType<VFXBugsManager>().BugsAppear();
+                        break;
+                    case "diving part 1":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1");
+                        FindObjectOfType<PPManager>().IsBlinking();
+                        break;
+                    case "so focus":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("So focus");
+                        break;
+                    case "diving part 2":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 2");
+                        FindObjectOfType<PPManager>().IsBlinking();
+                        break;
                     case "distortion field":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Distortion field");
                         break;
@@ -84,6 +98,11 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Strange feet");
                         break;
                     case "water up":
+                        FindObjectOfType<WaterPPManager>().PPPresence(1);
+                        //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Water is going up");
+                        break;
+                    case "water down":
+                        FindObjectOfType<WaterPPManager>().PPPresence(0);
                         //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Water is going up");
                         break;
                     case "finds box":
@@ -101,19 +120,15 @@ public class NativeWebsocketChat : MonoBehaviour
                     //SHOW MEMORY
                     case "memory 1 is called":
                         FindObjectOfType<EmitterOrder>().SendData(0);
-                        Debug.Log("I will display memory 1");
                         break;
                     case "memory 2 is called":
                         FindObjectOfType<EmitterOrder>().SendData(1);
-                        Debug.Log("I will display memory 2");
                         break;
                     case "memory 3 is called":
                         FindObjectOfType<EmitterOrder>().SendData(2);
-                        Debug.Log("I will display memory 3");
                         break;
 
                     default:
-                        Debug.Log("Nothing to display");
                         break;
                 }
                 

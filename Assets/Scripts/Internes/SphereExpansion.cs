@@ -158,7 +158,6 @@ public class SphereExpansion : MonoBehaviour
     {
         if (deleteZone = (bool)data)
         {
-            Debug.Log("deleteSphere has been received");
             this.gameObject.SetActive(false);
         }
     }

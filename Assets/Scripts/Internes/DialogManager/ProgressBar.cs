@@ -37,7 +37,6 @@ public class ProgressBar : MonoBehaviour
         float fillAmount = currentOffset / maximumOffset;
 
         mask.fillAmount = fillAmount;
-        Debug.Log(currentOffset);
 
         fill.color = colorOfBar;
 

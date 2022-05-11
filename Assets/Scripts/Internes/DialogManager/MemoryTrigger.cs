@@ -71,12 +71,10 @@ public class MemoryTrigger : MonoBehaviour
 
     public void SendisFinished()
     {
-        Debug.Log("isFinished is sent");
         EventManager.TriggerEvent("disabledDistoredVision", true);
     }
     public void SendendZone()
     {
-        Debug.Log("EndZone is sent");
         EventManager.TriggerEvent("endZone", true);
     }
 

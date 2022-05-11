@@ -601,6 +601,83 @@ MonoBehaviour:
   whenHorizontalSmallPlaneIsFound:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &40057935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40057938}
+  - component: {fileID: 40057937}
+  - component: {fileID: 40057936}
+  - component: {fileID: 40057939}
+  m_Layer: 0
+  m_Name: PPWater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &40057936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40057935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &40057937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40057935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 1
+  blendDistance: 0.3
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6836d484ed82e6245b3b4a6f9cbf1a4c, type: 2}
+--- !u!4 &40057938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40057935}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.145, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40057939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40057935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead815333c26470429aa7ffe19bf3278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeight: 0
+  seconds: 5
 --- !u!1 &69263955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,16 +1289,10 @@ MonoBehaviour:
   - name: Look around
     sentences:
     - My body has been wandering in this strange place for a long time now. Since...
-    - <color=#0000FF>I dived...</color>
-    - 'I don''t like to see myself like this.
-
-
-      I don''t want anybody to see
-      me like this.'
-    - '<color=#0000FF>Disconnected.</color>
-
-
-      Lost.'
+    - Since I dived...
+    - Since then, nothing seems to have changed for me
+    - I feel the same as before.
+    - Maybe that's the whole issue...
   - name: Distortion Field
     sentences:
     - I have to keep walking
@@ -1229,41 +1300,72 @@ MonoBehaviour:
     - The fear will come back...
   - name: Front water
     sentences:
-    - I...I don't want go there...!
-    - ....<color=#0000FF>Water</color> feels scary...
-    - And this <color=#0000FF>body</color> is useless !
+    - My body has managed to avoid the water so far.
+    - He is terrified of water.
+    - It's embarassing...
+    - ....For a diver
+    - 'Do you really want to take it THERE? '
+    - ...
+    - Well...
+    - I don't think we have a CHOICE anyway.
   - name: Strange feet
     sentences:
     - My feets are so weird !
     - ....As if they were anchored to the ground....
-    - ...unable to run nor jump...to avoid <color=#0000FF>water</color>...
-  - name: Finds box
+    - ...unable to run nor jump...to avoid WATER...
+  - name: The bugs
     sentences:
-    - What is this ...
-    - Oh !
+    - Bugs...
+    - They come through here a lot.
+    - There are more and more of them these days.
+    - It's like they're attracted to unstable beings.
+    - ...Like me...
+  - name: Diving part 1
+    sentences:
+    - This place is falling appart...
+    - Like me...
+    - 'Diving has been so important for me for years. '
+    - But after that dive... suddenly I didn't care anymore.
+    - 'I wasn''t feeling the soft water like I used to. '
+    - It was somewhat PAINFUL
+    - And now...I don't know who I am anymore.
+  - name: So focus
+    sentences:
+    - But what does all this fuss mean?!
+    - I'm just trying to figure out what's going on here.
+    - What is my body doing over there?
+    - 'And what am I doing so far away from him? '
+    - We cannot move forward without each other. But we also... paralyze each other.
+    - Each of us is hiding part of the story from the other...
+  - name: Diving part 2
+    sentences:
+    - I don't care about water.
+    - I don't like it anymore.
+    - And I don't want to go back THERE.
   - name: In front of Gate
     sentences:
-    - I have been <color=#0000FF>left</color> without a place to remember what happened
-      ...
-    - Now this place has been opened...
-    - A <color=#0000FF>sanctuary</color> for the memories
+    - I have been LEFT without a place to remember what happened ...
+    - Now this place has been opened by the bugs...
+    - Or ...by myself ?
+    - ...This place...
+    - A sanctuary for the BODY's memories
   - name: Memory plant
     sentences:
-    - I hadn't thought about these things for a long time
-    - But now...it makes sense
-    - It is as if a whole new part of my memory had opened up to myself
-    - A part that only my body remembered...
-    - ...and kept secret to my mind until now.
+    - I hadn't thought about these sensations for a long time.
+    - But my body recalls them.
+    - 'And kept them secret until now. '
+    - Locked up in an aquatic sanctuary.
+    - With visions.
   - name: Body fragment
     sentences:
-    - My body and mind have been separated for a long time now..
-    - I was waiting for something that would bind them together again..
-    - ...And now that I'm not afraid to say I survived...
-    - I can feel my body again ...
+    - My body and mind have been split for a long time now..
+    - I was waiting for something that would bind them together again.
+    - Now that my shame has been slowly relieved...
+    - I get a part of my body back.
   - name: I feel myself again
     sentences:
     - It's been a long time since...
-    - ... I haven't felt so connected...
+    - I haven't felt so connected...
   - name: Pal recovers
     sentences:
     - ...Now I understand...
@@ -2843,7 +2945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &942556281
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3383,6 +3485,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089280488}
   m_CullTransparentMesh: 1
+--- !u!1 &1093526810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093526811}
+  - component: {fileID: 1093526812}
+  - component: {fileID: 1093526813}
+  m_Layer: 0
+  m_Name: PP_Danger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1093526811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093526810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1315582782}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093526812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093526810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 82612390eb53c1240a5b4ae8cd171bc4, type: 2}
+--- !u!114 &1093526813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093526810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488cdcafa40a20c4bafebb374be8eadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 0.15
 --- !u!224 &1100815176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 315708430998204037, guid: 6030f9f47faa11346aee441807a0869a, type: 3}
@@ -3880,6 +4044,8 @@ Transform:
   - {fileID: 1023568683}
   - {fileID: 1846328293}
   - {fileID: 1533185933}
+  - {fileID: 1459272690}
+  - {fileID: 1093526811}
   m_Father: {fileID: 23293086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4318,6 +4484,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1459272689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459272690}
+  m_Layer: 0
+  m_Name: BugsTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459272690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459272689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.36}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1315582782}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533185932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9021414415720887363, guid: 259644089ede21e4bb4951666f72e106, type: 3}
@@ -4798,7 +4994,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: memory 1 is called
+          m_StringArgument: bugs appear
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1882527570
@@ -5063,6 +5259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProgressBar
       objectReference: {fileID: 0}
+    - target: {fileID: 315708431807593362, guid: 6030f9f47faa11346aee441807a0869a, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6030f9f47faa11346aee441807a0869a, type: 3}
 --- !u!1001 &4804483159601283415
@@ -5154,6 +5354,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07214f288d131de4eb1c2e30251a9e39, type: 3}
+--- !u!1001 &7764723969171911093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1703573787671919480, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 1459272690}
+    - target: {fileID: 2482825255205960080, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123804144145101016, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084136442891673675, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_Name
+      value: Swarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113195714788038510, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c446b1ead103c89468124a17e24051ee, type: 3}
 --- !u!1001 &9021414416712940495
 PrefabInstance:
   m_ObjectHideFlags: 0

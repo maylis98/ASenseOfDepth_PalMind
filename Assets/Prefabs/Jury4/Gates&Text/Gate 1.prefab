@@ -1317,20 +1317,20 @@ MonoBehaviour:
   memory:
     memoryNumber: 1
     sentences:
-    - "I remember feeling completely helpless before I drowned. It's weird. That
-      experience should have made me afraid of everything. \n\n"
-    - I mean... I don't like water, but maybe that's the only problem. As for the
-      rest, I feel indestructible now. Unlike my cousin...
-    - She was a diver too. Oh, she was good, much better than me. She could dive
-      for hours without feeling the water pressure, the lack of oxygen or the cold.
-    - "Unlike me... I completely lost control that day. I could feel the bite of
-      the cold. But it didn't bring me to the surface. Instead, my mind ran away
-      from my own frozen body. \n\n"
-    - There I became completely separated from myself. Suddenly, I felt what she
-      must have felt when... she died. But I survived that death plunge. She didn't.
-    - I can't help but think that I survived. I beat death by escaping my own body.
-      I let her rest, I let her fall asleep, while I, the mind, was still awake.
-    - "Strange feeling... I survived. \nFor no reason at all."
+    - 'That day ....
+
+      I completely lost control.
+
+      I could feel the bite
+      of the cold. And I could see HER drowning.'
+    - "Her...My cousin... She was a diver. \nShe was very good at diving, much better
+      than me."
+    - We got caught in the cold on that dive. But it didn't bring us to the surface.
+    - "I was so stressed that my mind escaped from my own, frozen, body. I was completely
+      separated from myself. \n\nI felt what she must have felt when..."
+    - When she died.
+    - "I survived thanks to this mind-body dissociation. \nShe was not so lucky."
+    - "Strange feeling... \n\nI survived. \n\nFor no reason at all."
   floatingObjs:
   - {fileID: 4627720966642016627}
   - {fileID: 8504987631276441689}

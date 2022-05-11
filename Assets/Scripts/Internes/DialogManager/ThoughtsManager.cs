@@ -50,7 +50,6 @@ public class ThoughtsManager : MonoBehaviour
             walkButton.SetActive(false);
         }
 
-        Debug.Log("memoryAppear =" + memoryAppear);
     }
 
     public void StartThoughts(Dialog dialogue)
@@ -102,6 +101,8 @@ public class ThoughtsManager : MonoBehaviour
     {
         sentences.Clear();
         FindObjectOfType<PalPresenceManager>().stopParticules();
+        FindObjectOfType<VFXBugsManager>().BugsDisappear();
+
         thoughtsBoxAnimator.SetBool("appear", false);
         continueButton.SetActive(false);
         thoughtsBreath.Stop();
@@ -114,7 +115,6 @@ public class ThoughtsManager : MonoBehaviour
         if (memoryAppear = (bool)data && continueButton.activeSelf == false)
         {
             walkButton.SetActive(false);
-            Debug.Log("update of memoryAppear" + memoryAppear);
         }
         
     }

@@ -26,7 +26,6 @@ public class CamReceiveOrder : MonoBehaviour
     {
         if (theEnd = (bool)data)
         {
-            Debug.Log("audio is stopped");
             mainAudio.Stop();
         }
     }
