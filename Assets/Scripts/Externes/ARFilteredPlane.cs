@@ -10,7 +10,10 @@ using TMPro;
 public class ARFilteredPlane : MonoBehaviour
 {
     public GameObject zoneToPlace;
+    public GameObject palPresence;
     public TextMeshProUGUI debugText;
+    //public Vector3 offsetFromCamera;
+
 
     public UnityEvent whenHorizontalSmallPlaneIsFound;
          
@@ -24,8 +27,6 @@ public class ARFilteredPlane : MonoBehaviour
     {
         arPlanes = new List<ARPlane>();
         arPlaneManager = FindObjectOfType<ARPlaneManager>();
-
-
 
         arPlaneManager.planesChanged += OnPlanesChanged;
     }
@@ -45,6 +46,7 @@ public class ARFilteredPlane : MonoBehaviour
             if(countDown < 0)
             {
                 zoneToPlace.transform.position = new Vector3(Camera.main.transform.position.x, lowestPlane.transform.position.y, Camera.main.transform.position.z);
+                palPresence.transform.position = new Vector3(Camera.main.transform.position.x, lowestPlane.transform.position.y, Camera.main.transform.position.z);
             }
         }
     }

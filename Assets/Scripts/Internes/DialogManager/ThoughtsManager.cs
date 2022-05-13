@@ -15,10 +15,15 @@ public class ThoughtsManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject palPresence;
     public GameObject walkButton;
+    public float durationVolume;
 
     private Queue<string> sentences;
     private bool isDone = false;
     private bool memoryAppear = false;
+
+    private float currentVolume;
+    private float highVolume = 1f;
+    private float lowVolume = 0f;
 
     void Start()
     {
@@ -83,6 +88,7 @@ public class ThoughtsManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(LerpVolume(highVolume, durationVolume));
 
     }
 
@@ -102,10 +108,9 @@ public class ThoughtsManager : MonoBehaviour
         sentences.Clear();
         FindObjectOfType<PalPresenceManager>().stopParticules();
         FindObjectOfType<VFXBugsManager>().BugsDisappear();
-
+        StartCoroutine(LerpVolume(lowVolume, durationVolume));
         thoughtsBoxAnimator.SetBool("appear", false);
         continueButton.SetActive(false);
-        thoughtsBreath.Stop();
 
         Debug.Log("End of conversation");
     }
@@ -129,6 +134,26 @@ public class ThoughtsManager : MonoBehaviour
         {
             return;
         }
+    }
+
+    IEnumerator LerpVolume(float endVolume, float durationFade)
+    {
+        float time = 0;
+        float startValue = currentVolume;
+        while (time < durationFade)
+        {
+            currentVolume = Mathf.Lerp(startValue, endVolume, time / durationFade);
+            time += Time.deltaTime;
+
+            thoughtsBreath.volume = currentVolume;
+            yield return null;  
+        }
+
+        if (currentVolume < 0.1)
+        {
+            thoughtsBreath.Stop();
+        }
+
     }
 
 
