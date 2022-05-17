@@ -11,11 +11,11 @@ public class ARFilteredPlane : MonoBehaviour
 {
     public GameObject zoneToPlace;
     public GameObject palPresence;
-    public TextMeshProUGUI debugText;
+    public TextMeshProUGUI countDownText;
+    public TextMeshProUGUI floorText;
     //public Vector3 offsetFromCamera;
 
-
-    public UnityEvent whenHorizontalSmallPlaneIsFound;
+    public UnityEvent whenFoorIsFound;
          
     private ARPlaneManager arPlaneManager;
 
@@ -29,6 +29,7 @@ public class ARFilteredPlane : MonoBehaviour
         arPlaneManager = FindObjectOfType<ARPlaneManager>();
 
         arPlaneManager.planesChanged += OnPlanesChanged;
+        floorText.text = "";
     }
 
      private void OnDisable()
@@ -41,12 +42,33 @@ public class ARFilteredPlane : MonoBehaviour
         if(countDown > 0)
         {
             countDown -= Time.deltaTime;
-            Debug.Log(countDown);
+            float seconds = Mathf.FloorToInt(countDown % 60);
+            //Debug.Log(countDown);
+            countDownText.text = string.Format("{0}", seconds);
+            floorText.text = "Looking for the floor... \n \n LOOK AT YOUR FEET";
 
-            if(countDown < 0)
+            if (countDown < 0 && lowestPlane != null)
             {
+                countDownText.text = "";
+                floorText.text = "";
                 zoneToPlace.transform.position = new Vector3(Camera.main.transform.position.x, lowestPlane.transform.position.y, Camera.main.transform.position.z);
                 palPresence.transform.position = new Vector3(Camera.main.transform.position.x, lowestPlane.transform.position.y, Camera.main.transform.position.z);
+                whenFoorIsFound.Invoke();
+
+
+            }
+            else if(countDown < 0 && lowestPlane == null)
+            {
+                zoneToPlace.transform.position = new Vector3(Camera.main.transform.position.x, -1, Camera.main.transform.position.z);
+                palPresence.transform.position = new Vector3(Camera.main.transform.position.x, -1, Camera.main.transform.position.z);
+                countDownText.text = "";
+                floorText.text = "";
+
+                //To delete 
+                whenFoorIsFound.Invoke();
+
+                //& Replace by ... when build
+                //countDown = 6;
             }
         }
     }
@@ -62,8 +84,8 @@ public class ARFilteredPlane : MonoBehaviour
                 if(lowestPlane == null || plane.transform.position.y < lowestPlane.transform.position.y)
                 {
                     lowestPlane = plane;
-                    debugText.text = "ar Plane y is" + lowestPlane.transform.position.y + "& timer is" + countDown;
-                    countDown = 5;
+                    floorText.text = "ar Plane y is" + lowestPlane.transform.position.y;
+                    countDown = 6;
                 }
                /* if (plane.transform.position.y < -0.6)
                 {

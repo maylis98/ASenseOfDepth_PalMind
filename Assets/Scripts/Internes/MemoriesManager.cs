@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class MemoriesManager : MonoBehaviour
 {
+    public GameObject MemorialSpace;
+
+    public GameObject UncompleteSphere;
+
     [SerializeField]
     private GameObject[] SpheresOfMemory;
 
@@ -24,6 +28,8 @@ public class MemoriesManager : MonoBehaviour
     private Vector3 offsetFromCamera;
     public Vector3 initGateRotation;
 
+    private GameObject spawnedUncompleteS;
+    private GameObject spawnedMemorialSpace;
     private GameObject spawnedSphere;
     private GameObject spawnedGate;
     private int indexOfMemory;
@@ -34,6 +40,36 @@ public class MemoriesManager : MonoBehaviour
         theEnd = false;
         EventManager.StartListening("UnlockMemory", UnlockMemory);
         EventManager.StartListening("endOfMemory", endThisMemory);
+        EventManager.StartListening("clearMemorialSpace", hideMSpace);
+        EventManager.StartListening("clearUncompleteS", hideUncompleteS);
+    }
+
+    public void showUncompleteS()
+    {
+        spawnedUncompleteS = Instantiate(UncompleteSphere, Camera.main.transform.position + offsetFromCamera, Quaternion.Euler(0, 0, 0));
+    }
+
+    public void showMSpace()
+    {
+        spawnedMemorialSpace = Instantiate(MemorialSpace, triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
+    }
+
+    private void hideMSpace(object data) 
+    {
+        bool hideSpace = true;
+        if (hideSpace == (bool)data)
+        {
+            Destroy(spawnedMemorialSpace);
+        }
+    }
+
+    private void hideUncompleteS(object data)
+    {
+        bool hideUncompleteS = true;
+        if (hideUncompleteS == (bool)data)
+        {
+            Destroy(spawnedUncompleteS);
+        }
     }
 
     private void UnlockMemory(object data)
@@ -45,10 +81,6 @@ public class MemoriesManager : MonoBehaviour
 
         spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
         spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
-        
-
-        data = indexOfMemory;
-        Debug.Log("index of current memory is " + indexOfMemory);
 
     }
 
@@ -60,7 +92,6 @@ public class MemoriesManager : MonoBehaviour
             Destroy(spawnedGate);
             //FindObjectOfType<CanvasManager>().deleteEndText();
             onEnd.Invoke();
-            Debug.Log("c'est la fin de ce souvenir");
         }
     }
     public void showPalBody()

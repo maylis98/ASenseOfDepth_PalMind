@@ -50,12 +50,7 @@ public class EndMemory : MonoBehaviour
     public void ableToClickOnArm()
     {
         armCollider.enabled = true;
-        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click ]");
-    }
-
-    public void returnToGame()
-    {
-        EventManager.TriggerEvent("returnGame", true);
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("Catch this");
     }
 
     public void returnToScreen()

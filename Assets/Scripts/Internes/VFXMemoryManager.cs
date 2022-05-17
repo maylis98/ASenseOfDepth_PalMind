@@ -6,13 +6,13 @@ using UnityEngine.VFX;
 public class VFXMemoryManager : MonoBehaviour
 {
     public VisualEffect VFXCoral;
-    public GameObject enceinte;
+    //public GameObject enceinte;
     public GameObject palBodyFragment;
     private AudioSource audioBodyFragment;
 
-    private Animator enceinteAnimator;
+    /*private Animator enceinteAnimator;
     private AudioSource enceinteAudio;
-    private VisualEffect VFXenceinte;
+    private VisualEffect VFXenceinte;*/
 
     private BoxCollider VFXCoralCollider;
 
@@ -28,9 +28,9 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoralCollider = VFXCoral.GetComponent<BoxCollider>();
         VFXCoralCollider.enabled = false;
 
-        enceinteAudio = enceinte.GetComponent<AudioSource>();
-        enceinteAnimator = enceinte.GetComponent<Animator>();
-        VFXenceinte = enceinte.GetComponent<VisualEffect>();
+        //enceinteAudio = enceinte.GetComponent<AudioSource>();
+        //enceinteAnimator = enceinte.GetComponent<Animator>();
+        //VFXenceinte = enceinte.GetComponent<VisualEffect>();
 
         audioBodyFragment = palBodyFragment.GetComponent<AudioSource>();
 
@@ -50,8 +50,8 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoral.SetFloat("Flux Intensity", 0.01f) ;
         VFXCoral.SetVector3("Transform_scale", UnifiedVFXscale);
 
-        enceinteAnimator.SetBool("endPoint", true);
-        enceinteAudio.Play();
+        /*enceinteAnimator.SetBool("endPoint", true);
+        enceinteAudio.Play();*/
 
         VFXCoralCollider.enabled = true;
         
@@ -62,7 +62,7 @@ public class VFXMemoryManager : MonoBehaviour
 
         FindObjectOfType<VFXGateManager>().GateDisappear();
         //enceinteAnimator.SetBool("disappear", true);
-        VFXenceinte.SetFloat("Particules", 0f);
+       /* VFXenceinte.SetFloat("Particules", 0f);*/
 
         VFXCoral.SetFloat("Flux Intensity", 1.3f);
         VFXCoral.SetFloat("Number of particules", 0f);

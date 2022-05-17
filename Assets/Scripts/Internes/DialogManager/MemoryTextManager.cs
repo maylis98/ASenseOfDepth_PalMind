@@ -6,14 +6,17 @@ using TMPro;
 public class MemoryTextManager : MonoBehaviour
 {
     public GameObject textBoxObj;
+    public GameObject[] wayPointsParent;
+    public GameObject centerButton;
+
+
     private TextMeshPro textBox;
     private AudioSource textAudio;
-
-    public GameObject[] wayPointsParent;
     private Transform[] wayPoints;
     private int currentPos;
     private int lastPos;
     private int memoryLength;
+    private CanvasGroup alphaButton;
 
     private Queue<string> sentences;
 
@@ -22,13 +25,14 @@ public class MemoryTextManager : MonoBehaviour
         textBox = textBoxObj.GetComponent<TextMeshPro>();
         textAudio = textBoxObj.GetComponent<AudioSource>();
         wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
+        alphaButton = centerButton.GetComponent<CanvasGroup>();
 
         sentences = new Queue<string>();
+        alphaButton.alpha = 0f;
     }
 
     public void StartMemory(Memory memory)
     {
-        //textBoxAnimator.SetBool("appear", true);
         sentences.Clear();
 
         foreach (string sentence in memory.sentences)
@@ -66,9 +70,10 @@ public class MemoryTextManager : MonoBehaviour
         FindObjectOfType<ProgressBar>().GetCurrentFill(sentences.Count, 0, memoryLength);
 
         moveToPoints();
-        
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
+        alphaButton.alpha = 0f;
         StartCoroutine(TypeSentence(sentence));
 
     }
@@ -81,12 +86,14 @@ public class MemoryTextManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             textBox.text += letter;
+            alphaButton.alpha = 1f;
             yield return null;
         }
     }
 
    void EndMemory()
     {
+        alphaButton.alpha = 0f;
         FindObjectOfType<ProgressBar>().GetCurrentFill(0, 0, memoryLength);
         //Clear text
         textBox.text = "";

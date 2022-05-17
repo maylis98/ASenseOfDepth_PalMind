@@ -57,7 +57,6 @@ public class NativeWebsocketChat : MonoBehaviour
 
             if (txt)
             {
-                txt.text = message;
 
                 switch (message)
                 {
@@ -83,9 +82,6 @@ public class NativeWebsocketChat : MonoBehaviour
                         break;
                     case "so focus":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("So focus");
-                        break;
-                    case "diving part 2":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 2");
                         FindObjectOfType<PPManager>().IsBlinking();
                         break;
                     case "distortion field":
@@ -99,7 +95,6 @@ public class NativeWebsocketChat : MonoBehaviour
                         break;
                     case "water up":
                         FindObjectOfType<WaterPPManager>().PPPresence(1);
-                        //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Water is going up");
                         break;
                     case "water down":
                         FindObjectOfType<WaterPPManager>().PPPresence(0);
@@ -109,6 +104,7 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Finds box");
                         break;
                     case "feel myself":
+                        EventManager.TriggerEvent("returnGame", true);
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("I feel myself again");
                         break;
                     case "end of Game":
@@ -118,6 +114,11 @@ public class NativeWebsocketChat : MonoBehaviour
 
 
                     //SHOW MEMORY
+                    case "water up 1":
+                        FindObjectOfType<WaterPPManager>().PPPresence(1);
+                        FindObjectOfType<MemoriesManager>().showUncompleteS();
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Uncomplete memory");
+                        break;
                     case "memory 1 is called":
                         FindObjectOfType<EmitterOrder>().SendData(0);
                         break;
@@ -178,7 +179,6 @@ public class NativeWebsocketChat : MonoBehaviour
 
         if (websocket.State == WebSocketState.Open)
         {
-            Debug.Log("Sending " + message);
 
             // Sending bytes
             //await websocket.Send(new byte[] { 10, 20, 30 });

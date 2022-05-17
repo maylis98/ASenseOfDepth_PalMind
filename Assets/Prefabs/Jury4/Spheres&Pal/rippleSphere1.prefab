@@ -67,6 +67,9 @@ VisualEffect:
       - m_Value: 4
         m_Name: ScaleY
         m_Overridden: 1
+      - m_Value: 35000
+        m_Name: Number of particules
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:

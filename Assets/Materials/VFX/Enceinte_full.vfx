@@ -31,7 +31,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Enceinte
+  m_Name: Enceinte_full
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -208,8 +208,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Particules
-    path: Particules
+  - name: Number of particules
+    path: Number of particules
     tooltip: 
     sheetType: m_Float
     realType: Single
@@ -234,7 +234,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enceinte
+  m_Name: Enceinte_full
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614693}
   - {fileID: 8926484042661614694}
   - {fileID: 8926484042661614695}
-  Asset: {fileID: -3256353808211938606, guid: f70b56e9351326b4f9d08395d7441e08, type: 3}
+  Asset: {fileID: -3256353808211938606, guid: b5558b8a672a79949937a56268871fe8, type: 3}
 --- !u!114 &8926484042661614693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,7 +3480,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614800}
-  m_ExposedName: Particules
+  m_ExposedName: Number of particules
   m_Exposed: 1
   m_Order: 8
   m_Category: 

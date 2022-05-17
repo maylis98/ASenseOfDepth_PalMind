@@ -79,7 +79,6 @@ public class SphereExpansion : MonoBehaviour
         if (isActivate)
         {
             InvokeRepeating("moveToPoints", 1, delay);
-            FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Look around ]");
         }
         else
         {
@@ -102,14 +101,15 @@ public class SphereExpansion : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        sound.Play();
+        /*sound.Play();
         changePos(true);
         timeToMove = true;
 
         yield return new WaitForSeconds(20);
 
-        changePos(false);
+        changePos(false);*/
         //timeToMove = false;
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("A memory has been opened");
         sphereToZone();
 
     }

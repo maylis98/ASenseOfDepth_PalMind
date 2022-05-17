@@ -17,6 +17,7 @@ public class CanvasManager : MonoBehaviour
     void Start()
     {
         memoryAppear = false;
+        MainControls.SetActive(false);
 
         EventManager.StartListening("returnGame", returnGameControls);
     }
