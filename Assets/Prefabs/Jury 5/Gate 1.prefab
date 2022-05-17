@@ -6615,13 +6615,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8361870733805025363}
     - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
-      propertyPath: floatingObjs.Array.data[1]
+      propertyPath: floatingObjs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
+      propertyPath: floatingObjs.Array.data[0]
       value: 
       objectReference: {fileID: 8504987631276441689}
     - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
-      propertyPath: floatingObjs.Array.data[2]
+      propertyPath: floatingObjs.Array.data[1]
       value: 
       objectReference: {fileID: 8155229036139671447}
+    - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
+      propertyPath: floatingObjs.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
+      propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3070081131732799449, guid: 88e204d820267464395c6f4d335de5a6, type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

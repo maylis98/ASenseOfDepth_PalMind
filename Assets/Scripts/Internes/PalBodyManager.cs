@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PalBodyManager : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class PalBodyManager : MonoBehaviour
             yield return null;
         }
        
-        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Pal recovers");
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("end Screen");
         this.gameObject.SetActive(false);
 
     }

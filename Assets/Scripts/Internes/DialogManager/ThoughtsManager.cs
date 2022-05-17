@@ -75,6 +75,11 @@ public class ThoughtsManager : MonoBehaviour
         }
 
         DisplayNextThoughts();
+
+        if(dialogue.name == "end Screen")
+        {
+            memoryAppear = true;
+        }
     }
 
     public void DisplayNextThoughts()

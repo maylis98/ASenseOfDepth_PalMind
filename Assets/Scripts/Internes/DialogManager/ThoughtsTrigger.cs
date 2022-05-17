@@ -14,6 +14,7 @@ public class ThoughtsTrigger : MonoBehaviour
             {
                 FindObjectOfType<ThoughtsManager>().StartThoughts(dialogue);
             }
+
         }
         //FindObjectOfType<ThoughtsManager>().StartThoughts(dialogues[indexOfDialogue]);
     }
