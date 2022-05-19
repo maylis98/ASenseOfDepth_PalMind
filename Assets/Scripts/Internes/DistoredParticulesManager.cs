@@ -27,8 +27,6 @@ public class DistoredParticulesManager : MonoBehaviour
     private void disableDistoredVision(object data)
     {
 
-        Debug.Log("we received isFinished");
-
         if(isFinished = (bool)data)
         {
             Destroy(ObjToDestroy);

@@ -42,7 +42,6 @@ public class VFXMemoryManager : MonoBehaviour
 
     public void UnifiedMemory()
     {
-        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Memory plant");
         VFXCoral.SetFloat("Lifetime Expansion", 2f);
         VFXCoral.SetFloat("Spread", 0f);
 

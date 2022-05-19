@@ -12,10 +12,12 @@ public class ThoughtsManager : MonoBehaviour
     public Animator thoughtsBoxAnimator;
     public AudioSource thoughtsNotif;
     public AudioSource thoughtsBreath;
+    public GameObject restartButton;
     public GameObject continueButton;
     public GameObject palPresence;
     public GameObject walkButton;
     public float durationVolume;
+    public TextMeshProUGUI tmpDebugText;
 
     private Queue<string> sentences;
     private bool isDone = false;
@@ -24,16 +26,22 @@ public class ThoughtsManager : MonoBehaviour
     private float currentVolume;
     private float highVolume = 1f;
     private float lowVolume = 0f;
+    private float countDown = 15;
+    private bool playerRead;
+    private bool startCountDown;
 
     void Start()
     {
         continueButton.SetActive(false);
         sentences = new Queue<string>();
         EventManager.StartListening("clearCanvas", disableWalkButton);
+        EventManager.StartListening("nexButtonClicked", resetCountDown);
+        startCountDown = false;
     }
 
     private void Update()
     {
+
         if (continueButton.activeSelf == true)
         {
             walkButton.SetActive(false);
@@ -55,10 +63,33 @@ public class ThoughtsManager : MonoBehaviour
             walkButton.SetActive(false);
         }
 
+        //countDown
+
+        if (startCountDown == true)
+        {
+            //float secondsCountDown = Mathf.FloorToInt(countDown % 60);
+            //tmpDebugText.text = string.Format("{0}", secondsCountDown);
+
+            if (countDown > 0)
+            {
+                countDown -= Time.deltaTime;
+                playerRead = false;
+
+                if (countDown < 0 && playerRead == false)
+                {
+                    EndThoughts();
+                }
+            }
+
+        }  
+
     }
 
     public void StartThoughts(Dialog dialogue)
     {
+        startCountDown = true;
+        sendResetCountDown();
+
         thoughtsBoxAnimator.SetBool("blink", false);
         thoughtsBoxAnimator.SetBool("appear", true);
         thoughtsNotif.Play();
@@ -79,7 +110,9 @@ public class ThoughtsManager : MonoBehaviour
         if(dialogue.name == "end Screen")
         {
             memoryAppear = true;
+            restartButton.SetActive(true);
         }
+
     }
 
     public void DisplayNextThoughts()
@@ -110,6 +143,7 @@ public class ThoughtsManager : MonoBehaviour
 
     public void EndThoughts()
     {
+        startCountDown = false;
         sentences.Clear();
         FindObjectOfType<PalPresenceManager>().stopParticules();
         FindObjectOfType<VFXBugsManager>().BugsDisappear();
@@ -134,10 +168,24 @@ public class ThoughtsManager : MonoBehaviour
         if (memoryIsEnd == true)
         {
             memoryAppear = false;
+            Debug.Log("walk button return");
         }
         else
         {
             return;
+        }
+    }
+
+    public void sendResetCountDown()
+    {
+        EventManager.TriggerEvent("nexButtonClicked", true);
+    }
+
+    private void resetCountDown(object data)
+    {
+        if ((bool)data == true) 
+        {
+            countDown = 15;
         }
     }
 
@@ -160,6 +208,7 @@ public class ThoughtsManager : MonoBehaviour
         }
 
     }
+
 
 
 

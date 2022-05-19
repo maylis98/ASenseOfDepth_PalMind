@@ -45,7 +45,10 @@ public class SphereExpansion : MonoBehaviour
     //Text blink time
     public float waitTime;
 
-    bool deleteZone;
+    private bool deleteZone;
+    private bool moveTowards;
+    private float speed = 0.5f;
+    private float degreesPerSecond = 30;
 
 
     private void Awake()
@@ -62,14 +65,27 @@ public class SphereExpansion : MonoBehaviour
         //wayPoints = wayPointsParent[0].GetComponentsInChildren<Transform>();
 
         deleteZone = false;
+        moveTowards = false;
         EventManager.StartListening("endZone", endZone);
     }
 
     private void Update()
     {
+        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+
         if (timeToMove)
         {
             updateWithConditions.Invoke();
+        }
+
+        if (moveTowards == true)
+        {
+            transform.position = Vector3.Lerp(transform.position, zonesInScene[0].transform.position + offsetFromObj, speed * Time.deltaTime);
+
+            if(transform.position == zonesInScene[0].transform.position + offsetFromObj)
+            {
+                moveTowards = false;
+            }
         }
 
     }
@@ -139,7 +155,8 @@ public class SphereExpansion : MonoBehaviour
     {
         //Place sphere above zone
         zonesInScene = GameObject.FindGameObjectsWithTag("Zone");
-        transform.position = zonesInScene[0].transform.position + offsetFromObj;
+        moveTowards = true;
+        //transform.position = zonesInScene[0].transform.position + offsetFromObj;
 
         //Make zone appear
         FindObjectOfType<ZoneManager>().showZone();

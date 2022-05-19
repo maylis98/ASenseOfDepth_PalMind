@@ -8,11 +8,8 @@ public class CanvasManager : MonoBehaviour
     public GameObject MainControls;
     public TextMeshProUGUI instructionsBox;
 
-    private bool memoryAppear;
-
     void Start()
     {
-        memoryAppear = false;
         MainControls.SetActive(false);
 
         EventManager.StartListening("returnGame", returnGameControls);
@@ -20,9 +17,9 @@ public class CanvasManager : MonoBehaviour
 
     private void returnGameControls(object data)
     {
-        if (memoryAppear == (bool)data)
+        if ((bool)data == true)
         {
-            Debug.Log("return to game received");
+            Debug.Log("return to game received " + (bool)data);
             FindObjectOfType<ThoughtsManager>().enableWalkButton(true);
         }
     }

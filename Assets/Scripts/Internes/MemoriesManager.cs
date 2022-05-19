@@ -18,6 +18,8 @@ public class MemoriesManager : MonoBehaviour
     [SerializeField]
     private GameObject PalBody;
 
+    
+
 
     public UnityEvent onEnd;
 
@@ -28,12 +30,18 @@ public class MemoriesManager : MonoBehaviour
     private Vector3 offsetFromCamera;
     public Vector3 initGateRotation;
 
+    private Vector3 frontCameraPos;
+    private Vector3 resultingPosition;
     private GameObject spawnedUncompleteS;
     private GameObject spawnedMemorialSpace;
     private GameObject spawnedSphere;
     private GameObject spawnedGate;
     private int indexOfMemory;
     private bool theEnd;
+
+    private bool rotateTowards;
+    private float distanceFromCamera = 2;
+    private float speed = 0.5f;
 
     void Awake()
     {
@@ -44,9 +52,11 @@ public class MemoriesManager : MonoBehaviour
         EventManager.StartListening("clearUncompleteS", hideUncompleteS);
     }
 
+
     public void showUncompleteS()
     {
-        spawnedUncompleteS = Instantiate(UncompleteSphere, Camera.main.transform.position + offsetFromCamera, Quaternion.Euler(0, 0, 0));
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
+        spawnedUncompleteS = Instantiate(UncompleteSphere, resultingPosition, Quaternion.Euler(0, 0, 0));
     }
 
     public void showMSpace()
@@ -74,12 +84,14 @@ public class MemoriesManager : MonoBehaviour
 
     private void UnlockMemory(object data)
     {
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
+
         FindObjectOfType<NativeWebsocketChat>().SendChatMessage("player static");
         FindObjectOfType<SoundManager>().sphereAppear();
         EventManager.TriggerEvent("clearCanvas", true);
         EventManager.TriggerEvent("showZone", true);
 
-        spawnedSphere = Instantiate(SpheresOfMemory[(int)data], Vector3.zero,Quaternion.identity);
+        spawnedSphere = Instantiate(SpheresOfMemory[(int)data], resultingPosition,Quaternion.identity);
         spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
 
     }
@@ -96,7 +108,8 @@ public class MemoriesManager : MonoBehaviour
     }
     public void showPalBody()
     {
-        spawnedGate = Instantiate(PalBody, Camera.main.transform.position + offsetFromCamera, Quaternion.Euler(0, 180, 0));
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
+        spawnedGate = Instantiate(PalBody, resultingPosition, Quaternion.Euler(0, 180, 0));
         FindObjectOfType<PalBodyManager>().showBody();
     }
 

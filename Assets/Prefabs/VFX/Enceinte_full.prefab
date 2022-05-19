@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4906598238541189154}
   - component: {fileID: 5992933464126306588}
   - component: {fileID: 3070081131732799449}
+  - component: {fileID: 2475311604571931898}
   m_Layer: 0
   m_Name: Enceinte_full
   m_TagString: Untagged
@@ -398,3 +399,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   vaseAnimator: {fileID: 0}
+--- !u!114 &2475311604571931898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065748080573902151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 0
+  priority: 1
+  blendDistance: 0.3
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6836d484ed82e6245b3b4a6f9cbf1a4c, type: 2}

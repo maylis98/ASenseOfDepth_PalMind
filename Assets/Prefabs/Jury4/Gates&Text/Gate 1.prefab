@@ -363,6 +363,7 @@ MonoBehaviour:
   textBoxObj: {fileID: 1615569150288000027}
   wayPointsParent:
   - {fileID: 6930684796228972078}
+  centerButton: {fileID: 0}
 --- !u!1 &1736652405561741240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,7 +7523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VFXCoral: {fileID: 8504987631276441767}
-  enceinte: {fileID: 3113940235819873416}
   palBodyFragment: {fileID: 8290442422959566543}
   UnifiedVFXscale: {x: 5, y: 5, z: 5}
 --- !u!65 &5724660553421427830

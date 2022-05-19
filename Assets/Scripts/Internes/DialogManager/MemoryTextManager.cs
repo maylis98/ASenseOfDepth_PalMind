@@ -72,15 +72,14 @@ public class MemoryTextManager : MonoBehaviour
         moveToPoints();
 
         string sentence = sentences.Dequeue();
-        StopAllCoroutines();
         alphaButton.alpha = 0f;
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
     }
 
     IEnumerator TypeSentence(string sentence)
     {
-
         textBox.text = "";
 
         foreach (char letter in sentence.ToCharArray())
@@ -96,17 +95,16 @@ public class MemoryTextManager : MonoBehaviour
         alphaButton.alpha = 0f;
         FindObjectOfType<ProgressBar>().GetCurrentFill(0, 0, memoryLength);
         //Clear text
+        sentences.Clear();
         textBox.text = "";
-        //FindObjectOfType<CanvasManager>().sentenceInEndText("Pal's memory is now complete");
-        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click on the memory ]");
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Memory plant");
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("NOW THE VISION IS CLEAR");
         FindObjectOfType<SoundManager>().calmDownAfterText();
         Debug.Log("End of conversation");
 
+
         //VFX State to "Unified"
         FindObjectOfType<VFXMemoryManager>().UnifiedMemory();
-
-
-        //Start Pal's body fragment animation
 
     }
 

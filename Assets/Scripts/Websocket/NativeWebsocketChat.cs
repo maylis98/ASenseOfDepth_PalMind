@@ -76,8 +76,12 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("The bugs");
                         FindObjectOfType<VFXBugsManager>().BugsAppear();
                         break;
-                    case "diving part 1":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1");
+                    case "diving part 1 pre":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1 pre");
+                        FindObjectOfType<PPManager>().IsBlinking();
+                        break;
+                    case "diving part 1 main":
+                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1 main");
                         FindObjectOfType<PPManager>().IsBlinking();
                         break;
                     case "so focus":
