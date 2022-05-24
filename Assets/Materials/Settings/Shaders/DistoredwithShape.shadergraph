@@ -149,9 +149,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "5120f123ec594f78b4ab08acbfd3282e"
+                    "m_Id": "82bdd708d60e4e90974ff1ec3a6e5564"
                 },
-                "m_SlotId": 0
+                "m_SlotId": 2
             }
         },
         {
@@ -749,7 +749,7 @@
     },
     "m_Name": "Alpha Clip",
     "m_DefaultReferenceName": "Vector1_23aa8a8e1081420d9a2d390d5e952785",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_AlphaC",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -865,16 +865,16 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "438c2d156856424c8390e2d123816a06",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "7d88d13396d54262afbe3ec04a5b15ce"
     },
     "m_Name": "Property",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -198.99996948242188,
-            "y": 364.0,
-            "width": 130.0,
+            "x": -1714.6666259765625,
+            "y": 427.3333435058594,
+            "width": 132.66664123535157,
             "height": 34.0
         }
     },

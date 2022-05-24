@@ -9,7 +9,8 @@ using TMPro;
 
 public class ARFilteredPlane : MonoBehaviour
 {
-    public GameObject zoneToPlace;
+    public GameObject[] objectsToPlace;
+    /*public GameObject zoneToPlace;*/
     public TextMeshProUGUI countDownText;
     public TextMeshProUGUI floorText;
     //public Vector3 offsetFromCamera;
@@ -50,14 +51,22 @@ public class ARFilteredPlane : MonoBehaviour
             {
                 countDownText.text = "";
                 floorText.text = "";
-                zoneToPlace.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
+                foreach (GameObject obj in objectsToPlace)
+                {
+                    obj.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
+                }
+                //zoneToPlace.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
                 whenFoorIsFound.Invoke();
 
 
             }
             else if(countDown < 0 && lowestPlane == null)
             {
-                zoneToPlace.transform.position = new Vector3(0, -1, 0);
+                foreach (GameObject obj in objectsToPlace)
+                {
+                    obj.transform.position = new Vector3(0, -1, 0);
+                }
+                //zoneToPlace.transform.position = new Vector3(0, -1, 0);
                 countDownText.text = "";
                 floorText.text = "";
 
@@ -100,7 +109,7 @@ public class ARFilteredPlane : MonoBehaviour
                     return;
                 }*/
 
-            }
+}
 
         }
 

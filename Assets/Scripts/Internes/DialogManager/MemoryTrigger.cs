@@ -46,7 +46,7 @@ public class MemoryTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<MemoryTextManager>().StartMemory(memory);
-        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("[ Click on text to continue the memory ]");
+        FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("Follow the light");
     }
 
     public void ShowParallelDimension()

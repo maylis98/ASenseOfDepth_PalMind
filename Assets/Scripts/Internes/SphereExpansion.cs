@@ -45,7 +45,7 @@ public class SphereExpansion : MonoBehaviour
     //Text blink time
     public float waitTime;
 
-    private bool deleteZone;
+    private bool deleteZone = false;
     private bool moveTowards;
     private float speed = 0.5f;
     private float degreesPerSecond = 30;
@@ -173,7 +173,8 @@ public class SphereExpansion : MonoBehaviour
 
     private void endZone(object data)
     {
-        if (deleteZone = (bool)data)
+        deleteZone = true;
+        if (deleteZone == (bool)data)
         {
             this.gameObject.SetActive(false);
         }

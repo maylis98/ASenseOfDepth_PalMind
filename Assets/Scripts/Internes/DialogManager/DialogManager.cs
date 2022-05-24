@@ -9,7 +9,9 @@ public class DialogManager : MonoBehaviour
     public UnityEvent whenFirstDialogueIsEnd;
     public UnityEvent whenSecondDialogueIsEnd;
 
+    public TextMeshProUGUI speakerName;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI introText;
 
     public GameObject intro;
 
@@ -19,6 +21,7 @@ public class DialogManager : MonoBehaviour
     public AudioSource palBreath;
 
     public Animator dialogueBoxAnimator;
+    public Animator eyesAnimator;
     public Animator endButton;
 
     private Queue<string> sentences;
@@ -38,10 +41,20 @@ public class DialogManager : MonoBehaviour
         dialogueBoxAnimator.SetBool("blink", false);
         dialogueBoxAnimator.SetBool("appear", true);
         nextButton.SetActive(true);
-        
 
-        if (dialogNumber == 1)
+        if (dialogNumber == 0)
         {
+            dialogueText.enabled = false;
+            introText.enabled = true;
+            speakerName.text = "";
+        }
+            if (dialogNumber == 1)
+        {
+            dialogueText.enabled = true;
+            eyesAnimator.SetBool("opening", true);
+            introText.enabled = false;
+            speakerName.text = "PAL'S MIND";
+        
             palPresence.SetActive(true);
             FindObjectOfType<PalPresenceManager>().startParticules();
             palBreath.Play();
@@ -75,13 +88,29 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = "";
-
-        foreach (char letter in sentence.ToCharArray())
+        if (dialogueText.enabled == false)
         {
-            dialogueText.text += letter;
-            yield return null;
+            introText. text = "";
+
+            foreach (char letter in sentence.ToCharArray())
+            {
+                introText.text += letter;
+                yield return null;
+            }
         }
+        else
+        {
+            dialogueText.text = "";
+
+            foreach (char letter in sentence.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return null;
+            }
+        }
+
+        
+
     }
 
    private void EndDialogue()

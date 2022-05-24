@@ -11,7 +11,7 @@ public class EndMemory : MonoBehaviour
 
     private BoxCollider armCollider;
 
-    public GameObject goalPos;
+    //public GameObject goalPos;
     public float speedToScreen;
     public float seconds = 1f;
     private void Start()
@@ -38,7 +38,7 @@ public class EndMemory : MonoBehaviour
         if (disappear)
         {
             appear = false;
-            this.transform.position = Vector3.MoveTowards(transform.position, goalPos.transform.position, Time.deltaTime * speedToScreen);
+            this.transform.position = Vector3.MoveTowards(transform.position, Camera.main.transform.position, Time.deltaTime * speedToScreen);
             StartCoroutine(ScaleTo(objectToScale, scaleTo, seconds));
 
             StartCoroutine(deleteMemory(seconds));

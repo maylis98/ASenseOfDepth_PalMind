@@ -100,11 +100,11 @@ public class MemoryTextManager : MonoBehaviour
         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Memory plant");
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("NOW THE VISION IS CLEAR");
         FindObjectOfType<SoundManager>().calmDownAfterText();
-        Debug.Log("End of conversation");
 
 
         //VFX State to "Unified"
         FindObjectOfType<VFXMemoryManager>().UnifiedMemory();
+        FindObjectOfType<PalPresenceWithText>().stopFollowing();
 
     }
 

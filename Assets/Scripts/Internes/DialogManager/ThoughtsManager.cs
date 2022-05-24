@@ -9,6 +9,7 @@ public class ThoughtsManager : MonoBehaviour
     public UnityEvent ifWalkButtonIsInactive;
 
     public TextMeshProUGUI thoughtsText;
+    public TextMeshProUGUI speakerName;
     public Animator thoughtsBoxAnimator;
     public AudioSource thoughtsNotif;
     public AudioSource thoughtsBreath;
@@ -23,6 +24,7 @@ public class ThoughtsManager : MonoBehaviour
     private bool isDone = false;
     private bool memoryAppear = false;
 
+    private Animator walkBAnimator;
     private float currentVolume;
     private float highVolume = 1f;
     private float lowVolume = 0f;
@@ -32,6 +34,7 @@ public class ThoughtsManager : MonoBehaviour
 
     void Start()
     {
+        walkBAnimator = walkButton.GetComponent<Animator>();
         continueButton.SetActive(false);
         sentences = new Queue<string>();
         EventManager.StartListening("clearCanvas", disableWalkButton);
@@ -90,6 +93,7 @@ public class ThoughtsManager : MonoBehaviour
         startCountDown = true;
         sendResetCountDown();
 
+        speakerName.text = "Pal's mind";
         thoughtsBoxAnimator.SetBool("blink", false);
         thoughtsBoxAnimator.SetBool("appear", true);
         thoughtsNotif.Play();
@@ -109,7 +113,7 @@ public class ThoughtsManager : MonoBehaviour
 
         if(dialogue.name == "end Screen")
         {
-            memoryAppear = true;
+            EventManager.TriggerEvent("cleanCanvas", true);
             restartButton.SetActive(true);
         }
 
@@ -143,6 +147,7 @@ public class ThoughtsManager : MonoBehaviour
 
     public void EndThoughts()
     {
+        speakerName.text = "";
         startCountDown = false;
         sentences.Clear();
         FindObjectOfType<PalPresenceManager>().stopParticules();
@@ -168,7 +173,7 @@ public class ThoughtsManager : MonoBehaviour
         if (memoryIsEnd == true)
         {
             memoryAppear = false;
-            Debug.Log("walk button return");
+            walkBAnimator.Play("Blink");
         }
         else
         {
@@ -202,11 +207,20 @@ public class ThoughtsManager : MonoBehaviour
             yield return null;  
         }
 
-        if (currentVolume < 0.1)
+        if (currentVolume < 0.05)
         {
             thoughtsBreath.Stop();
         }
 
+    }
+
+    IEnumerator makeWalkBlink(float duration)
+    {
+        walkBAnimator.SetBool("blink", true);
+
+        yield return new WaitForSeconds(duration);
+
+        walkBAnimator.SetBool("blink", false); 
     }
 
 

@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class PalPresenceManager : MonoBehaviour
 {
+    public Color targetColor;
+    public Color initialColor;
+    public Material particulesM;
+
     [SerializeField]
     private ParticleSystem particules;
     private ParticleSystem.MainModule sysmain;
     private bool rotateTowards;
-    private float distanceFromCamera = 2;
+    private float distanceFromCamera = 10;
     private float speed = 0.5f;
+    private Color currentColor;
 
     void Start()
     {
+        currentColor = initialColor;
+        particulesM.SetColor("_TintColor", currentColor);
         rotateTowards = false;
         sysmain = particules.main;
-        sysmain.startSize = 0f;
+
         this.gameObject.SetActive(false);
     }
 
@@ -44,21 +51,41 @@ public class PalPresenceManager : MonoBehaviour
 
     IEnumerator particulesAppear()
     {
+        currentColor = targetColor;
+        particulesM.SetColor("_TintColor", currentColor);
+
         sysmain.startSize = 0f;
 
-        yield return new WaitForSeconds(1);
+        float time = 0;
+        float durationFade = 2;
 
-        sysmain.startSize = 2f;
+        while (time < durationFade)
+        {
+            currentColor = Color.Lerp(currentColor, initialColor, time / durationFade);
+            time += Time.deltaTime;
+            particulesM.SetColor("_TintColor", currentColor);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(durationFade);
+
+        sysmain.startSize = 2f; 
        
     }
 
     IEnumerator particulesDisappear()
     {
-        sysmain.startSize = 2f;
+        float time = 0;
+        float durationFade = 2;
 
-        yield return new WaitForSeconds(1);
+        while (time < durationFade)
+        {
+            currentColor = Color.Lerp(currentColor, targetColor, time / durationFade);
+            time += Time.deltaTime;
+            particulesM.SetColor("_TintColor", currentColor);
+            yield return null;
+        }
 
-        sysmain.startSize = 0f;
         this.gameObject.SetActive(false);
 
     }

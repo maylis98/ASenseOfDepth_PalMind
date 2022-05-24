@@ -362,40 +362,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   mouseDown:
     m_PersistentCalls:
       m_Calls: []
   memory:
     memoryNumber: 1
     sentences:
-    - 'That day ....
+    - "That day...I remember now...\n\nI lost everything I had learned for years.
+      \nI lost control. "
+    - "I remember the bite of the cold in the water. And I remember watching her
+      sink. \nHer. "
+    - My cousin.
+    - "We were stupidly caught in a current. I panicked. \n\nMy body went into hypothermia.
+      I went into a strange sleep that kept me alive. "
+    - "She wasn't so lucky...\n\nShe froze to \u2026death."
+    - 'Strange feeling to survive.
 
-      I completely lost control.
 
-      I could feel the bite
-      of the cold. And I could see HER drowning.'
-    - "Her...My cousin... She was a diver. \nShe was very good at diving, much better
-      than me."
-    - We got caught in the cold on that dive. But it didn't bring us to the surface.
-    - "I was so stressed that my mind escaped from my own, frozen, body. I was completely
-      separated from myself. \n\nI felt what she must have felt when..."
-    - When she died.
-    - "I survived thanks to this mind-body dissociation. \nShe was not so lucky."
-    - "Strange feeling... \n\nI survived. \n\nFor no reason at all."
+      Without any reason.'
   floatingObjs:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   vaseAnimator: {fileID: 0}

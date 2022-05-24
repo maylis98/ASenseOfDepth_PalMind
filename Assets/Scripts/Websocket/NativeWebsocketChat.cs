@@ -83,6 +83,7 @@ public class NativeWebsocketChat : MonoBehaviour
                     case "diving part 1 main":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1 main");
                         FindObjectOfType<PPManager>().IsBlinking();
+                        FindObjectOfType<MemoriesManager>().showFallingC();
                         break;
                     case "so focus":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("So focus");
@@ -92,6 +93,7 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Distortion field");
                         break;
                     case "front water":
+                        FindObjectOfType<WaterFloorManager>().floorWater();
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Front water");
                         break;
                     case "strange feet":

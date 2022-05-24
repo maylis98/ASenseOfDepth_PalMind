@@ -9,6 +9,8 @@ public class MemoriesManager : MonoBehaviour
 
     public GameObject UncompleteSphere;
 
+    public GameObject FallingCylinders;
+
     [SerializeField]
     private GameObject[] SpheresOfMemory;
 
@@ -17,8 +19,6 @@ public class MemoriesManager : MonoBehaviour
 
     [SerializeField]
     private GameObject PalBody;
-
-    
 
 
     public UnityEvent onEnd;
@@ -30,10 +30,12 @@ public class MemoriesManager : MonoBehaviour
     private Vector3 offsetFromCamera;
     public Vector3 initGateRotation;
 
+    private float countDown;
     private Vector3 frontCameraPos;
     private Vector3 resultingPosition;
     private GameObject spawnedUncompleteS;
     private GameObject spawnedMemorialSpace;
+    private GameObject spawnedFallingC;
     private GameObject spawnedSphere;
     private GameObject spawnedGate;
     private int indexOfMemory;
@@ -42,6 +44,7 @@ public class MemoriesManager : MonoBehaviour
     private bool rotateTowards;
     private float distanceFromCamera = 2;
     private float speed = 0.5f;
+    private bool rotateAround = false;
 
     void Awake()
     {
@@ -50,6 +53,28 @@ public class MemoriesManager : MonoBehaviour
         EventManager.StartListening("endOfMemory", endThisMemory);
         EventManager.StartListening("clearMemorialSpace", hideMSpace);
         EventManager.StartListening("clearUncompleteS", hideUncompleteS);
+    }
+
+    private void Update()
+    {
+        if (rotateAround == true)
+        {
+            Vector3 objPos = Camera.main.transform.position + Camera.main.transform.up * 4 + Camera.main.transform.forward * 7;
+            spawnedFallingC.transform.position = new Vector3(objPos.x, objPos.y, objPos.z);
+
+            if (countDown > 0)
+            {
+                countDown -= Time.deltaTime;
+                float seconds = Mathf.FloorToInt(countDown % 60);
+                Debug.Log(countDown);
+
+                if (countDown < 0)
+                {
+                    Destroy(spawnedFallingC);
+                    rotateAround = false;
+                }
+            }
+        }
     }
 
 
@@ -62,6 +87,13 @@ public class MemoriesManager : MonoBehaviour
     public void showMSpace()
     {
         spawnedMemorialSpace = Instantiate(MemorialSpace, triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
+    }
+
+    public void showFallingC()
+    {
+        countDown = 10;
+        spawnedFallingC = Instantiate(FallingCylinders, Camera.main.transform.position + Camera.main.transform.up * 4 + Camera.main.transform.forward * 7, Quaternion.Euler(90, 0, 0));
+        rotateAround = true;
     }
 
     private void hideMSpace(object data) 

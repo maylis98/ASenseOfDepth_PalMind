@@ -7,7 +7,13 @@ public class VFXMemoryManager : MonoBehaviour
 {
     public VisualEffect VFXCoral;
     //public GameObject enceinte;
+    public GameObject rippleCaspule;
     public GameObject palBodyFragment;
+    public float currentAlpha;
+    private float fadeIn = 0;
+    public float fadeOut = 1;
+
+    private Material rippleM;
     private AudioSource audioBodyFragment;
 
     /*private Animator enceinteAnimator;
@@ -20,6 +26,9 @@ public class VFXMemoryManager : MonoBehaviour
 
     private void Awake()
     {
+        rippleM = rippleCaspule.GetComponent<Material>();
+        currentAlpha = fadeIn;
+        rippleM.SetFloat("_AlphaCC", currentAlpha);
 
         VFXCoral.SetFloat("Flux Intensity", 0.3f);
         VFXCoral.SetVector3("Transform_scale", new Vector3(2, 2, 2));
@@ -60,6 +69,7 @@ public class VFXMemoryManager : MonoBehaviour
     {
 
         FindObjectOfType<VFXGateManager>().GateDisappear();
+        StartCoroutine(lerpAlpha(fadeOut, 2));
         //enceinteAnimator.SetBool("disappear", true);
        /* VFXenceinte.SetFloat("Particules", 0f);*/
 
@@ -74,5 +84,18 @@ public class VFXMemoryManager : MonoBehaviour
         //FindObjectOfType<CanvasManager>().sentenceInEndText("This is a part of Pal's body");
         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Body fragment");
 
+    }
+
+    IEnumerator lerpAlpha(float targetAlpha, float durationFade)
+    {
+        float time = 0;
+
+        while (time < durationFade)
+        {
+            currentAlpha = Mathf.Lerp(currentAlpha, targetAlpha, time / durationFade);
+            time += Time.deltaTime;
+            rippleM.SetFloat("_AlphaCC", currentAlpha);
+            yield return null;
+        }
     }
 }
