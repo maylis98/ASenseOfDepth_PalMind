@@ -66,7 +66,6 @@ public class MemoriesManager : MonoBehaviour
             {
                 countDown -= Time.deltaTime;
                 float seconds = Mathf.FloorToInt(countDown % 60);
-                Debug.Log(countDown);
 
                 if (countDown < 0)
                 {

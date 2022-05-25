@@ -8,7 +8,7 @@ public class ThoughtsManager : MonoBehaviour
 {
     public UnityEvent ifWalkButtonIsInactive;
 
-    public TextMeshProUGUI thoughtsText;
+    public TextMeshPro thoughtsText;
     public TextMeshProUGUI speakerName;
     public Animator thoughtsBoxAnimator;
     public AudioSource thoughtsNotif;
@@ -70,7 +70,8 @@ public class ThoughtsManager : MonoBehaviour
 
         if (startCountDown == true)
         {
-            //float secondsCountDown = Mathf.FloorToInt(countDown % 60);
+            float secondsCountDown = Mathf.FloorToInt(countDown % 60);
+            Debug.Log(countDown);
             //tmpDebugText.text = string.Format("{0}", secondsCountDown);
 
             if (countDown > 0)

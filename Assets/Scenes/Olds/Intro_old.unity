@@ -385,7 +385,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -548,6 +548,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &276656996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276656998}
+  - component: {fileID: 276656997}
+  - component: {fileID: 276656999}
+  m_Layer: 0
+  m_Name: Socket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &276656997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276656996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7274518e5d782b14890f93b8005b2007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostname: pierrerossel.alwaysdata.net
+  port: 80
+  txt: {fileID: 175792363}
+--- !u!4 &276656998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276656996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 662.668, y: 1246.3667, z: 331.57617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276656999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276656996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cf33ef3f2d46a48b9515386262471c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &290607937
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +727,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -239.86147, y: 0, z: -239.7226, w: -538.06195}
+  m_margin: {x: -239.86147, y: 0, z: -239.7226, w: -180.68907}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -825,7 +884,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1657,7 +1716,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023568682
 GameObject:
@@ -1720,9 +1779,9 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.77, y: 0.68, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1094286644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5818881263965367763, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+--- !u!4 &1028043689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
   m_PrefabInstance: {fileID: 1975371459}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135623053
@@ -1766,17 +1825,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23ce49338b1a6c944aa975e82888af4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1192206367 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-  m_PrefabInstance: {fileID: 1975371459}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1271444434
@@ -1936,7 +1984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276656997}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2447,27 +2495,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2594539764579329901}
     m_Modifications:
-    - target: {fileID: 9021414415720887361, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: palOrb
-      value: 
-      objectReference: {fileID: 1094286644}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -399.93
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -532.2
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2533,7 +2577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8656317903365176001, guid: c0ee9832ba0b6aa419f228a0a29ac6d1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8656317903365176001, guid: c0ee9832ba0b6aa419f228a0a29ac6d1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2731,7 +2775,7 @@ MonoBehaviour:
   whenFirstDialogueIsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276656997}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2758,7 +2802,7 @@ MonoBehaviour:
   whenSecondDialogueIsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 276656997}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2771,7 +2815,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   speakerName: {fileID: 1891862813}
-  dialogueText: {fileID: 1192206367}
+  dialogueText: {fileID: 2594539764810961439}
   introText: {fileID: 290607939}
   intro: {fileID: 2594539764994016824}
   startButton: {fileID: 1287525227}
@@ -2792,6 +2836,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1028043689}
   - {fileID: 574805539}
   - {fileID: 2594539764994016823}
   - {fileID: 175792362}
@@ -2878,10 +2923,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2594539764810961408}
+  - component: {fileID: 2594539764810961438}
+  - component: {fileID: 2594539764810961439}
   - component: {fileID: 2594539764810961437}
   - component: {fileID: 2594539764810961410}
   m_Layer: 5
-  m_Name: Eyes
+  m_Name: DialogBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3002,6 +3049,104 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!222 &2594539764810961438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594539764810961409}
+  m_CullTransparentMesh: 1
+--- !u!114 &2594539764810961439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594539764810961409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'During a winter river swim, (s)he lost control. While (s)he was swimming,
+    (s)he suddenly no longer felt like (s)he had to come up to the surface to breathe. '
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
+  m_sharedMaterial: {fileID: 2508897350221615766, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29.11
+  m_fontSizeBase: 29.11
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 18
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 62.132843, y: -45.034073, z: 64.21631, w: -9.184663}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!224 &2594539764994016823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3020,7 +3165,7 @@ RectTransform:
   - {fileID: 305593726}
   - {fileID: 1891862812}
   m_Father: {fileID: 2594539764579329901}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3060,18 +3205,35 @@ MonoBehaviour:
   dialogues:
   - name: Introduction to Pal's world
     sentences:
-    - "They all knew the risks. \n\nEvery dive is a challenge. The cold, the current,
-      the pressure.\r\n"
-    - "Pal was an excellent diver, with an incredible breathing capacity. \nUnusually
-      capable.\r\n\r\nPerhaps a little too overconfident."
+    - "You will now dive in Pal\u2019s world."
+    - Pal was part of a group of 5 professional divers.
+    - 'Every dive was a challenge: they all knew the risks. The cold, the current,
+      the pressure of the water are merciless.'
+    - "Pal was an excellent diver. She had incredible breathing capacities. \r\n\nVery
+      unusual."
+    - Maybe she was a little too confident in herself.
+    - "You always have to be on your guard when scuba diving. \r\n\r\nUnderwater,
+      the sound travels poorly and the field of vision is reduced."
+    - 'You should always dive with someone.
+
+'
+    - Even the most experienced divers panic quickly when something unexpected happens.
+    - Welcome
   - name: Intro with Pal's voice
     sentences:
-    - 'Where are we?
-
-
-
-      Who do you think you are talking to?'
-    - Do you even know?
+    - ...
+    - Do you wonder where we are ?
+    - "And who's talking to you ? \n\nYou don't even know !"
+    - "You don\u2019t know who I am. Or should I say\u2026"
+    - 'WHAT I am. '
+    - ...Pay attention...
+    - "I\u2019m just a presence.\n\nWithout\u2026\n\nA body. "
+    - 'I lost it. '
+    - 'My body. '
+    - "He\u2019s over there, right behind.\n\nThat black shape."
+    - "I can\u2019t reach him. \n\nNot anymore..."
+    - 'I''m just a presence. '
+    - I'm just Pal's Mind.
 --- !u!82 &2594539764994016826
 AudioSource:
   m_ObjectHideFlags: 0

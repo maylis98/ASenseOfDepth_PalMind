@@ -7,13 +7,15 @@ public class PalPresenceManager : MonoBehaviour
     public Color targetColor;
     public Color initialColor;
     public Material particulesM;
+    public float distanceFromCamera = 10;
+
+    public GameObject palOrb;
 
     [SerializeField]
     private ParticleSystem particules;
     private ParticleSystem.MainModule sysmain;
     private bool rotateTowards;
-    private float distanceFromCamera = 10;
-    private float speed = 0.5f;
+    private float speed = 1f;
     private Color currentColor;
 
     void Start()
@@ -23,7 +25,7 @@ public class PalPresenceManager : MonoBehaviour
         rotateTowards = false;
         sysmain = particules.main;
 
-        this.gameObject.SetActive(false);
+        palOrb.SetActive(false);
     }
 
     private void Update()
@@ -33,6 +35,7 @@ public class PalPresenceManager : MonoBehaviour
             Vector3 resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
             //transform.position = new Vector3(resultingPosition.x, transform.position.y, resultingPosition.z);
             transform.position = Vector3.Lerp(transform.position, resultingPosition, speed * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Camera.main.transform.rotation, speed * Time.deltaTime);
         }
         
     }
@@ -86,7 +89,7 @@ public class PalPresenceManager : MonoBehaviour
             yield return null;
         }
 
-        this.gameObject.SetActive(false);
+        palOrb.SetActive(false);
 
     }
 

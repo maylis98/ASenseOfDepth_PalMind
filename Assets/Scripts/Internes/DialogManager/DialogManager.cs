@@ -10,7 +10,7 @@ public class DialogManager : MonoBehaviour
     public UnityEvent whenSecondDialogueIsEnd;
 
     public TextMeshProUGUI speakerName;
-    public TextMeshProUGUI dialogueText;
+    public TextMeshPro dialogueText;
     public TextMeshProUGUI introText;
 
     public GameObject intro;
