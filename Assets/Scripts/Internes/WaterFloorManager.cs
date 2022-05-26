@@ -18,6 +18,8 @@ public class WaterFloorManager : MonoBehaviour
         floorR.enabled = false;
         currentAlpha = lowAlpha;
         floorM.SetFloat("_AlphaC", currentAlpha);
+
+        floorWater();
     }
     public void floorWater()
     {
@@ -28,15 +30,18 @@ public class WaterFloorManager : MonoBehaviour
     IEnumerator floorTimeline(float durationF)
     {
         StartCoroutine(lerpAlpha(highAlpha, durationF));
+        FindObjectOfType<WaterPPManager>().PPPresence(1);
 
         yield return new WaitForSeconds(durationF + 10);
 
         StartCoroutine(lerpAlpha(lowAlpha, durationF));
+        FindObjectOfType<WaterPPManager>().PPPresence(0);
 
         yield return new WaitForSeconds(durationF);
 
         floorR.enabled = false;
-        this.gameObject.SetActive(false);
+        EventManager.TriggerEvent("disabledDistoredVision", true);
+        Destroy(this.gameObject);
     }
 
     IEnumerator lerpAlpha(float targetAlpha, float durationFade)

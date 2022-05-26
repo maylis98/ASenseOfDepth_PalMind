@@ -27,6 +27,7 @@ public class ARFilteredPlane : MonoBehaviour
     {
         arPlanes = new List<ARPlane>();
         arPlaneManager = FindObjectOfType<ARPlaneManager>();
+        arPlaneManager.enabled = true;
 
         arPlaneManager.planesChanged += OnPlanesChanged;
         floorText.text = "";
@@ -50,13 +51,13 @@ public class ARFilteredPlane : MonoBehaviour
             if (countDown < 0 && lowestPlane != null)
             {
                 countDownText.text = "";
-                floorText.text = "";
                 foreach (GameObject obj in objectsToPlace)
                 {
                     obj.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
                 }
                 //zoneToPlace.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
                 whenFoorIsFound.Invoke();
+                StartCoroutine(floorFound());
 
 
             }
@@ -71,10 +72,10 @@ public class ARFilteredPlane : MonoBehaviour
                 floorText.text = "";
 
                 //To delete 
-                whenFoorIsFound.Invoke();
+                //whenFoorIsFound.Invoke();
 
                 //& Replace by ... when build
-                //countDown = 6;
+                countDown = 6;
             }
         }
     }
@@ -93,30 +94,21 @@ public class ARFilteredPlane : MonoBehaviour
                     floorText.text = "ar Plane y is" + lowestPlane.transform.position.y;
                     countDown = 6;
                 }
-               /* if (plane.transform.position.y < -0.6)
-                {
-                    //plane.alignment.IsHorizontal() &&
-                    ARPlane arPlane = args.added[0];
-                    debugText.text = "ar Plane y is" + arPlane.transform.position.y;
-                    //zoneToPlace.transform.position = arPlane.transform.position;
-                    //FindObjectOfType<PositionZoneOnMainPlane>().placeOnCenterOfPlane(arPlane);
-                    whenHorizontalSmallPlaneIsFound.Invoke();
-                }
-                else
-                {
-                    ARPlane arPlane = args.removed[0];
-                    debugText.text = "the plane is under -0.6";
-                    return;
-                }*/
 
-}
+
+            }
 
         }
 
-        
+    }
 
+    IEnumerator floorFound()
+    {
+        floorText.text = "Floor found";
 
+        yield return new WaitForSeconds(3);
 
-
+        floorText.text = "";
+        arPlaneManager.enabled = false;
     }
 }

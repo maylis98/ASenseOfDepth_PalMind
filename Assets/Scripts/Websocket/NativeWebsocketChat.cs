@@ -88,12 +88,13 @@ public class NativeWebsocketChat : MonoBehaviour
                     case "so focus":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("So focus");
                         FindObjectOfType<PPManager>().IsBlinking();
+                        FindObjectOfType<MemoriesManager>().showFallingC();
                         break;
                     case "distortion field":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Distortion field");
                         break;
                     case "front water":
-                        FindObjectOfType<WaterFloorManager>().floorWater();
+                        FindObjectOfType<MemoriesManager>().showWaterFloor();
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Front water");
                         break;
                     case "strange feet":
@@ -114,7 +115,6 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("I feel myself again");
                         break;
                     case "end of Game":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("end of Game");
                         FindObjectOfType<MemoriesManager>().showPalBody();
                         break;
 
@@ -122,6 +122,7 @@ public class NativeWebsocketChat : MonoBehaviour
                     //SHOW MEMORY
                     case "water up 1":
                         FindObjectOfType<WaterPPManager>().PPPresence(1);
+                        FindObjectOfType<MemoriesManager>().showWaterFloor();
                         FindObjectOfType<MemoriesManager>().showUncompleteS();
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Uncomplete memory");
                         break;

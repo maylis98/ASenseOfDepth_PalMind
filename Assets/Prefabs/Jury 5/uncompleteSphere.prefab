@@ -470,7 +470,7 @@ VisualEffect:
       - m_Value: 1.96
         m_Name: Flux Intensity
         m_Overridden: 1
-      - m_Value: 0.4
+      - m_Value: 0.2
         m_Name: ScaleX
         m_Overridden: 1
       - m_Value: 4
@@ -510,7 +510,7 @@ VisualEffect:
       - m_Value:
           serializedVersion: 2
           key0: {r: 0.007843138, g: 0, b: 1.4980392, a: 0.25490198}
-          key1: {r: 0.36256206, g: 0.54705244, b: 14.411887, a: 1}
+          key1: {r: 0.10349082, g: 0.16558532, b: 3.9533494, a: 1}
           key2: {r: 0, g: 0.029150024, b: 5.029994, a: 0}
           key3: {r: 0.0031859921, g: 0, b: 0.1509434, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}

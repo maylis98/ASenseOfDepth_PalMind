@@ -71,7 +71,7 @@ public class ThoughtsManager : MonoBehaviour
         if (startCountDown == true)
         {
             float secondsCountDown = Mathf.FloorToInt(countDown % 60);
-            Debug.Log(countDown);
+            //Debug.Log(countDown);
             //tmpDebugText.text = string.Format("{0}", secondsCountDown);
 
             if (countDown > 0)

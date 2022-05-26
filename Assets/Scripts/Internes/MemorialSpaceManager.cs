@@ -15,7 +15,7 @@ public class MemorialSpaceManager : MonoBehaviour
     private float valueToChange;
     private float PPValueToChange;
     private float highParticules = 100000f;
-    private float lowParticules = 0f;
+    private float lowParticules = -200f;
 
     private VisualEffect VFXGate;
     private AudioSource audioGate;

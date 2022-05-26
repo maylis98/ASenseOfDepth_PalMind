@@ -78,6 +78,7 @@ public class EndMemory : MonoBehaviour
 
         EventManager.TriggerEvent("endOfMemory", true);
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
+        FindObjectOfType<CanvasManager>().showWhiteBckgrd();
         FindObjectOfType<SoundManager>().defaultState();
         Debug.Log("END sent to Game");
     }

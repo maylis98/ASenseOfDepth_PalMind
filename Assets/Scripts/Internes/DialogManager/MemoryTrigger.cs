@@ -14,7 +14,7 @@ public class MemoryTrigger : MonoBehaviour
 
     public GameObject[] floatingObjs;
 
-    public Animator vaseAnimator;
+    //public Animator vaseAnimator;
 
     private AudioSource audioDistortionField;
 
@@ -65,7 +65,7 @@ public class MemoryTrigger : MonoBehaviour
     {
         audioDistortionField.Play();
 
-        vaseAnimator.SetBool("disappear", true);
+        //vaseAnimator.SetBool("disappear", true);
         floatingObjs[0].SetActive(false);
     }
 

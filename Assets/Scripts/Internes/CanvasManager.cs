@@ -6,6 +6,7 @@ using TMPro;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject MainControls;
+    public GameObject whiteBckgrd;
     public TextMeshProUGUI instructionsBox;
 
     void Start()
@@ -28,6 +29,11 @@ public class CanvasManager : MonoBehaviour
     {
         instructionsBox.text = instructions;
     }
-   
+
+    public void showWhiteBckgrd()
+    {
+        whiteBckgrd.SetActive(true);
+    }
+
 
 }

@@ -11,6 +11,8 @@ public class MemoriesManager : MonoBehaviour
 
     public GameObject FallingCylinders;
 
+    public GameObject WaterFloor;
+
     [SerializeField]
     private GameObject[] SpheresOfMemory;
 
@@ -59,8 +61,8 @@ public class MemoriesManager : MonoBehaviour
     {
         if (rotateAround == true)
         {
-            Vector3 objPos = Camera.main.transform.position + Camera.main.transform.up * 4 + Camera.main.transform.forward * 7;
-            spawnedFallingC.transform.position = new Vector3(objPos.x, objPos.y, objPos.z);
+            /*Vector3 objPos = Camera.main.transform.position + Camera.main.transform.up * 4 + Camera.main.transform.forward * 7;
+            spawnedFallingC.transform.position = new Vector3(objPos.x, objPos.y, objPos.z);*/
 
             if (countDown > 0)
             {
@@ -88,10 +90,15 @@ public class MemoriesManager : MonoBehaviour
         spawnedMemorialSpace = Instantiate(MemorialSpace, triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
     }
 
+    public void showWaterFloor()
+    {
+        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-4), Quaternion.Euler(0, 0, 0)) ;
+    }
+
     public void showFallingC()
     {
-        countDown = 10;
-        spawnedFallingC = Instantiate(FallingCylinders, Camera.main.transform.position + Camera.main.transform.up * 4 + Camera.main.transform.forward * 7, Quaternion.Euler(90, 0, 0));
+        countDown = 20;
+        spawnedFallingC = Instantiate(FallingCylinders, Camera.main.transform.position + Camera.main.transform.up * 10 + Camera.main.transform.forward * 7, Quaternion.Euler(90, 0, 0));
         rotateAround = true;
     }
 
@@ -139,8 +146,8 @@ public class MemoriesManager : MonoBehaviour
     }
     public void showPalBody()
     {
-        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
-        spawnedGate = Instantiate(PalBody, resultingPosition, Quaternion.Euler(0, 180, 0));
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.up * (-1) + Camera.main.transform.forward * distanceFromCamera;
+        spawnedGate = Instantiate(PalBody, resultingPosition, Quaternion.Euler(0, 0, 0));
         FindObjectOfType<PalBodyManager>().showBody();
     }
 

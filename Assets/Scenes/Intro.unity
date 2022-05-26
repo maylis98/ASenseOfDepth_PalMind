@@ -1412,11 +1412,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1427,7 +1431,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2008309312}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1001997110}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
@@ -1439,11 +1451,27 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SendChatMessage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: NativeWebsocketChat, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153705788672, guid: a8972ac333165a6468040132e2984fb1, type: 3}
@@ -1452,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153705788679, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153705788679, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1658,6 +1686,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001997108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001997111}
+  - component: {fileID: 1001997110}
+  - component: {fileID: 1001997109}
+  m_Layer: 0
+  m_Name: Socket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1001997109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001997108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cf33ef3f2d46a48b9515386262471c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1001997110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001997108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7274518e5d782b14890f93b8005b2007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hostname: pierrerossel.alwaysdata.net
+  port: 80
+  txt: {fileID: 175792363}
+--- !u!4 &1001997111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001997108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 662.668, y: 1246.3667, z: 331.57617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023568682
 GameObject:
@@ -1936,7 +2023,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1001997110}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2455,7 +2542,7 @@ PrefabInstance:
       objectReference: {fileID: 1094286644}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2503,11 +2590,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259644089ede21e4bb4951666f72e106, type: 3}
---- !u!1 &1975371460 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9021414415720887363, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-  m_PrefabInstance: {fileID: 1975371459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2008309310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2731,7 +2813,7 @@ MonoBehaviour:
   whenFirstDialogueIsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1001997110}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2758,7 +2840,7 @@ MonoBehaviour:
   whenSecondDialogueIsEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1001997110}
         m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
         m_MethodName: SendChatMessage
         m_Mode: 5
@@ -2776,7 +2858,7 @@ MonoBehaviour:
   intro: {fileID: 2594539764994016824}
   startButton: {fileID: 1287525227}
   nextButton: {fileID: 649943388}
-  palPresence: {fileID: 1975371460}
+  palPresence: {fileID: 1094286644}
   palBreath: {fileID: 2594539764810961410}
   dialogueBoxAnimator: {fileID: 2594539764810961437}
   eyesAnimator: {fileID: 2594539764810961437}
@@ -2797,7 +2879,7 @@ RectTransform:
   - {fileID: 175792362}
   - {fileID: 2008309311}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

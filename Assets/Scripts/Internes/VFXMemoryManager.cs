@@ -26,12 +26,13 @@ public class VFXMemoryManager : MonoBehaviour
 
     private void Awake()
     {
-        rippleM = rippleCaspule.GetComponent<Material>();
+        rippleM = rippleCaspule.GetComponent<MeshRenderer>().sharedMaterial;
         currentAlpha = fadeIn;
         rippleM.SetFloat("_AlphaCC", currentAlpha);
 
+        VFXCoral.SetFloat("Spread", 7f);
         VFXCoral.SetFloat("Flux Intensity", 0.3f);
-        VFXCoral.SetVector3("Transform_scale", new Vector3(2, 2, 2));
+        VFXCoral.SetVector3("Transform_scale", UnifiedVFXscale);
 
         //Enable memory Collider at first
         VFXCoralCollider = VFXCoral.GetComponent<BoxCollider>();
