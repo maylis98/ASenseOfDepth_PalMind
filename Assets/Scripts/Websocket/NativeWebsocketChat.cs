@@ -73,17 +73,21 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Look around");
                         break;
                     case "bugs appear":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("The bugs");
                         FindObjectOfType<VFXBugsManager>().BugsAppear();
                         break;
                     case "diving part 1 pre":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1 pre");
                         FindObjectOfType<PPManager>().IsBlinking();
+                        FindObjectOfType<CanvasManager>().showCapsuleButton(1);
                         break;
                     case "diving part 1 main":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Diving part 1 main");
                         FindObjectOfType<PPManager>().IsBlinking();
                         FindObjectOfType<MemoriesManager>().showFallingC();
+                        break;
+                    case "diving part 2 pre":
+                        FindObjectOfType<PPManager>().IsBlinking();
+                        FindObjectOfType<CanvasManager>().showCapsuleButton(2);
                         break;
                     case "so focus":
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("So focus");
@@ -91,14 +95,12 @@ public class NativeWebsocketChat : MonoBehaviour
                         FindObjectOfType<MemoriesManager>().showFallingC();
                         break;
                     case "distortion field":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Distortion field");
                         break;
                     case "front water":
                         FindObjectOfType<MemoriesManager>().showWaterFloor();
                         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Front water");
                         break;
                     case "strange feet":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Strange feet");
                         break;
                     case "water up":
                         FindObjectOfType<WaterPPManager>().PPPresence(1);
@@ -108,7 +110,6 @@ public class NativeWebsocketChat : MonoBehaviour
                         //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Water is going up");
                         break;
                     case "finds box":
-                        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("Finds box");
                         break;
                     case "feel myself":
                         EventManager.TriggerEvent("returnGame", true);

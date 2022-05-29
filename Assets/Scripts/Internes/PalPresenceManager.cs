@@ -11,6 +11,7 @@ public class PalPresenceManager : MonoBehaviour
 
     public GameObject palOrb;
 
+    public ParticleSystem smokeParticules;
     [SerializeField]
     private ParticleSystem particules;
     private ParticleSystem.MainModule sysmain;
@@ -88,6 +89,10 @@ public class PalPresenceManager : MonoBehaviour
             particulesM.SetColor("_TintColor", currentColor);
             yield return null;
         }
+
+        smokeParticules.Stop();
+
+        yield return new WaitForSeconds(3);
 
         palOrb.SetActive(false);
 

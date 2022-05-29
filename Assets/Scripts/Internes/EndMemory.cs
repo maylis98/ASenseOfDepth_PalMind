@@ -74,6 +74,7 @@ public class EndMemory : MonoBehaviour
 
     private IEnumerator deleteMemory(float seconds)
     {
+
         yield return new WaitForSeconds(seconds);
 
         EventManager.TriggerEvent("endOfMemory", true);

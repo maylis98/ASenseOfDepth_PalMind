@@ -9,8 +9,11 @@ public class DistoredParticulesManager : MonoBehaviour
     private bool followCam = false;
     public GameObject ObjToDestroy;
 
+    private ParticleSystem particulesS;
+
     void Awake()
     {
+        particulesS = GetComponent<ParticleSystem>();
         EventManager.StartListening("disabledDistoredVision", disableDistoredVision);
         isFinished = false;
 
@@ -43,7 +46,7 @@ public class DistoredParticulesManager : MonoBehaviour
 
         if(isFinished = (bool)data)
         {
-            Destroy(ObjToDestroy);
+            particulesS.Stop();
         }
         
     }

@@ -35,7 +35,7 @@ public class ZoneManager : MonoBehaviour
 
     private void disableZone(object data)
     {
-        if((bool)data)
+        if((bool)data == true)
         {
             Debug.Log("endZoneIsReceived");
             audioZone.Stop();

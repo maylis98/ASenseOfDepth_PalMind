@@ -43,14 +43,16 @@ public class MemoriesManager : MonoBehaviour
     private int indexOfMemory;
     private bool theEnd;
 
-    private bool rotateTowards;
+    private ParticleSystem fallingCParticules;
+
+    private float wait = 2f;
     private float distanceFromCamera = 2;
-    private float speed = 0.5f;
     private bool rotateAround = false;
 
     void Awake()
     {
         theEnd = false;
+
         EventManager.StartListening("UnlockMemory", UnlockMemory);
         EventManager.StartListening("endOfMemory", endThisMemory);
         EventManager.StartListening("clearMemorialSpace", hideMSpace);
@@ -67,12 +69,14 @@ public class MemoriesManager : MonoBehaviour
             if (countDown > 0)
             {
                 countDown -= Time.deltaTime;
-                float seconds = Mathf.FloorToInt(countDown % 60);
+                //float seconds = Mathf.FloorToInt(countDown % 60);
 
                 if (countDown < 0)
                 {
-                    Destroy(spawnedFallingC);
+                    fallingCParticules.Stop();
+                    StartCoroutine(waitBeforeDestroy(wait));
                     rotateAround = false;
+                    
                 }
             }
         }
@@ -92,13 +96,15 @@ public class MemoriesManager : MonoBehaviour
 
     public void showWaterFloor()
     {
-        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-4), Quaternion.Euler(0, 0, 0)) ;
+        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-7), Quaternion.Euler(0, 0, 0)) ;
     }
 
     public void showFallingC()
     {
         countDown = 20;
         spawnedFallingC = Instantiate(FallingCylinders, Camera.main.transform.position + Camera.main.transform.up * 10 + Camera.main.transform.forward * 7, Quaternion.Euler(90, 0, 0));
+        fallingCParticules = spawnedFallingC.GetComponent<ParticleSystem>();
+        FindObjectOfType<SoundManager>().anxiousWithWater();
         rotateAround = true;
     }
 
@@ -151,5 +157,11 @@ public class MemoriesManager : MonoBehaviour
         FindObjectOfType<PalBodyManager>().showBody();
     }
 
+    IEnumerator waitBeforeDestroy(float waitingTime)
+    {
+        yield return new WaitForSeconds(waitingTime);
+
+        Destroy(spawnedFallingC);
+    }
        
 }

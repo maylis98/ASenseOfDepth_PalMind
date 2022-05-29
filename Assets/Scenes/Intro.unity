@@ -2351,6 +2351,11 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 1
+--- !u!95 &1527422226 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 549884636, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+  m_PrefabInstance: {fileID: 1975371459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1846328292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2588,7 +2593,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pal Mind
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 259644089ede21e4bb4951666f72e106, type: 3}
 --- !u!1001 &2008309310
 PrefabInstance:
@@ -2860,7 +2866,7 @@ MonoBehaviour:
   nextButton: {fileID: 649943388}
   palPresence: {fileID: 1094286644}
   palBreath: {fileID: 2594539764810961410}
-  dialogueBoxAnimator: {fileID: 2594539764810961437}
+  dialogueBoxAnimator: {fileID: 1527422226}
   eyesAnimator: {fileID: 2594539764810961437}
   endButton: {fileID: 574805540}
 --- !u!224 &2594539764579329901

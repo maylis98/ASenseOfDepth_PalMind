@@ -123,6 +123,280 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2465651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2465652}
+  - component: {fileID: 2465657}
+  - component: {fileID: 2465656}
+  - component: {fileID: 2465655}
+  - component: {fileID: 2465653}
+  - component: {fileID: 2465654}
+  - component: {fileID: 2465658}
+  m_Layer: 5
+  m_Name: openCapsuleButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2465652
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 692697834}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -318.75003}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &2465653
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f7a91aab21ac3ae499f46f100b9d3a34, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &2465654
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 111fa1b268c3eb240b7563658eec3a26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2465655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.1764706}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.1764706}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.1764706}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2465656}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2465653}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2465658}
+        m_TargetAssemblyTypeName: capsuleButtonManager, Assembly-CSharp
+        m_MethodName: onceClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2465656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ce86653693993f94aba09b4ae6343636, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2465657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_CullTransparentMesh: 1
+--- !u!114 &2465658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fef9fae031b22240ac90bcfbed37fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5633977
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +429,7 @@ MonoBehaviour:
   MemorialSpace: {fileID: 3985406069563779917, guid: 9248a52863ffbaf4eb152ba8ff8575b7, type: 3}
   UncompleteSphere: {fileID: 3610988817717689725, guid: e8a16bbea37ff994d92460e2f1fbd82e, type: 3}
   FallingCylinders: {fileID: 8003339399235137671, guid: 2cc1cc391896d9c4182064e761ec981e, type: 3}
-  WaterFloor: {fileID: 2624436101764315232, guid: 9c2b5cfb40cf73a4e8d87599df0d6387, type: 3}
+  WaterFloor: {fileID: 5595404245213969829, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
   SpheresOfMemory:
   - {fileID: 3610988817717689725, guid: d056054074db0ba4b9fae89a30fbb7be, type: 3}
   - {fileID: 3610988817717689725, guid: 605f78a766d92cd4fa40971c59d9fef2, type: 3}
@@ -307,13 +581,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23293086}
-  - component: {fileID: 23293094}
   - component: {fileID: 23293088}
   - component: {fileID: 23293096}
   - component: {fileID: 23293089}
   - component: {fileID: 23293091}
   - component: {fileID: 23293093}
   - component: {fileID: 23293097}
+  - component: {fileID: 23293094}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -782,7 +1056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &69853641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -795,7 +1069,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1332840941}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1508,140 +1782,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &440468623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 440468624}
-  - component: {fileID: 440468626}
-  - component: {fileID: 440468625}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &440468624
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440468623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 818214156}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 159.89584}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &440468625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440468623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: RESTART
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57f94ef36e672f844842d3766b594058, type: 2}
-  m_sharedMaterial: {fileID: 80393421418118997, guid: 57f94ef36e672f844842d3766b594058, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 41.89
-  m_fontSizeBase: 41.89
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -69.62437, y: 97.16601, z: -66.2978, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &440468626
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440468623}
-  m_CullTransparentMesh: 1
 --- !u!1 &441461648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,262 +2012,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517624348}
   m_CullTransparentMesh: 1
---- !u!1 &549884632 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1192206366, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-  m_PrefabInstance: {fileID: 1715251044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &549884633 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
   m_PrefabInstance: {fileID: 1715251044}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549884632}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &549884634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549884632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b70cf00a41310478e6a2091b2200db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - name: Look around
-    sentences:
-    - "I should warn you. \n\nThis body is afraid of everything. "
-    - 'Nobody tells him where to go.
-
-
-      He''s completely lost in this place. '
-    - I think, deep down, he knows the direction.
-    - But he refuses to remember it.
-    - So YOU have to push him forward.
-  - name: Distortion Field
-    sentences:
-    - I have to keep walking
-    - Otherwise...
-    - The fear will come back...
-  - name: Front water
-    sentences:
-    - "So far, my body has managed to avoid water. \n\nHe is scared to death of it."
-    - 'It''s kind of ridiculous. '
-    - He, well... WE, used to love diving so much. Before...
-    - ...
-    - 'Anyway...do you really want to take him ? '
-    - "Let's go. \n\nThis place doesn't leave us with many choices anyway. "
-  - name: The bugs
-    sentences:
-    - Bugs...
-    - 'They come through here a lot.
-
-
-      There are more and more of them these
-      days.'
-    - As if they were attracted to unstable beings.
-    - ...Like me...
-    - "Sometimes they help you to know where you are. \n\nAnd what to expect in that
-      place.\n"
-  - name: Diving part 1 pre
-    sentences:
-    - "Maybe I should tell you a little more about the two of us\u2026"
-  - name: Diving part 1 main
-    sentences:
-    - "Wow this place is really falling apart\u2026! \n\nJust like me\u2026"
-    - 'As I was saying, I loved water.
-
-
-      Diving was my life. '
-    - "And then\u2026after one of those dives\u2026suddenly that URGE to go underwater
-      disappeared."
-    - "Just like that. \n\nI didn\u2019t care anymore. "
-    - "The water didn\u2019t feel as soft as it used to. \n\nIt was somehow even
-      \u2026painful. "
-  - name: Uncomplete memory
-    sentences:
-    - Water is rising ...
-    - I have already been through this...
-    - "I couldn\u2019t say more. \n\nBut it awakened something..."
-    - "It\u2019s not clear. \n\nI feel like there's something broken."
-    - 'It''s just a vision for now. '
-  - name: So focus
-    sentences:
-    - But what does all this fuss mean?!
-    - 'I''m just trying to figure out what''s going on here.
-
-
-      There is nothing
-      more I can do for this body. '
-    - "I don't even understand why we are separated. \n\nBut I can't leave."
-    - 'I have to take him back. I know he''s hiding something from me. '
-    - 'Something I can''t access...
-
-
-      without him...'
-  - name: In front of Gate
-    sentences:
-    - Finally...
-    - Something was awakened by the box.
-    - 'It is clearer now...
-
-
-      A sanctuary of forgotten sensations...'
-  - name: Memory plant
-    sentences:
-    - 'I hadn''t felt that way in a long time. '
-    - 'My feelings were stored in another part of my memory.
-
-
-      The memory of
-      my body.'
-    - This place,... those water plants, seem familiar now.
-  - name: Body fragment
-    sentences:
-    - I was waiting for something that would bind us together again.
-    - Now that my shame has been slowly relieved...
-    - "My body finds its way back to me. \n\nAnd ... To himself."
-  - name: I feel myself again
-    sentences:
-    - 'We both know we lived all of this. '
-    - 'This loss. '
-    - 'It''s time to face it. '
-  - name: Pal recovers
-    sentences:
-    - ...Now I understand...
-    - ...I am fully myself...
-  - name: end of Game
-    sentences:
-    - It will be a long road.
-    - "And I don't expect to fully recover. \n\nI can't."
-    - But I do hope to find again the bond that will go between this lost body and
-      me.
-    - It will be a journey into my introVerse.
-  - name: end Screen
-    sentences:
-    - 'THANK YOU FOR PLAYING '
---- !u!95 &549884636
+--- !u!95 &549884636 stripped
 Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 549884636, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+  m_PrefabInstance: {fileID: 1715251044}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549884632}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4eafdf59783c76d428d0db75367d060c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &549884638
+--- !u!82 &549884638 stripped
 AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 549884638, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+  m_PrefabInstance: {fileID: 1715251044}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549884632}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7cd5b3ddcf90f3845b477e413d2408c1, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &600803251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2143,7 @@ RectTransform:
   - {fileID: 899717120}
   - {fileID: 1089280489}
   - {fileID: 1882527568}
+  - {fileID: 2465652}
   m_Father: {fileID: 1332840941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2490,15 +2396,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 440468624}
+  m_Children: []
   m_Father: {fileID: 1332840941}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -337.9}
-  m_SizeDelta: {x: 160, y: 160}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818214157
 MonoBehaviour:
@@ -2600,7 +2505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21934adafa4cd78468fe5f1160e0f30f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe20442fc31771a47834cb010c6328d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4504,9 +4409,9 @@ RectTransform:
   - {fileID: 71749037}
   - {fileID: 1158857844}
   - {fileID: 1930916522}
+  - {fileID: 69853641}
   - {fileID: 818214156}
   - {fileID: 1100815176}
-  - {fileID: 69853641}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4528,6 +4433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainControls: {fileID: 692697833}
+  openCapsuleButton: {fileID: 2465651}
   whiteBckgrd: {fileID: 69853640}
   instructionsBox: {fileID: 1575412636}
 --- !u!114 &1332840943
@@ -5042,61 +4948,353 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_text
-      value: hgfdxcvbn,k,jhgfdfg
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.size
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_margin.w
-      value: 1.1092216
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[1].name
+      value: Front water
       objectReference: {fileID: 0}
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_margin.x
-      value: 8.729311
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].name
+      value: Diving part 1 pre
       objectReference: {fileID: 0}
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_margin.y
-      value: 1.1242112
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].name
+      value: Diving part 1 main
       objectReference: {fileID: 0}
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_margin.z
-      value: 8.753919
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].name
+      value: Uncomplete memory
       objectReference: {fileID: 0}
-    - target: {fileID: 1192206367, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].name
+      value: So focus
       objectReference: {fileID: 0}
-    - target: {fileID: 9021414415720887361, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: palOrb
-      value: 
-      objectReference: {fileID: 1715251046}
-    - target: {fileID: 9021414415720887361, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1846328292}
-    - target: {fileID: 9021414415720887361, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: particulesM
-      value: 
-      objectReference: {fileID: 2100000, guid: dbad02d3734c5d2408a86e46adfe77e8, type: 2}
-    - target: {fileID: 9021414415720887361, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: distanceFromCamera
-      value: 4
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].name
+      value: Memory plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[7].name
+      value: Body fragment
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[8].name
+      value: I feel myself
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[9].name
+      value: end Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].name
+      value: end Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].name
+      value: end Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].name
+      value: end Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[13].name
+      value: end Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[7].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[8].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[9].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[13].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[0]
+      value: "Me, I'm just a presence - a presence whithout a body. \nA mind.\nPal's
+        mind. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[1]
+      value: "That black shape over there ? Just a body. \nI can't reach him. Not
+        anymore. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[2]
+      value: So YOU have to push him forward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[0].sentences.Array.data[3]
+      value: So YOU have to push him forward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[0]
+      value: "This place doesn't give us many choices. There is only one way through
+        the water. \n\nI used to love to dive into the water and feel my body float. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[1].sentences.Array.data[1]
+      value: 'It''s painful now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[0]
+      value: "I know this body is hiding something from me. \n\nI can't access it
+        without him."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[1]
+      value: 'It''s painful now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[2]
+      value: "Let's go. \n\nThis place doesn't leave us with many choices anyway. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[3]
+      value: "Let's go. \n\nThis place doesn't leave us with many choices anyway. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[2].sentences.Array.data[4]
+      value: "Let's go. \n\nThis place doesn't leave us with many choices anyway. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[0]
+      value: "What did he just do ?! \n\nSomething is definitely trying to escape
+        from there."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[1]
+      value: Or reach out ...to me ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[2]
+      value: "And then\u2026after one of those dives\u2026suddenly that URGE to go
+        underwater disappeared."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[3]
+      value: "Just like that. \n\nI didn\u2019t care anymore. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[3].sentences.Array.data[4]
+      value: "The water didn\u2019t feel as soft as it used to. \n\nIt was somehow
+        even \u2026painful. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.data[0]
+      value: "Water is rising ...I already lived this. \n\nA long time ago ...."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.data[1]
+      value: 'It''s just a vision for now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.data[2]
+      value: 'It''s just a vision for now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.data[3]
+      value: 'It''s just a vision for now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[4].sentences.Array.data[4]
+      value: 'It''s just a vision for now. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.data[0]
+      value: More and more oddities ?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.data[1]
+      value: We are getting closer...
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.data[2]
+      value: 'I have to take him back. I know he''s hiding something from me. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.data[3]
+      value: 'Something I can''t access...
+
+
+        without him...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[5].sentences.Array.data[4]
+      value: 'Something I can''t access...
+
+
+        without him...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.data[0]
+      value: The answers always lies in the body...
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.data[1]
+      value: This place,... those water plants, seem familiar now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.data[2]
+      value: This place,... those water plants, seem familiar now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.data[3]
+      value: 'I have to take him back. I know he''s hiding something from me. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[6].sentences.Array.data[4]
+      value: 'Something I can''t access...
+
+
+        without him...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[7].sentences.Array.data[0]
+      value: 'Forgotten sensations. Lying in this place. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[7].sentences.Array.data[1]
+      value: "Fears I couldn't admit. \nMy body knew about this all along. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[7].sentences.Array.data[2]
+      value: "My body finds its way back to me. \n\nAnd ... To himself."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[8].sentences.Array.data[0]
+      value: "Now that my shame has been slowly relieved, my body can heal. \n\nI
+        have found a way back to him."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[8].sentences.Array.data[1]
+      value: 'It''s time to face it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[8].sentences.Array.data[2]
+      value: 'It''s time to face it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[9].sentences.Array.data[0]
+      value: It was a journey into Pal's IntroVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[9].sentences.Array.data[1]
+      value: 'THANK YOU FOR PLAYING '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[9].sentences.Array.data[2]
+      value: 'It''s time to face it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].sentences.Array.data[0]
+      value: It was a journey into Pal's IntroVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].sentences.Array.data[1]
+      value: 'THANK YOU FOR PLAYING '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].sentences.Array.data[2]
+      value: But I do hope to find again the bond that will go between this lost
+        body and me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[10].sentences.Array.data[3]
+      value: It will be a journey into my introVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].sentences.Array.data[0]
+      value: It was be a journey into an introVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].sentences.Array.data[1]
+      value: 'THANK YOU FOR PLAYING '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].sentences.Array.data[2]
+      value: But I do hope to find again the bond that will go between this lost
+        body and me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[11].sentences.Array.data[3]
+      value: It will be a journey into my introVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].sentences.Array.data[0]
+      value: 'THANK YOU FOR PLAYING '
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].sentences.Array.data[1]
+      value: "And I don't expect to fully recover. \n\nI can't."
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].sentences.Array.data[2]
+      value: But I do hope to find again the bond that will go between this lost
+        body and me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[12].sentences.Array.data[3]
+      value: It will be a journey into my introVerse.
+      objectReference: {fileID: 0}
+    - target: {fileID: 549884634, guid: 259644089ede21e4bb4951666f72e106, type: 3}
+      propertyPath: dialogues.Array.data[13].sentences.Array.data[0]
+      value: 'THANK YOU FOR PLAYING '
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9021414415720887362, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5141,98 +5339,6 @@ PrefabInstance:
     - target: {fileID: 9021414415720887363, guid: 259644089ede21e4bb4951666f72e106, type: 3}
       propertyPath: m_Name
       value: Pal Mind
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414416930278594, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414416930278595, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414416930278596, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414416930278596, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: InitialModule.rotation3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.60903525
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812147, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.5801887
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812148, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_MaxParticleSize
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710456
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.70710456
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.0017773798
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0017773798
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.713
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 9021414417500812149, guid: 259644089ede21e4bb4951666f72e106, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259644089ede21e4bb4951666f72e106, type: 3}
@@ -5498,7 +5604,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: front water
+          m_StringArgument: diving part 1 main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1882527570
@@ -5832,7 +5938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 315708430998204037, guid: 6030f9f47faa11346aee441807a0869a, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 315708430998204037, guid: 6030f9f47faa11346aee441807a0869a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5932,8 +6038,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -5942,15 +6052,15 @@ PrefabInstance:
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 223974230}
+      objectReference: {fileID: 1542671746}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1542671746}
+      objectReference: {fileID: 223974230}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 223974230}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -5961,31 +6071,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SendChatMessage
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Play
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelLoader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: NativeWebsocketChat, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: restart
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: restart
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1339914153216068627, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
@@ -6134,6 +6248,10 @@ PrefabInstance:
     - target: {fileID: 1339914153952475383, guid: a8972ac333165a6468040132e2984fb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339914154141672323, guid: a8972ac333165a6468040132e2984fb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1152827536181440064, guid: a8972ac333165a6468040132e2984fb1, type: 3}
@@ -6387,6 +6505,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c446b1ead103c89468124a17e24051ee, type: 3}
+--- !u!1001 &7872405978683177573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530075645960607132, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595404245213969829, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
+      propertyPath: m_Name
+      value: WaterCircle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef5652e79eaf1a044b5837379e53732f, type: 3}
 --- !u!1001 &8656317904529761460
 PrefabInstance:
   m_ObjectHideFlags: 0

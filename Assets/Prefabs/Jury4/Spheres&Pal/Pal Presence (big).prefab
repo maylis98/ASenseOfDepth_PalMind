@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1192206369}
   - component: {fileID: 1192206368}
   - component: {fileID: 1192206367}
+  - component: {fileID: 549884638}
+  - component: {fileID: 549884636}
+  - component: {fileID: 549884634}
   m_Layer: 0
   m_Name: thoughtsBox
   m_TagString: Untagged
@@ -98,7 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: dfghjklmlkjhfcdfgh
+  m_text: hgfdxcvbn,k,jhgfdfg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
   m_sharedMaterial: {fileID: 2508897350221615766, guid: 65aaf9a8d26fb174997b8edb8b664d10, type: 2}
@@ -161,7 +164,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 7.4964485, y: 0, z: 7.4788427, w: 0}
+  m_margin: {x: 8.729311, y: 1.1242112, z: 8.753919, w: 1.1092216}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -170,6 +173,246 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!82 &549884638
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192206366}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7cd5b3ddcf90f3845b477e413d2408c1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &549884636
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192206366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4eafdf59783c76d428d0db75367d060c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &549884634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192206366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b70cf00a41310478e6a2091b2200db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Look around
+    sentences:
+    - "I should warn you. \n\nThis body is afraid of everything. "
+    - 'Nobody tells him where to go.
+
+
+      He''s completely lost in this place. '
+    - I think, deep down, he knows the direction.
+    - But he refuses to remember it.
+    - So YOU have to push him forward.
+  - name: Distortion Field
+    sentences:
+    - I have to keep walking
+    - Otherwise...
+    - The fear will come back...
+  - name: Front water
+    sentences:
+    - "So far, my body has managed to avoid water. \n\nHe is scared to death of it."
+    - 'It''s kind of ridiculous. '
+    - He, well... WE, used to love diving so much. Before...
+    - ...
+    - 'Anyway...do you really want to take him ? '
+    - "Let's go. \n\nThis place doesn't leave us with many choices anyway. "
+  - name: The bugs
+    sentences:
+    - Bugs...
+    - 'They come through here a lot.
+
+
+      There are more and more of them these
+      days.'
+    - As if they were attracted to unstable beings.
+    - ...Like me...
+    - "Sometimes they help you to know where you are. \n\nAnd what to expect in that
+      place.\n"
+  - name: Diving part 1 pre
+    sentences:
+    - "Maybe I should tell you a little more about the two of us\u2026"
+  - name: Diving part 1 main
+    sentences:
+    - "Wow this place is really falling apart\u2026! \n\nJust like me\u2026"
+    - 'As I was saying, I loved water.
+
+
+      Diving was my life. '
+    - "And then\u2026after one of those dives\u2026suddenly that URGE to go underwater
+      disappeared."
+    - "Just like that. \n\nI didn\u2019t care anymore. "
+    - "The water didn\u2019t feel as soft as it used to. \n\nIt was somehow even
+      \u2026painful. "
+  - name: Uncomplete memory
+    sentences:
+    - Water is rising ...
+    - I have already been through this...
+    - "I couldn\u2019t say more. \n\nBut it awakened something..."
+    - "It\u2019s not clear. \n\nI feel like there's something broken."
+    - 'It''s just a vision for now. '
+  - name: So focus
+    sentences:
+    - But what does all this fuss mean?!
+    - 'I''m just trying to figure out what''s going on here.
+
+
+      There is nothing
+      more I can do for this body. '
+    - "I don't even understand why we are separated. \n\nBut I can't leave."
+    - 'I have to take him back. I know he''s hiding something from me. '
+    - 'Something I can''t access...
+
+
+      without him...'
+  - name: In front of Gate
+    sentences:
+    - Finally...
+    - Something was awakened by the box.
+    - 'It is clearer now...
+
+
+      A sanctuary of forgotten sensations...'
+  - name: Memory plant
+    sentences:
+    - 'I hadn''t felt that way in a long time. '
+    - 'My feelings were stored in another part of my memory.
+
+
+      The memory of
+      my body.'
+    - This place,... those water plants, seem familiar now.
+  - name: Body fragment
+    sentences:
+    - I was waiting for something that would bind us together again.
+    - Now that my shame has been slowly relieved...
+    - "My body finds its way back to me. \n\nAnd ... To himself."
+  - name: I feel myself again
+    sentences:
+    - 'We both know we lived all of this. '
+    - 'This loss. '
+    - 'It''s time to face it. '
+  - name: Pal recovers
+    sentences:
+    - ...Now I understand...
+    - ...I am fully myself...
+  - name: end of Game
+    sentences:
+    - It will be a long road.
+    - "And I don't expect to fully recover. \n\nI can't."
+    - But I do hope to find again the bond that will go between this lost body and
+      me.
+    - It will be a journey into my introVerse.
+  - name: end Screen
+    sentences:
+    - 'THANK YOU FOR PLAYING '
 --- !u!1 &5818881263965367763
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,8 +496,8 @@ MonoBehaviour:
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   particulesM: {fileID: 2100000, guid: dbad02d3734c5d2408a86e46adfe77e8, type: 2}
   distanceFromCamera: 4
-  palOrb: {fileID: 0}
-  palSmoke: {fileID: 0}
+  palOrb: {fileID: 5818881263965367763}
+  smokeParticules: {fileID: 9021414416930278594}
   particules: {fileID: 9021414417500812147}
 --- !u!1 &9021414416496277370
 GameObject:
@@ -5085,13 +5328,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9021414417500812150}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalRotation: {x: -0.70710456, y: -0.0017773798, z: 0.0017773798, w: 0.70710456}
+  m_LocalPosition: {x: 0, y: 1, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3162779249176250101}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.713, y: -90, z: 90}
 --- !u!198 &9021414417500812147
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5175,7 +5418,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5344,7 +5587,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5660,7 +5903,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -6364,7 +6607,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.9517203, g: 0.9292453, b: 1, a: 0}
-        key1: {r: 0.15622425, g: 0, b: 1, a: 1}
+        key1: {r: 0.5801887, g: 0.60903525, b: 1, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0.0031859921, g: 0, b: 0.1509434, a: 0}
         key4: {r: 1, g: 1, b: 1, a: 0}
@@ -9842,7 +10085,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.8
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -9885,11 +10128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6086503563851069065, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6086503563851069065, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6086503563851069065, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9919,11 +10162,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6086503563851069070, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086503563851069071, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
 --- !u!4 &9021414416930278596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6086503563851069065, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
+  m_PrefabInstance: {fileID: 2973811866637859405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9021414416930278594 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6086503563851069071, guid: 7ca8d983fe6bfc54188b6ec5355ab444, type: 3}
   m_PrefabInstance: {fileID: 2973811866637859405}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7273317676136964715

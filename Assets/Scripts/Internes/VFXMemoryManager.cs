@@ -30,7 +30,7 @@ public class VFXMemoryManager : MonoBehaviour
         currentAlpha = fadeIn;
         rippleM.SetFloat("_AlphaCC", currentAlpha);
 
-        VFXCoral.SetFloat("Spread", 7f);
+        VFXCoral.SetFloat("Spread", 3f);
         VFXCoral.SetFloat("Flux Intensity", 0.3f);
         VFXCoral.SetVector3("Transform_scale", UnifiedVFXscale);
 
@@ -78,6 +78,7 @@ public class VFXMemoryManager : MonoBehaviour
         VFXCoral.SetFloat("Number of particules", 0f);
         VFXCoralCollider.enabled = false;
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
+        EventManager.TriggerEvent("disabledDistoredVision", true);
 
         palBodyFragment.SetActive(true);
         audioBodyFragment.Play();

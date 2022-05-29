@@ -15,7 +15,7 @@ public class MemorialSpaceManager : MonoBehaviour
     private float valueToChange;
     private float PPValueToChange;
     private float highParticules = 100000f;
-    private float lowParticules = -200f;
+    private float lowParticules = -100f;
 
     private VisualEffect VFXGate;
     private AudioSource audioGate;
@@ -55,10 +55,14 @@ public class MemorialSpaceManager : MonoBehaviour
 
         hideMemorialSpace();
 
+        //yield return new WaitForSeconds(duration + 5);
+
+        EventManager.TriggerEvent("disabledDistoredVision", true);
+
         yield return new WaitForSeconds(duration + 5);
 
         EventManager.TriggerEvent("clearMemorialSpace", true);
-        EventManager.TriggerEvent("disabledDistoredVision", true);
+        
     }
 
     IEnumerator fadeAway(float endValue, float PPEndValue, float durationToFade)
@@ -73,7 +77,7 @@ public class MemorialSpaceManager : MonoBehaviour
             PPValueToChange = Mathf.Lerp(PPstartValue, PPEndValue, time / durationToFade);
             time += Time.deltaTime;
             PP.weight = PPValueToChange;
-            VFXGate.SetFloat("Number of particules", valueToChange);
+            VFXGate.SetFloat("Number of particules", endValue);
             yield return null;
         }
 

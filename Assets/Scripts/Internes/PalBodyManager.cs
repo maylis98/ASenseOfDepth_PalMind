@@ -27,7 +27,6 @@ public class PalBodyManager : MonoBehaviour
     private Color currentVeilC;
 
     private int state = 0;
-    private float countDown = 2;
 
 
     void Awake()
@@ -73,15 +72,17 @@ public class PalBodyManager : MonoBehaviour
         if (state == 3)
         {
             currentColor_A = Color.Lerp(currentColor_A, disappearC_A, 0.2f * Time.deltaTime);
-            currentColor_B = Color.Lerp(currentColor_B, disappearC_A, 1f * Time.deltaTime);
+            currentColor_B = Color.Lerp(currentColor_B, disappearC_A, 0.2f * Time.deltaTime);
             palMaterial.SetColor("_Color_A", currentColor_A);
             palMaterial.SetColor("_Color_B", currentColor_B);
+            state = 4;
         }
     }
 
     public void showBody()
     {
         EventManager.TriggerEvent("clearCanvas", true);
+        FindObjectOfType<SoundManager>().sphereAppear();
         state = 1;
         StartCoroutine(LerpAlpha());
     }
@@ -90,14 +91,12 @@ public class PalBodyManager : MonoBehaviour
     {
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("");
         StopAllCoroutines();
-        palAnimator.SetBool("endDance", true);
         state = 4;
         StartCoroutine(Disappear());
     }
 
     IEnumerator LerpAlpha()
     {
-
         state = 1; 
 
         yield return new WaitForSeconds(5);
@@ -117,6 +116,7 @@ public class PalBodyManager : MonoBehaviour
     {
         veilM.color = transparentVeilC;
         palAnimator.SetBool("endDance", true);
+        FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("I feel myself");
 
         yield return new WaitForSeconds(5);
 
@@ -125,7 +125,7 @@ public class PalBodyManager : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("end Screen");
-        //FindObjectOfType<ThoughtsTrigger>().TriggerThoughts("end of Game");
+        FindObjectOfType<NativeWebsocketChat>().SendChatMessage("credits");
 
         Destroy(this.gameObject);
     }

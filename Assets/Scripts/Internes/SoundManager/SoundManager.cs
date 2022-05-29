@@ -24,6 +24,31 @@ public class SoundManager : MonoBehaviour
         StartCoroutine(calmDown());
     }
 
+    public void anxiousWithWater()
+    {
+        StartCoroutine(anxiousWithW());
+    }
+
+    IEnumerator anxiousWithW()
+    {
+        soundBreath.iCurrentClip = 4;
+        soundBreath.volumeLevel = 1;
+
+        soundHeartBeat.iCurrentClip = 2;
+        soundBreath.volumeLevel = 0.5f;
+
+        yield return new WaitForSeconds(7);
+
+        soundBreath.iCurrentClip = 1;
+        soundBreath.volumeLevel = 0.5f;
+
+        yield return new WaitForSeconds(7);
+
+        defaultState();
+        soundBreath.volumeLevel = 1f;
+    }
+
+
     IEnumerator calmDown()
     {
         yield return new WaitForSeconds(15);

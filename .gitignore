@@ -68,3 +68,18 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+#Personal
+/[Aa]ssets/[Oo]bj/shell.fbx
+/[Aa]ssets/[Oo]bj/shell.fbx.meta
+/[Aa]ssets/[Oo]bj/highpoly_sphere.fbx
+/[Aa]ssets/[Oo]bj/highpoly_sphere.fbx.meta
+/[Aa]ssets/[Oo]bj/body_veil.fbx
+/[Aa]ssets/[Oo]bj/body_veil.fbx.meta
+/[Aa]ssets/[Ss]ounds/sound_human_background.wav
+/[Aa]ssets/[Ss]ounds/sound_human_background.wav.meta
+/[Aa]ssets/[Aa]nimations/Player/Dancing.anim
+/[Aa]ssets/[Aa]nimations/Player/Dancing.anim.meta
+
+
+

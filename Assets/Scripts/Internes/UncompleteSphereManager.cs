@@ -39,6 +39,7 @@ public class UncompleteSphereManager : MonoBehaviour
     private void showObj()
     {
         StartCoroutine(fadeAway(0.48f, 0.8f, 20));
+        FindObjectOfType<SoundManager>().morecalmAfterText();
     }
 
     public void increaseObject()

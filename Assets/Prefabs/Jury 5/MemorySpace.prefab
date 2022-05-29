@@ -298,7 +298,33 @@ VisualEffect:
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -3.5419192
+            value: 5.6233654
+            inSlope: -0.4461613
+            outSlope: -0.4461613
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.7350464
+            value: 3.715149
+            inSlope: -0.4461613
+            outSlope: -0.4461613
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: Scale Y (size over life)
+        m_Overridden: 1
     m_Gradient:
       m_Array:
       - m_Value:
@@ -503,6 +529,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 917491045087224504}
+        m_TargetAssemblyTypeName: DistoredParticulesManager, Assembly-CSharp
+        m_MethodName: distoredVision
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   PP: {fileID: 1654100514128099507}
 --- !u!1001 &3078367516967456779
 PrefabInstance:
@@ -570,3 +608,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7197938562269659346, guid: 95af4ac34213bcf46a092bbd2b9ab108, type: 3}
   m_PrefabInstance: {fileID: 3078367516967456779}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &917491045087224504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2739063565451588275, guid: 95af4ac34213bcf46a092bbd2b9ab108, type: 3}
+  m_PrefabInstance: {fileID: 3078367516967456779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e678335c6b038d4898d784c41661ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

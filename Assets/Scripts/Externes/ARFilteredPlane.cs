@@ -72,10 +72,10 @@ public class ARFilteredPlane : MonoBehaviour
                 floorText.text = "";
 
                 //To delete 
-                //whenFoorIsFound.Invoke();
+                whenFoorIsFound.Invoke();
 
                 //& Replace by ... when build
-                countDown = 6;
+                //countDown = 6;
             }
         }
     }
@@ -110,5 +110,10 @@ public class ARFilteredPlane : MonoBehaviour
 
         floorText.text = "";
         arPlaneManager.enabled = false;
+
+        foreach (ARPlane plane in arPlanes)
+        {
+            plane.gameObject.SetActive(false);
+        }
     }
 }

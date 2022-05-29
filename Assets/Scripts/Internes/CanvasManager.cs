@@ -6,13 +6,16 @@ using TMPro;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject MainControls;
+    public GameObject openCapsuleButton; 
+
     public GameObject whiteBckgrd;
     public TextMeshProUGUI instructionsBox;
 
     void Start()
     {
         MainControls.SetActive(false);
-
+        whiteBckgrd.SetActive(false);
+        openCapsuleButton.SetActive(false);
         EventManager.StartListening("returnGame", returnGameControls);
     }
 
@@ -34,6 +37,13 @@ public class CanvasManager : MonoBehaviour
     {
         whiteBckgrd.SetActive(true);
     }
+
+    public void showCapsuleButton(int indexB)
+    {
+        openCapsuleButton.SetActive(true);
+        EventManager.TriggerEvent("indexNumber", indexB);
+    }
+
 
 
 }

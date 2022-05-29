@@ -116,7 +116,7 @@ public class DialogManager : MonoBehaviour
    private void EndDialogue()
    {
         dialogueBoxAnimator.SetBool("blink", true);
-        dialogueText.text = "LISTEN";
+        dialogueText.text = "";
         Debug.Log("End of conversation");
 
         if (dialogNumber == 0)

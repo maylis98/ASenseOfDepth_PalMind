@@ -25,6 +25,7 @@ public class WaterFloorManager : MonoBehaviour
     {
         floorR.enabled = true;
         StartCoroutine(floorTimeline(duration));
+        FindObjectOfType<SoundManager>().anxiousWithWater();
     }
 
     IEnumerator floorTimeline(float durationF)
