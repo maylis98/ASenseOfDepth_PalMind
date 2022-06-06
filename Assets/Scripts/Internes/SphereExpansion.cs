@@ -21,6 +21,7 @@ public class SphereExpansion : MonoBehaviour
     [SerializeField, Range(0, 4)]
     private float fluxIntensity;
 
+    public Vector3 resultingPosition;
     private GameObject[]wayPointsParent;
     private Transform[] wayPoints;
 
@@ -29,6 +30,7 @@ public class SphereExpansion : MonoBehaviour
 
     //forScalingOverTime
     public float speedOfPulse;
+
     //delay between change of Pos
     public float delay = 10;
 
@@ -47,6 +49,7 @@ public class SphereExpansion : MonoBehaviour
 
     private bool deleteZone = false;
     private bool moveTowards;
+    private bool appearFromScreen;
     private float speed = 0.5f;
     private float degreesPerSecond = 30;
 
@@ -66,7 +69,10 @@ public class SphereExpansion : MonoBehaviour
 
         deleteZone = false;
         moveTowards = false;
+        appearFromScreen = true;
         EventManager.StartListening("endZone", endZone);
+
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * 2;
     }
 
     private void Update()
@@ -76,6 +82,11 @@ public class SphereExpansion : MonoBehaviour
         if (timeToMove)
         {
             updateWithConditions.Invoke();
+        }
+
+        if (appearFromScreen == true)
+        {
+            transform.position = Vector3.Lerp(transform.position, resultingPosition, 1f * Time.deltaTime);
         }
 
         if (moveTowards == true)
@@ -125,6 +136,7 @@ public class SphereExpansion : MonoBehaviour
 
         changePos(false);*/
         //timeToMove = false;
+        appearFromScreen = false;
         FindObjectOfType<CanvasManager>().sentenceInInstructionsBox("A memory has been opened");
         sphereToZone();
 

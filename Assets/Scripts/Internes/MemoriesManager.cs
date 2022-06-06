@@ -85,7 +85,7 @@ public class MemoriesManager : MonoBehaviour
 
     public void showUncompleteS()
     {
-        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
+        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * 2 + Camera.main.transform.up * (-10);
         spawnedUncompleteS = Instantiate(UncompleteSphere, resultingPosition, Quaternion.Euler(0, 0, 0));
     }
 
@@ -96,7 +96,7 @@ public class MemoriesManager : MonoBehaviour
 
     public void showWaterFloor()
     {
-        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-7), Quaternion.Euler(0, 0, 0)) ;
+        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-50), Quaternion.Euler(0, 0, 0)) ;
     }
 
     public void showFallingC()
@@ -128,15 +128,16 @@ public class MemoriesManager : MonoBehaviour
 
     private void UnlockMemory(object data)
     {
-        resultingPosition = Camera.main.transform.position + Camera.main.transform.forward * distanceFromCamera;
+        Vector3 screenPosition = Camera.main.transform.position + Camera.main.transform.forward * 15;
 
         FindObjectOfType<NativeWebsocketChat>().SendChatMessage("player static");
         FindObjectOfType<SoundManager>().sphereAppear();
         EventManager.TriggerEvent("clearCanvas", true);
         EventManager.TriggerEvent("showZone", true);
 
-        spawnedSphere = Instantiate(SpheresOfMemory[(int)data], resultingPosition,Quaternion.identity);
+        spawnedSphere = Instantiate(SpheresOfMemory[(int)data], screenPosition,Quaternion.identity);
         spawnedGate = Instantiate(GatesOfMemory[(int)data], triggerZone.transform.position + offsetFromObj, Quaternion.Euler(0, 90, 0));
+
 
     }
 

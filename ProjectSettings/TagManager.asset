@@ -12,6 +12,7 @@ TagManager:
   - Gate
   - Zone
   - Sphere
+  - RecorderCamera
   layers:
   - Default
   - TransparentFX
