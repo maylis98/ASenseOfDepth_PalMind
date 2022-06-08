@@ -94,6 +94,7 @@ public class SplitBodyMindManager : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         fadeCanvasA.SetBool("toBlack", true);
+        FindObjectOfType<NativeWebsocketChat>().SendChatMessage("pal is here");
     }
 
 

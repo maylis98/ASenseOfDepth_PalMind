@@ -7,6 +7,8 @@ using UnityEngine.Events;
 public class DialogManager : MonoBehaviour
 {
     public UnityEvent whenFirstDialogueIsEnd;
+    public UnityEvent fDialogueSentence1;
+    public UnityEvent fDialogueSentence2;
     public UnityEvent whenSecondDialogueIsEnd;
 
     public TextMeshProUGUI speakerName;
@@ -90,7 +92,16 @@ public class DialogManager : MonoBehaviour
     {
         if (dialogueText.enabled == false)
         {
-            introText. text = "";
+            introText.text = "";
+
+            if (sentence.Contains("They all knew the risks"))
+            {
+                fDialogueSentence1.Invoke();
+            }
+            else if (sentence.Contains("Pal was an excellent diver"))
+            {
+                fDialogueSentence2.Invoke();
+            }
 
             foreach (char letter in sentence.ToCharArray())
             {

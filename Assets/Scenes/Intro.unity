@@ -2858,6 +2858,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  fDialogueSentence1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1001997110}
+        m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
+        m_MethodName: SendChatMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: risks
+          m_BoolArgument: 0
+        m_CallState: 2
+  fDialogueSentence2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1001997110}
+        m_TargetAssemblyTypeName: NativeWebsocketChat, Assembly-CSharp
+        m_MethodName: SendChatMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: diver
+          m_BoolArgument: 0
+        m_CallState: 2
   whenSecondDialogueIsEnd:
     m_PersistentCalls:
       m_Calls:
@@ -3162,10 +3192,9 @@ MonoBehaviour:
   dialogues:
   - name: Introduction to Pal's world
     sentences:
-    - "They all knew the risks. \n\nEvery dive is a challenge. The cold, the current,
-      the pressure.\r\n"
+    - "They all knew the risks. \n"
     - "Pal was an excellent diver, with an incredible breathing capacity. \nUnusually
-      capable.\r\n\r\nPerhaps a little too overconfident."
+      capable.\r"
   - name: Intro with Pal's voice
     sentences:
     - 'Where are we?
