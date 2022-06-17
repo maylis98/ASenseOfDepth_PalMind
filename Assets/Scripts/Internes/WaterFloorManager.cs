@@ -9,7 +9,7 @@ public class WaterFloorManager : MonoBehaviour
     //private float lowAlpha = 0;
     public float highAlpha = 0.2f;
     public float duration = 5;
-    private bool appearFromFloor = false;
+    //private bool appearFromFloor = false;
 
     private MeshRenderer floorR;
     private Vector3 resultingPosition;
@@ -33,18 +33,18 @@ public class WaterFloorManager : MonoBehaviour
 
     private void Update()
     {
-        if (appearFromFloor == true)
+        /*if (appearFromFloor == true)
         {
             transform.position = Vector3.Lerp(transform.position, resultingPosition, 1f * Time.deltaTime);
-        }
+        }*/
     }
     public void floorWater()
     {
         floorR.enabled = true;
         StartCoroutine(floorTimeline(duration));
         FindObjectOfType<SoundManager>().anxiousWithWater();
-        appearFromFloor = true;
-        resultingPosition = Camera.main.transform.position + Camera.main.transform.up * (-7);
+        //appearFromFloor = true;
+        //resultingPosition = Camera.main.transform.position + Camera.main.transform.up * (-20);
     }
 
     IEnumerator floorTimeline(float durationF)
@@ -54,7 +54,7 @@ public class WaterFloorManager : MonoBehaviour
 
         yield return new WaitForSeconds(durationF + 10);
 
-        appearFromFloor = false;
+        //appearFromFloor = false;
         StartCoroutine(lerpAlpha(smallSize, durationF));
         FindObjectOfType<WaterPPManager>().PPPresence(0);
 

@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94b08dfd28e7094ca76a9789b7eebf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 4
+  duration: 3
   whenSpaceAppear:
     m_PersistentCalls:
       m_Calls:

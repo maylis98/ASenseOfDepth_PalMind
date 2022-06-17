@@ -5032,9 +5032,9 @@ MonoBehaviour:
   veilM: {fileID: 2100000, guid: ff5c00e4c3235224b8a6396c27b8358f, type: 2}
   currentColor_A: {r: 0, g: 0, b: 0, a: 0}
   currentColor_B: {r: 0, g: 0, b: 0, a: 0}
-  blueFill: {r: 0, g: 0.17391205, b: 1, a: 1}
+  blueFill: {r: 0.5424528, g: 0.621402, b: 1, a: 1}
   whiteFill: {r: 1, g: 1, b: 1, a: 1}
-  disappearC_A: {r: 0.14509821, g: 0, b: 1, a: 0}
+  disappearC_A: {r: 0.590438, g: 0.5801887, b: 1, a: 0}
   disappearC_B: {r: 1, g: 1, b: 1, a: 0}
   initVeilC: {r: 1, g: 1, b: 1, a: 1}
   transparentVeilC: {r: 1, g: 1, b: 1, a: 0}

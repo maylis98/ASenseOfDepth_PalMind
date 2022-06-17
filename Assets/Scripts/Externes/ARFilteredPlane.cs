@@ -15,7 +15,7 @@ public class ARFilteredPlane : MonoBehaviour
     public TextMeshProUGUI floorText;
     //public Vector3 offsetFromCamera;
 
-    public UnityEvent whenFoorIsFound;
+    public UnityEvent whenFloorIsFound;
          
     private ARPlaneManager arPlaneManager;
 
@@ -56,9 +56,8 @@ public class ARFilteredPlane : MonoBehaviour
                     obj.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
                 }
                 //zoneToPlace.transform.position = new Vector3(0, lowestPlane.transform.position.y, 0);
-                whenFoorIsFound.Invoke();
+                whenFloorIsFound.Invoke();
                 StartCoroutine(floorFound());
-
 
             }
             else if(countDown < 0 && lowestPlane == null)
@@ -72,10 +71,10 @@ public class ARFilteredPlane : MonoBehaviour
                 floorText.text = "";
 
                 //To delete 
-                whenFoorIsFound.Invoke();
+                //whenFloorIsFound.Invoke();
 
                 //& Replace by ... when build
-                //countDown = 6;
+                countDown = 6;
             }
         }
     }
@@ -109,6 +108,7 @@ public class ARFilteredPlane : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         floorText.text = "";
+        arPlaneManager.planePrefab.GetComponent<MeshRenderer>().enabled = false;
         arPlaneManager.enabled = false;
 
         foreach (ARPlane plane in arPlanes)

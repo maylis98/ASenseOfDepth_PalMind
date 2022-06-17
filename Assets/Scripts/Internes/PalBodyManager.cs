@@ -63,7 +63,7 @@ public class PalBodyManager : MonoBehaviour
 
         if (state == 2)
         {
-            currentVeilC = Color.Lerp(currentVeilC, transparentVeilC, 0.5f * Time.deltaTime);
+            currentVeilC = Color.Lerp(currentVeilC, transparentVeilC, 1f * Time.deltaTime);
             veilM.color = currentVeilC;
         }
 

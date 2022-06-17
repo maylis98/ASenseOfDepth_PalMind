@@ -13,6 +13,7 @@ public class MemoryTrigger : MonoBehaviour
     public Memory memory;
 
     public GameObject[] floatingObjs;
+    public GameObject bodyPart;
 
     //public Animator vaseAnimator;
 
@@ -22,6 +23,7 @@ public class MemoryTrigger : MonoBehaviour
     private void Start()
     {
         audioDistortionField = this.gameObject.GetComponent<AudioSource>();
+        bodyPart.SetActive(false);
 
         foreach (GameObject floatObj in floatingObjs)
         {

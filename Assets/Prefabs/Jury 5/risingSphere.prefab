@@ -52,7 +52,7 @@ VisualEffect:
       - m_Value: 7091
         m_Name: Number of particules
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.4
         m_Name: ScaleX
         m_Overridden: 1
       - m_Value: 0.82
@@ -316,7 +316,7 @@ VisualEffect:
       - m_Value: 1.96
         m_Name: Flux Intensity
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.4
         m_Name: ScaleX
         m_Overridden: 1
       - m_Value: 4
@@ -350,7 +350,33 @@ VisualEffect:
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
-      m_Array: []
+      m_Array:
+      - m_Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: -0.008333325
+            value: 1.010849
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.9916667
+            value: 1.010849
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        m_Name: ScaleY
+        m_Overridden: 1
     m_Gradient:
       m_Array:
       - m_Value:
@@ -454,7 +480,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7a91aab21ac3ae499f46f100b9d3a34, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 01c08d02329ac9c428fba7062b9a80f7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -606,6 +632,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5292101545791273168}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   after1Second:
     m_PersistentCalls:
       m_Calls: []
@@ -692,7 +730,7 @@ VisualEffect:
       - m_Value: 7091
         m_Name: Number of particules
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.4
         m_Name: ScaleX
         m_Overridden: 1
       - m_Value: 0.82
@@ -858,6 +896,87 @@ Transform:
   m_Father: {fileID: 4713221375975796121}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8993371197616350239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8612307283165494949}
+  - component: {fileID: 4623741396029387008}
+  - component: {fileID: 7479954534308595146}
+  m_Layer: 0
+  m_Name: rippleCapsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8612307283165494949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993371197616350239}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.032999992, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 4713221375975796121}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &4623741396029387008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993371197616350239}
+  m_Mesh: {fileID: 5047744672363744156, guid: 94eb092fd6df14c4bac2054613f4269c, type: 3}
+--- !u!23 &7479954534308595146
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993371197616350239}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b9e356235878b34458404fc772e017dd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9026144016472637332
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +1029,7 @@ VisualEffect:
       - m_Value: 7091
         m_Name: Number of particules
         m_Overridden: 1
-      - m_Value: 0.2
+      - m_Value: 0.4
         m_Name: ScaleX
         m_Overridden: 1
       - m_Value: 0.82
@@ -1045,81 +1164,3 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &8518679828287870562
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4713221375975796121}
-    m_Modifications:
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.032999992
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 790013806486270589, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_Name
-      value: rippleCapsule
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294306808146105256, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ca161dd1c822a7946b43d66b398e4e1e, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
---- !u!4 &8612307283165494949 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 125364063457044679, guid: 54f0909df4fbcad42a6dd0641c4e04e1, type: 3}
-  m_PrefabInstance: {fileID: 8518679828287870562}
-  m_PrefabAsset: {fileID: 0}

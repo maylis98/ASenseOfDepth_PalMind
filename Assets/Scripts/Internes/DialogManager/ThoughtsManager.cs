@@ -59,6 +59,7 @@ public class ThoughtsManager : MonoBehaviour
         else if (continueButton.activeSelf == false && memoryAppear == false)
         {
             walkButton.SetActive(true);
+            walkBAnimator.Play("Blink");
             isDone = false;
         }
         else
@@ -174,7 +175,7 @@ public class ThoughtsManager : MonoBehaviour
         if (memoryIsEnd == true)
         {
             memoryAppear = false;
-            walkBAnimator.Play("Blink");
+
         }
         else
         {

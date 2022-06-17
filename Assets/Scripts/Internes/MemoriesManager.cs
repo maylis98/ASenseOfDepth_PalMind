@@ -96,7 +96,7 @@ public class MemoriesManager : MonoBehaviour
 
     public void showWaterFloor()
     {
-        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-50), Quaternion.Euler(0, 0, 0)) ;
+        spawnedMemorialSpace = Instantiate(WaterFloor, Camera.main.transform.position + Camera.main.transform.up * (-20), Quaternion.Euler(0, 0, 0)) ;
     }
 
     public void showFallingC()
@@ -156,6 +156,7 @@ public class MemoriesManager : MonoBehaviour
         resultingPosition = Camera.main.transform.position + Camera.main.transform.up * (-1) + Camera.main.transform.forward * distanceFromCamera;
         spawnedGate = Instantiate(PalBody, resultingPosition, Quaternion.Euler(0, 0, 0));
         FindObjectOfType<PalBodyManager>().showBody();
+        FindObjectOfType<WaterPPManager>().PPPresence(1);
     }
 
     IEnumerator waitBeforeDestroy(float waitingTime)

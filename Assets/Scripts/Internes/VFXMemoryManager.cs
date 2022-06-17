@@ -7,13 +7,11 @@ public class VFXMemoryManager : MonoBehaviour
 {
     public VisualEffect VFXCoral;
     //public GameObject enceinte;
-    public GameObject rippleCaspule;
     public GameObject palBodyFragment;
     public float currentAlpha;
     private float fadeIn = 0;
     public float fadeOut = 1;
 
-    private Material rippleM;
     private AudioSource audioBodyFragment;
 
     /*private Animator enceinteAnimator;
@@ -26,9 +24,8 @@ public class VFXMemoryManager : MonoBehaviour
 
     private void Awake()
     {
-        rippleM = rippleCaspule.GetComponent<MeshRenderer>().sharedMaterial;
+       
         currentAlpha = fadeIn;
-        rippleM.SetFloat("_AlphaCC", currentAlpha);
 
         VFXCoral.SetFloat("Spread", 3f);
         VFXCoral.SetFloat("Flux Intensity", 0.3f);
@@ -70,7 +67,7 @@ public class VFXMemoryManager : MonoBehaviour
     {
 
         FindObjectOfType<VFXGateManager>().GateDisappear();
-        StartCoroutine(lerpAlpha(fadeOut, 2));
+        //StartCoroutine(lerpAlpha(fadeOut, 2));
         //enceinteAnimator.SetBool("disappear", true);
        /* VFXenceinte.SetFloat("Particules", 0f);*/
 
@@ -96,7 +93,7 @@ public class VFXMemoryManager : MonoBehaviour
         {
             currentAlpha = Mathf.Lerp(currentAlpha, targetAlpha, time / durationFade);
             time += Time.deltaTime;
-            rippleM.SetFloat("_AlphaCC", currentAlpha);
+            //rippleM.SetFloat("_AlphaCC", currentAlpha);
             yield return null;
         }
     }

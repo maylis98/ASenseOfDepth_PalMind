@@ -33,15 +33,14 @@ public class SplitBodyMindManager : MonoBehaviour
     {
         currentColor = initColor;
         veilMat.color = currentColor;
+        veil.SetActive(false);
         floatingBody = true;
         palOrb.SetActive(false);
         instructions.SetActive(false);
         splitBodyA = splitBody.GetComponent<Animator>();
         fadeCanvasA = fadeCanvas.GetComponent<Animator>();
+        fadeCanvasA.gameObject.SetActive(false);
         titleA = title.GetComponent<Animator>();
-
-        splitBody.transform.position = Camera.main.transform.position + Camera.main.transform.forward * (3);
-        posOffset = splitBody.transform.position;
     }
 
     public void startSplitBody()
@@ -55,7 +54,8 @@ public class SplitBodyMindManager : MonoBehaviour
         {
             splitBody.transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
-            tempPos = posOffset;
+            posOffset = Camera.main.transform.position + Camera.main.transform.forward * (3);
+            tempPos = Vector3.Lerp(splitBody.transform.position, posOffset, 1f * Time.deltaTime);
             tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
             splitBody.transform.position = tempPos;
@@ -67,7 +67,7 @@ public class SplitBodyMindManager : MonoBehaviour
             splitBody.transform.rotation = Quaternion.Lerp(splitBody.transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * 1f);
             splitBody.transform.localScale = Vector3.Lerp(splitBody.transform.localScale, targetScale, Time.deltaTime * 0.1f);
             veil.transform.localScale = Vector3.Lerp(veil.transform.localScale, targetScale, Time.deltaTime * 0.5f);
-            currentColor = Color.Lerp(currentColor, visibleColor, Time.deltaTime * 0.1f);
+            currentColor = Color.Lerp(currentColor, visibleColor, Time.deltaTime * 0.3f);
             veilMat.color = currentColor;
 
         }
@@ -86,6 +86,7 @@ public class SplitBodyMindManager : MonoBehaviour
         yield return new WaitForSeconds(6);
 
         walkingBody = true;
+        veil.SetActive(true);
 
         yield return new WaitForSeconds(2);
 
@@ -93,6 +94,7 @@ public class SplitBodyMindManager : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
+        fadeCanvas.gameObject.SetActive(true);
         fadeCanvasA.SetBool("toBlack", true);
         FindObjectOfType<NativeWebsocketChat>().SendChatMessage("pal is here");
     }
