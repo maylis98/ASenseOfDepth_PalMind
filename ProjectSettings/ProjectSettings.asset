@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: dbd705301faa40a4ea90166dd410d6aa, type: 3}
+  - logo: {fileID: 21300000, guid: 5f8408fdbe288be4e8d1d28fb7c51993, type: 3}
     duration: 2
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
@@ -320,8 +320,9 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 4800000, guid: e7c77f6eaab324a819efdc13b8125a39, type: 3}
-  - {fileID: 4401599496061726043, guid: 0bffc88eed582a247b1740129eb70c81, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -959,7 +960,7 @@ PlayerSettings:
   monoEnv: 
   splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 7780a6e386e1b1949a5791f57a4ff145, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 7780a6e386e1b1949a5791f57a4ff145, type: 3}
-  blurSplashScreenBackground: 0
+  blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 16
   webGLExceptionSupport: 1
