@@ -60,6 +60,7 @@ public class ThoughtsManager : MonoBehaviour
         {
             walkButton.SetActive(true);
             walkBAnimator.Play("Blink");
+
             isDone = false;
         }
         else

@@ -71,10 +71,10 @@ public class ARFilteredPlane : MonoBehaviour
                 floorText.text = "";
 
                 //To delete 
-                //whenFloorIsFound.Invoke();
+                whenFloorIsFound.Invoke();
 
                 //& Replace by ... when build
-                countDown = 6;
+                //countDown = 6;
             }
         }
     }
